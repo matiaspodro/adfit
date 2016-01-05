@@ -138,7 +138,7 @@ app.get('/getMLAccess', function(req, res) {
 
 
 //==========================
-console.log(config.URL);
+
 
 //ML =======================
 var access_token = '';
