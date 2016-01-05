@@ -28,6 +28,6 @@ If you have any questions or requests, email us at [chris@scotch.io](mailto:chri
 - sudo apt-get install nodejs-legacy
 - sudo apt-get install mongodb
 
-git clone https: ...
+- git clone https: ...
 
-Create the files are excepted in : .gitignore
+- Create the files are excepted in : .gitignore
