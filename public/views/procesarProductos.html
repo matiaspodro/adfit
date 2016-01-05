@@ -1,0 +1,14 @@
+<div ng-show="mensajeBD" class="alert alert-success alert-dismissible" role="alert" ng-bind='mensajeBD'></div>
+<div ng-show="mensajeBDError" class="alert alert-danger alert-dismissible" role="alert" ng-bind='mensajeBDError'></div>
+<a class="btn btn-large btn-success has-spinner" ng-class="{'active': isActive1}" ng-click="procesarTodasLasProductosDesdeCero()">
+
+	<span ng-class="{'glyphicon glyphicon-refresh glyphicon-refresh-animate': isActive1}"></span>
+    Guardar todas las productos desde Cero
+ </a>
+
+ <a class="btn btn-large btn-success has-spinner" ng-class="{'active': isActive3}" ng-click="fechaUlimaProductoEnBD()">
+	<span ng-class="{'glyphicon glyphicon-refresh glyphicon-refresh-animate': isActive3}"></span>
+    Ver la fecha del último PRODUCTO registrada en la Base de Datos
+ </a>
+ <h2 ng-bind='ultimaFecha'></h2>
+

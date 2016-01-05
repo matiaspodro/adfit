@@ -1,0 +1,23 @@
+<h1>Productos</h1>
+<span ng-class="{'glyphicon glyphicon-refresh glyphicon-refresh-animate': isActive}"></span>
+<div ng-show="!isActive">
+  <table class="table table-striped">
+    <thead><tr>
+      <th>Editar</th>
+      <th>ID</th>
+    </tr></thead>
+    <tbody><tr ng-repeat="producto in filteredProductos">
+      <td>
+
+        <a class="btn" href="/detalleProducto" ng-click="verDetalle(producto)">
+          <span class="glyphicon glyphicon-plus-sign"></span>&nbsp;&nbsp;Ver Detalles
+        </a>
+      </td>
+      <td>{{ producto.id }}</td>
+    </tr></tbody>
+  </table>
+    <div data-pagination="" data-num-pages="numPages()" 
+        data-current-page="currentPage" data-max-size="maxSize"  
+        data-boundary-links="true"></div> 
+
+</div>

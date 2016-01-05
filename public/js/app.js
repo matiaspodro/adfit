@@ -1,0 +1,1 @@
+angular.module('sampleApp', ['ngRoute', 'appRoutes', 'LoginCtrl', 'MainCtrl', 'VentasCtrl', 'DetalleVentaCtrl', 'DetalleProductoCtrl', 'CategoriasCtrl', 'ProductosCtrl', 'ProcesarVentasCtrl', 'ProcesarProductosCtrl', 'PublicidadesCtrl', 'MLService', 'DBService', 'ventaShareData', 'productoShareData']);

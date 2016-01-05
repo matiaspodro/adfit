@@ -1,0 +1,341 @@
+body { 
+		padding-top:30px;
+		color: white;
+	 }
+
+.navbar{
+	color:white;
+}
+.user{
+	top: 10px;
+    left: 40px !important;
+}
+
+
+.glyphicon-refresh-animate {
+    -animation: spin .7s infinite linear;
+    -webkit-animation: spin2 .7s infinite linear;
+}
+
+@-webkit-keyframes spin2 {
+    from { -webkit-transform: rotate(0deg);}
+    to { -webkit-transform: rotate(360deg);}
+}
+
+@keyframes spin {
+    from { transform: scale(1) rotate(0deg);}
+    to { transform: scale(1) rotate(360deg);}
+}
+
+/* MOM'S MARKETPLACE*/
+
+Skip to content
+This repository  
+Search
+Pull requests
+Issues
+Gist
+ @ivanmelul
+ Unwatch 4
+  Star 0
+  Fork 0 matiaspodro/moms-web
+ Code  Issues 0  Pull requests 0  Wiki  Pulse  Graphs
+Branch: master Find file Copy pathmoms-web/web/css/site.css
+13934cb  19 days ago
+@icernigoj icernigoj Modificar Anuncio
+1 contributor
+RawBlameHistory    292 lines (250 sloc)  7.19 KB
+.navbar-brand { padding: 5px 25px 5px 25px }
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover { /*color: #E60C89;*/ }
+.nav>li>a>img, .dropdown-menu>li>a>img {
+		width: 20px;
+		padding-right: 5px;
+}
+.form-control.nostyle { border: none; box-shadow: none; }
+.navbar-default { border: none; }
+.navbar-default button { border: none }
+.card { -webkit-box-shadow: 0px 0px 10px 0px rgba(173,173,173,1);
+		-moz-box-shadow: 0px 0px 10px 0px rgba(173,173,173,1);
+		box-shadow: 0px 0px 10px 0px rgba(173,173,173,1); 
+		-webkit-border-radius: 10px;
+		-moz-border-radius: 10px;
+		border-radius: 10px;
+		background-size: cover;
+}
+.card .price { position: absolute; padding-top: 14px;bottom: 20px; right: 20px; color: #fff; background-color: #E60C89; width: 50px; height: 50px; border-radius: 25px; text-align: center; font-size: 16px }
+.card .price sup { font-size: 10px; vertical-align: text-top; line-height: 1em; }
+.card .date { font-size: 11px; color: #E60C89; padding: 10px; border-bottom-right-radius: 10px;border-top-left-radius: 10px;background: rgba(255,255,255,0.7);  width: 35%;}
+.card .product { margin: 200px 0px 0px 0px; padding: 5px; background-color: rgba(255,255,255,0.7) }
+.card .category { background-color: #fff; width: 100%; border-radius: 0	 0 10px 10px; padding: 5px; }
+
+#login-username { height: 50px; background-image: url('../images/username.png'); background-repeat: no-repeat; background-position: 15px;padding: 7px 15px 10px 40px; }
+#login-username input, #login-password input, #login-email input { background-color: transparent; font-size: 16px;}
+#login-password { height: 50px; background-image: url('../images/password.png'); background-repeat: no-repeat; background-position: 15px;padding: 7px 15px 10px 40px; }
+#login-email { height: 50px; background-image: url('../images/email.png'); background-repeat: no-repeat; background-position: 15px;padding: 7px 15px 10px 40px;}
+
+.login button { width: 100% }
+.login .btn { margin: 5px auto 5px auto }
+.btn-default { background-color: #E72C8A; color: #fff; }
+.btn-default:hover { background-color: #fff; color: #E72C8A; border: 1px solid; }
+
+.btn-facebook { background-color: #44619D; color: #fff; }
+.btn-facebook:hover { background-color: #fff; color: #44619D; border: 1px solid; }
+
+.btn-blank { background-color: #C9C9C9; color: #E72C8A; }
+.btn-blank:hover { background-color: #E72C8A; color: #fff; border: 1px solid; }
+
+.login h2 { color: #E72C8A; font-weight: normal; font-size: 24px; text-align: left;  }
+.login p { font-size: 16px; color: #5D5D5D; text-align: left;  }
+
+.categories .row div { text-align: center; font-weight: bold; }
+.carousel-inner { border: solid 2px #E60C89; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; }
+.carousel-control { -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; }
+a:link { color: #E60C89; }
+
+.detail .price { color: #E60C89; float: right; font-size: 28px; }
+.detail .product { float: left; }
+
+.vendor h4 { color: #E60C89; }
+.vendor p { font-size: 14px;}
+.vendor h4, .vendor p { padding: 0px; margin: 0px; }
+
+.ui-slider {margin-bottom: 20px;}
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default { border: none !important; background: #E60C89 !important; -webkit-border-radius: 10px; -moz-border-radius: 10px; border-radius: 10px; }
+.ui-widget-header { background: #E60C89 !important; color: #E60C89 !important; }
+.ui-widget-content { border: none !important; }
+.ui-widget-content { background: #999 !important; }
+.ui-slider-horizontal { height: .2em !important; }
+.ui-slider-horizontal .ui-slider-handle { top: -.5em !important; }
+
+.chat .grey { background-color: #E5E5EA; max-width: 400px; }
+.chat .pink { background-color: #E72C8A; max-width: 400px; float: right; color: #fff; clear: both }
+.chat .list td { padding-bottom: 10px !important; }
+.chat .list img { margin-right: 20px !important; }
+
+/* css pablo */
+/* css custom */
+
+
+.price.hundreds{
+	font-size: 100%;
+	padding-top: 14px;
+}
+
+.price.thousands {
+	font-size: 90%;
+	padding-top: 17px;
+}
+.price.millions {
+	font-size: 80%;
+	padding-top: 18px;
+}
+
+.anuncio { padding-bottom: 15px !important; }
+
+.moms-footer{
+	background-color: #F9F9F9;
+	border-top: 1px solid #EEE;
+	color: #999;
+	margin-top: 40px;
+}
+
+.moms-footer .moms-footer-legal{
+	border-top: 1px solid #EEE;
+	margin-top: -1px;
+	overflow: hidden;
+	padding: 11px 0 10px;
+}
+
+.moms-footer .moms-links{
+	display: inline;
+}
+
+.moms-footer .moms-links li{
+	display: inline;
+	border-right: 1px solid #DDD;
+	padding: 0 7px;
+}
+
+.moms-filters{
+	margin-bottom: 30px;
+	border-bottom: 1px solid #DDD;
+	padding: 10px;
+}
+
+.advert-link, .advert-link:hover {
+	text-decoration: none;
+	color: initial;
+}
+.text-default, .text-default:hover {
+	color: #E72C8A;
+}
+
+/* input file */
+.inputfile {
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+.inputfile + label {
+	font-size: 1.25em;
+	font-weight: 700;
+	color: #333;
+	display: inline-block;
+	width: 100%;
+	border: 1px solid black;
+	text-align: center;
+	vertical-align: middle;
+	border-color: #ddd;
+	border-radius: 4px;
+	padding: 20px;
+}
+
+.inputfile:focus + label,
+.inputfile + label:hover {
+	color: #E72C8A;
+	border-color: #000;
+}
+.inputfile + label {
+	cursor: pointer; /* "hand" cursor */
+}
+.inputfile:focus + label {
+	outline: 1px dotted #000;
+	outline: -webkit-focus-ring-color auto 5px;
+}
+.inputfile + label * {
+	pointer-events: none;
+}
+
+.title-img{
+	width: 30px;
+	display: inline;
+	vertical-align: text-bottom;
+}
+
+
+@media (max-width: 767px) {
+	.navbar-form {
+		width: 100%;
+	}
+	.navbar-form .form-group{
+		width: 100%;
+	}
+	.navbar-form .input-group{
+		width: 100%;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+	.navbar-form {
+		width: 155px;
+	}
+	.navbar-form .form-group{
+		width: 100%;
+	}
+	.navbar-form .input-group{
+		width: 100%;
+	}
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+	.navbar-form {
+		width: 255px;
+	}
+	.navbar-form .form-group{
+		width: 100%;
+	}
+	.navbar-form .input-group{
+		width: 100%;
+	}
+}
+
+@media (min-width: 1200px) {
+	.navbar-form {
+		width: 415px;
+	}
+	.navbar-form .form-group{
+		width: 100%;
+	}
+	.navbar-form .input-group{
+		width: 100%;
+	}
+}
+
+.fill-custom {
+	min-height: 100%;
+	height: 100%;
+}
+
+.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
+	color: #fff;
+	background-color: #E60C89;
+}
+
+.img-center{
+	margin: auto;
+	height: 400px !important;
+}
+
+.anuncios-pills{
+	height: 690px;
+	overflow: auto;
+	border: solid 2px #E60C89;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	padding: 0;
+}
+
+.anuncios-pills > li{
+	border-bottom: 1px solid #ccc;
+}
+
+.nav-pills>li>a {
+	border-radius: 0px;
+}
+
+.nav-pills>li>a {
+	color: #000000;
+}
+
+.container{
+	/*padding: 0 50px;*/
+}
+
+.bootstrap-switch .bootstrap-switch-handle-on,
+.bootstrap-switch .bootstrap-switch-handle-off,
+.bootstrap-switch .bootstrap-switch-label {
+	height: inherit !important;
+}
+
+.color-star{
+	color: #ffe446;
+}
+
+.noti_bubble {
+	position: relative;
+	display: inline-block;
+	top: 2px;
+	right: 5px;
+	background-color: #fff;
+	color: #000;
+	font-weight: bold;
+	font-size: 13px;
+	border-radius: 50px;
+}
+
+.moms-filter{
+	background: #ddd;
+	border-radius: 10px;
+	padding: 10px 50px;
+	margin-bottom: 20px;
+}
+
+.vendor td{
+	margin-right: 20px;
+}
+Status API Training Shop Blog About Pricing
+© 2015 GitHub, Inc. Terms Privacy Security Contact Help
