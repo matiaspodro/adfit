@@ -21,12 +21,12 @@ If you have any questions or requests, email us at [chris@scotch.io](mailto:chri
 
 
 
-anexo by ivanmelul
-sudo apt-get install npm
-sudo apt-get install bower
-sudo apt-get install git
-sudo apt-get install nodejs-legacy
-sudo apt-get install mongodb
+## Anexo by ivanmelul
+- sudo apt-get install npm
+- sudo apt-get install bower
+- sudo apt-get install git
+- sudo apt-get install nodejs-legacy
+- sudo apt-get install mongodb
 
 git clone https: ...
 
