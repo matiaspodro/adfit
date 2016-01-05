@@ -1,4 +1,5 @@
 // modules =================================================
+var config 					= require('./config');
 var fs 						= require('fs');
 var https 					= require('https');
 var http					= require('http');
@@ -146,7 +147,7 @@ var profile_user = '';
 passport.use(new MercadoLibreStrategy({
     clientID: '8767318679796615',
     clientSecret: 'elBDPKVpiQztGCpWjrtymnuo5pwzcDW6',
-    callbackURL: 'https://adfit.ddns.net:8080/auth/mercadolibre/callback',
+    callbackURL: 'https://'+config.URL+':8080/auth/mercadolibre/callback',
   },
   function (accessToken, refreshToken, profile, done) {
     // + store/retrieve user from database, together with access token and refresh token 
