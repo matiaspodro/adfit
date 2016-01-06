@@ -43,9 +43,9 @@ angular.module('appRoutes', []).config(['$routeProvider', '$locationProvider', f
 			controller: 'ProcesarProductosController'
 		})
 
-		.when('/publicidades', {
-			templateUrl: 'views/publicidades.html',
-			controller: 'PublicidadesController'
+		.when('/eventos', {
+			templateUrl: 'views/eventos.html',
+			controller: 'EventosController'
 		});
 
 	$locationProvider.html5Mode(true);
