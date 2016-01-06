@@ -16,8 +16,9 @@ angular.module('ProcesarVentasCtrl', []).controller('ProcesarVentasController', 
 	$scope.fechaUlimaVentaEnBD = function(){
 		$scope.isActive3 = true;
 
-	    DB.getLastDate().then(function(data) {
-	    	$scope.ultimaFecha = data;
+	    DB.getLast().then(function(data) {
+	    	$scope.ultimaFecha = data.date_last_updated;
+	    	$scope.ultimoID = data.id;
 			$scope.isActive3 = false;
 	    });
 

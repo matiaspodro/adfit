@@ -116,9 +116,9 @@ app.get('/getAllProductos', function(req, res) {
 });
 
 
-app.get('/getLastDate', function(req, res) {
+app.get('/getLast', function(req, res) {
 	Ventas.find({}, null, {sort: {id: -1}, limit:1}, function(err, ventas) {
-		res.send(ventas[0].date_last_updated);  
+		res.send(ventas[0]);  
 	});
 });
 

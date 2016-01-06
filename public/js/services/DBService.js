@@ -43,10 +43,10 @@ angular.module('DBService', []).factory('DB', ['$http', '$q', function($http, $q
         return promise;
 	};
 
-	db.getLastDate = function(){		
+	db.getLast = function(){		
 	    var defered = $q.defer();
 	    var promise = defered.promise;
-		$http.get('/getLastDate')
+		$http.get('/getLast')
 		.success(function(data) {
             defered.resolve(data);
 		})
