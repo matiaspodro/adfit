@@ -18,3 +18,16 @@ If you have any questions or requests, email us at [chris@scotch.io](mailto:chri
 - Development and Production Environments
 - Link examples
 - Single Page AngularJS Animations
+
+
+
+## Anexo by ivanmelul
+- sudo apt-get install npm
+- sudo apt-get install bower
+- sudo apt-get install git
+- sudo apt-get install nodejs-legacy
+- sudo apt-get install mongodb
+
+- git clone https: ...
+
+- Create the files are excepted in : .gitignore
