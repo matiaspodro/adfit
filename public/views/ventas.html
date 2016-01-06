@@ -5,7 +5,7 @@
 <div ng-show="!isActive">
   <table class="table table-striped">
     <thead><tr>
-      <th>Editar</th>
+      <th>Detalle</th>
       <th>ID</th>
       <th>Estado</th>
       <th>Fecha</th>
@@ -19,7 +19,7 @@
       </td>
       <td>{{ venta.id }}</td>
       <td>{{ venta.status }}</td>
-      <td>{{ venta.date_created }}</td>
+      <td>{{ venta.date_last_updated }}</td>
     </tr></tbody>
   </table>
     <div data-pagination="" data-num-pages="numPages()" 

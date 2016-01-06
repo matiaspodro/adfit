@@ -1,6 +1,6 @@
 angular.module('ProcesarVentasCtrl', []).controller('ProcesarVentasController', function($scope, $http, ML, DB) {
 
-	$scope.procesarTodasLasVentasDesdeCero = function(){
+	$scope.procesarTodasLasVentas = function(){
 		$scope.isActive1 = true;
 
 	    ML.todasLasVentas().then(function(data) {

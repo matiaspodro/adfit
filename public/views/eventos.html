@@ -1,5 +1,18 @@
-<div class="jumbotron text-center">
-	<h1>Nerds and Proud</h1>
+<h1>Eventos</h1>
+<span ng-class="{'glyphicon glyphicon-refresh glyphicon-refresh-animate': isActive}"></span>
+<div ng-show="!isActive">
+  <table class="table table-striped">
+    <thead><tr>
+      <th>Fecha</th>
+      <th>Tipo</th>
+    </tr></thead>
+    <tbody><tr ng-repeat="evento in filteredEventos">
+      <td>{{ evento.fecha }}</td>
+      <td>{{ evento.tipo }}</td>
+    </tr></tbody>
+  </table>
+    <div data-pagination="" data-num-pages="numPages()" 
+        data-current-page="currentPage" data-max-size="maxSize"  
+        data-boundary-links="true"></div> 
 
-	<p>{{ tagline }}</p>
 </div>

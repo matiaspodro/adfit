@@ -7,7 +7,7 @@ angular.module('MLService', []).factory('ML', ['$http', '$q', 'DB', function($ht
 
 	    $http.get('/getMLAccess')
 		.success(function(dataToken) {
-			$http.get('https://api.mercadolibre.com/users/'+dataToken.profile_user.id+'/items/search?access_token='+dataToken.access_token+'&offset=0')
+			$http.get('https://api.mercadolibre.com/users/'+dataToken.profile_user.id+'/items/search?access_token='+dataToken.access_token+'&date_desc=asc&offset=0')
 			.success(function(data) {
 				var items1 = data.results;
 				var items2 = data.results;
@@ -21,12 +21,12 @@ angular.module('MLService', []).factory('ML', ['$http', '$q', 'DB', function($ht
 		    	DB.saveProductos(items5.slice(40, 50));
 
 				var cant 			= data.paging.limit;
-				var pages 		= Math.ceil(data.paging.total / data.paging.limit);
+				var pages 			= Math.ceil(data.paging.total / data.paging.limit);
 				//var pages 			= 3;
 
 				for (var i = 50; i < pages*cant; i+=50) {
 
-					$http.get('https://api.mercadolibre.com/users/'+dataToken.profile_user.id+'/items/search?access_token='+dataToken.access_token+'&offset='+i)
+					$http.get('https://api.mercadolibre.com/users/'+dataToken.profile_user.id+'/items/search?access_token='+dataToken.access_token+'&date_desc=asc&offset='+i)
 					.success(function(data) {
 						var items1 = data.results;
 						var items2 = data.results;
@@ -63,7 +63,7 @@ angular.module('MLService', []).factory('ML', ['$http', '$q', 'DB', function($ht
 
 	    $http.get('/getMLAccess')
 		.success(function(dataToken) {
-			$http.get('https://api.mercadolibre.com/orders/search?seller='+dataToken.profile_user.id+'&access_token='+dataToken.access_token+'&offset=0')
+			$http.get('https://api.mercadolibre.com/orders/search?seller='+dataToken.profile_user.id+'&access_token='+dataToken.access_token+'&date_desc=asc&offset=0')
 			.success(function(data) {
 				var items1 = data.results;
 				var items2 = data.results;
@@ -77,12 +77,12 @@ angular.module('MLService', []).factory('ML', ['$http', '$q', 'DB', function($ht
 		    	DB.saveVentas(items5.slice(40, 50));
 
 				var cant 			= data.paging.limit;
-				var pages 		= Math.ceil(data.paging.total / data.paging.limit);
+				var pages 			= Math.ceil(data.paging.total / data.paging.limit);
 				//var pages 			= 3;
 
 				for (var i = 50; i < pages*cant; i+=50) {
 
-					$http.get('https://api.mercadolibre.com/orders/search?seller='+dataToken.profile_user.id+'&access_token='+dataToken.access_token+'&offset='+i)
+					$http.get('https://api.mercadolibre.com/orders/search?seller='+dataToken.profile_user.id+'&access_token='+dataToken.access_token+'&date_desc=asc&offset='+i)
 					.success(function(data) {
 						var items1 = data.results;
 						var items2 = data.results;

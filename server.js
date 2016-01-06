@@ -44,6 +44,7 @@ var ventaSchema = new mongoose.Schema({
 , status: String
 , date_created: Date
 , date_closed: Date
+, date_last_updated: Date
 , currency: String
 , order_items: mongoose.Schema.Types.Mixed
 });
@@ -117,7 +118,7 @@ app.get('/getAllProductos', function(req, res) {
 
 app.get('/getLastDate', function(req, res) {
 	Ventas.find({}, null, {sort: {id: -1}, limit:1}, function(err, ventas) {
-		res.send(ventas[0].date_created);  
+		res.send(ventas[0].date_last_updated);  
 	});
 });
 
