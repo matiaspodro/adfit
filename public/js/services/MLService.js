@@ -7,7 +7,7 @@ angular.module('MLService', []).factory('ML', ['$http', '$q', 'DB', function($ht
 
 	    $http.get('/getMLAccess')
 		.success(function(dataToken) {
-			$http.get('https://api.mercadolibre.com/users/'+dataToken.profile_user.id+'/items/search?access_token='+dataToken.access_token+'&date_desc=asc&offset=0')
+			$http.get('https://api.mercadolibre.com/users/'+dataToken.profile_user.id+'/items/search?access_token='+dataToken.access_token+'&sort=date_desc&offset=0')
 			.success(function(data) {
 				var items1 = data.results;
 				var items2 = data.results;
@@ -26,7 +26,7 @@ angular.module('MLService', []).factory('ML', ['$http', '$q', 'DB', function($ht
 
 				for (var i = 50; i < pages*cant; i+=50) {
 
-					$http.get('https://api.mercadolibre.com/users/'+dataToken.profile_user.id+'/items/search?access_token='+dataToken.access_token+'&date_desc=asc&offset='+i)
+					$http.get('https://api.mercadolibre.com/users/'+dataToken.profile_user.id+'/items/search?access_token='+dataToken.access_token+'&sort=date_desc&offset='+i)
 					.success(function(data) {
 						var items1 = data.results;
 						var items2 = data.results;
@@ -57,60 +57,74 @@ angular.module('MLService', []).factory('ML', ['$http', '$q', 'DB', function($ht
         return promise;
 	};
 
-	ml.todasLasVentas = function(){		
-	    var defered = $q.defer();
-	    var promise = defered.promise;
+	ml.todasLasVentas = function(){
+		var ultimoID 		= -1;
+	    var deferedPPAL 	= $q.defer();
+	    var promisePPAL 	= deferedPPAL.promise;
 
-	    $http.get('/getMLAccess')
-		.success(function(dataToken) {
-			$http.get('https://api.mercadolibre.com/orders/search?seller='+dataToken.profile_user.id+'&access_token='+dataToken.access_token+'&date_desc=asc&offset=0')
-			.success(function(data) {
-				var items1 = data.results;
-				var items2 = data.results;
-				var items3 = data.results;
-				var items4 = data.results;
-				var items5 = data.results;
-		    	DB.saveVentas(items1.slice(0, 10));
-		    	DB.saveVentas(items2.slice(10, 20));
-		    	DB.saveVentas(items3.slice(20, 30));
-		    	DB.saveVentas(items4.slice(30, 40));
-		    	DB.saveVentas(items5.slice(40, 50));
+		DB.getLast().then(function(last) {
+			ultimoID = last.id;
 
-				var cant 			= data.paging.limit;
-				var pages 			= Math.ceil(data.paging.total / data.paging.limit);
-				//var pages 			= 3;
+		    $http.get('/getMLAccess')
+			.success(function(dataToken) {
+				$http.get('https://api.mercadolibre.com/orders/search?seller='+dataToken.profile_user.id+'&access_token='+dataToken.access_token+'&sort=date_desc&offset=0')
+				.success(function(data) {
 
-				for (var i = 50; i < pages*cant; i+=50) {
+					var cant 			= data.paging.limit;
+					var pages 			= Math.ceil(data.paging.total / data.paging.limit);
+					//var pages 			= 3;
 
-					$http.get('https://api.mercadolibre.com/orders/search?seller='+dataToken.profile_user.id+'&access_token='+dataToken.access_token+'&date_desc=asc&offset='+i)
-					.success(function(data) {
-						var items1 = data.results;
-						var items2 = data.results;
-						var items3 = data.results;
-						var items4 = data.results;
-						var items5 = data.results;
-				    	DB.saveVentas(items1.slice(0, 10));
-				    	DB.saveVentas(items2.slice(10, 20));
-				    	DB.saveVentas(items3.slice(20, 30));
-				    	DB.saveVentas(items4.slice(30, 40));
-				    	DB.saveVentas(items5.slice(40, 50));
-					})
-			        .error(function(err) {
-			            defered.reject(err)
-			        });
-				};
-				defered.resolve('Se han guardado las actualizaciones en la Base de Datos.');				
+					    var getPromises = function() {
+					    	var promise;
+		    				var promises = [];
+						    for (var i = 0; i < pages*cant; i+=cant) {
+								promise = $http.get('https://api.mercadolibre.com/orders/search?seller='+dataToken.profile_user.id+'&access_token='+dataToken.access_token+'&sort=date_desc&offset='+i);
+					            promises.push(promise);
+						 	}
+
+						    $q.all(promises).then(function(resp) {
+						        console.log(resp);
+						        guardarVentas(resp, cant);						        
+						    }, function(indexError) {
+						    	deferedPPAL.reject('falló servicio ML');
+						    });
+						};
+
+					    var guardarVentas = function(array) {
+					    	var promise1;
+					    	var promise2;
+		    				var promises = [];
+							angular.forEach(array, function(value) {
+								var items1raMitad = value.data.results;
+								var items2daMitad = value.data.results;
+								promise1 = DB.saveVentas(items1raMitad.slice(0, (cant/2)));
+								promises.push(promise1);
+								promise2 = DB.saveVentas(items2daMitad.slice((cant/2), cant));
+								promises.push(promise2);
+							});
+
+
+						    $q.all(promises).then(function(resp) {
+						    	deferedPPAL.resolve('Las ventas se han actualizado');		        
+						    }, function(indexError) {
+						    	deferedPPAL.resolve('Las ventas se han actualizado');
+						    });
+						};
+
+						getPromises();
+				})
+		        .error(function(err) {
+		            deferedPPAL.reject(err)
+		        });
 			})
 	        .error(function(err) {
-	            defered.reject(err)
+	            deferedPPAL.reject(err)
 	        });
-		})
-        .error(function(err) {
-            defered.reject(err)
-        });
+		
+		});
 
 
-        return promise;
+        return promisePPAL;
 	};
 
 	ml.login = function(){		

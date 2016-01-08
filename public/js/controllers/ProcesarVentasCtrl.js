@@ -17,12 +17,21 @@ angular.module('ProcesarVentasCtrl', []).controller('ProcesarVentasController', 
 		$scope.isActive3 = true;
 
 	    DB.getLast().then(function(data) {
-	    	$scope.ultimaFecha = data.date_last_updated;
+	    	$scope.ultimaFecha = data.date_created;
 	    	$scope.ultimoID = data.id;
 			$scope.isActive3 = false;
 	    });
 
 	};
 
+	$scope.cantidadDeVentas = function(){
+		$scope.isActive4 = true;
+
+	    DB.getCantVentas().then(function(data) {
+	    	$scope.cant = data.cant;
+			$scope.isActive4 = false;
+	    });
+
+	};
 
 });

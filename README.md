@@ -30,4 +30,8 @@ If you have any questions or requests, email us at [chris@scotch.io](mailto:chri
 
 - git clone https: ...
 
-- Create the files are excepted in : .gitignore
+- Create the files are excepted in : .gitignore (config.js)
+
+- mongo
+- use adfit
+- db.getCollection('ventas').createIndex( { "id": 1 }, { unique: true } )

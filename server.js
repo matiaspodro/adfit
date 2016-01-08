@@ -117,8 +117,15 @@ app.get('/getAllProductos', function(req, res) {
 
 
 app.get('/getLast', function(req, res) {
-	Ventas.find({}, null, {sort: {id: -1}, limit:1}, function(err, ventas) {
-		res.send(ventas[0]);  
+	Ventas.find({}, null, {limit:1}, function(err, ventas) {
+		if (ventas.length > 0) res.send(ventas[0]);  
+		else res.send({});  
+	});
+});
+
+app.get('/getCantVentas', function(req, res) {
+	Ventas.count({}, function(err, c) {
+		res.send({cant:c});	
 	});
 });
 
