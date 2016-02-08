@@ -43,6 +43,11 @@ angular.module('appRoutes', []).config(['$routeProvider', '$locationProvider', f
 			controller: 'ProcesarProductosController'
 		})
 
+		.when('/procesarCategorias', {
+			templateUrl: 'views/procesarCategorias.html',
+			controller: 'ProcesarCategoriasController'
+		})
+
 		.when('/eventos', {
 			templateUrl: 'views/eventos.html',
 			controller: 'EventosController'

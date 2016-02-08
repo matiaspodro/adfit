@@ -1,1 +1,18 @@
-angular.module('sampleApp', ['ngRoute', 'appRoutes', 'LoginCtrl', 'MainCtrl', 'VentasCtrl', 'DetalleVentaCtrl', 'DetalleProductoCtrl', 'CategoriasCtrl', 'ProductosCtrl', 'ProcesarVentasCtrl', 'ProcesarProductosCtrl', 'EventosCtrl', 'MLService', 'DBService', 'ventaShareData', 'productoShareData', 'eventoShareData']);
+angular.module('sampleApp', ['ngRoute', 'appRoutes', 
+'LoginCtrl', 
+'MainCtrl', 
+'VentasCtrl', 
+'DetalleVentaCtrl', 
+'DetalleProductoCtrl', 
+'CategoriasCtrl', 
+'ProductosCtrl', 
+'ProcesarVentasCtrl', 
+'ProcesarProductosCtrl', 
+'ProcesarCategoriasCtrl', 
+'EventosCtrl', 
+'MLService', 
+'DBService', 
+'ventaShareData', 
+'productoShareData', 
+'eventoShareData']);
+

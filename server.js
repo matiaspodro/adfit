@@ -39,22 +39,29 @@ res.setHeader('Access-Control-Allow-Origin', '*');
 //Mongoose =================
 
 var ventaSchema = new mongoose.Schema({
-  id: Number
-, comments: String
-, status: String
-, date_created: Date
-, date_closed: Date
-, date_last_updated: Date
-, currency: String
-, order_items: mongoose.Schema.Types.Mixed
+	  id: Number
+	, comments: String
+	, status: String
+	, date_created: Date
+	, date_closed: Date
+	, date_last_updated: Date
+	, currency: String
+	, order_items: mongoose.Schema.Types.Mixed
 });
 
 var productoSchema = new mongoose.Schema({
-  id: String
+	id: String
+});
+
+
+var categoriaSchema = new mongoose.Schema({
+	   id: String
+	,name: String
 });
 
 var Ventas = mongoose.model('Ventas', ventaSchema);
 var Productos = mongoose.model('Productos', productoSchema);
+var Categorias = mongoose.model('Categorias', categoriaSchema);
 
 
 
@@ -91,6 +98,21 @@ app.post('/saveProductos', function(req, res) {
 	}
 });
 
+app.post('/saveCategorias', function(req, res) {
+	Categorias.collection.insert(req.body, onInsert);
+
+	console.log(req.body);
+
+	function onInsert(err, docs) {
+	    if (err) {
+	    res.status(403)        // HTTP status 404: NotFound
+   		.send(err);
+	    } else {
+	        res.send(docs.length + ' categoria/s ha/n sido guardada/s.');
+	    }
+	}
+});
+
 app.get('/getAllVentas', function(req, res) {
   Ventas.find({}, function(err, ventas) {
     var ventaMap = {};
@@ -112,6 +134,18 @@ app.get('/getAllProductos', function(req, res) {
     });
 
     res.send(prodMap);  
+  });
+});
+
+app.get('/getAllCategorias', function(req, res) {
+  Categorias.find({}, function(err, categorias) {
+    var catMap = {};
+
+    categorias.forEach(function(cat) {
+      catMap[cat._id] = cat;
+    });
+
+    res.send(catMap);  
   });
 });
 

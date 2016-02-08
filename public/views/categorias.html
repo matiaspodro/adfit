@@ -1,5 +1,42 @@
-<div class="jumbotron text-center">
-	<h1>Nerds and Proud</h1>
+<div class="container">
+<div class="row"><h1>Categorías</h1></div>
+</div>
 
-	<p>{{ tagline }}</p>
+<div class="row">
+  <div class="span3">
+    <div class="well">
+        <div>
+            <ul class="nav nav-list">
+
+                <li><label ng-repeat="cat in categoriasPadres" class="tree-toggle nav-header">{{cat.name}}</label>
+
+                </li>
+
+
+
+
+
+
+                <li><label class="tree-toggle nav-header">Bootstrap</label>
+                    <ul class="nav nav-list tree">
+                        <li><a href="#">JavaScript</a></li>
+                        <li><a href="#">CSS</a></li>
+                        <li><label class="tree-toggle nav-header">Buttons</label>
+                            <ul class="nav nav-list tree">
+                                <li><a href="#">Colors</a></li>
+                                <li><a href="#">Sizes</a></li>
+                                <li><label class="tree-toggle nav-header">Forms</label>
+                                    <ul class="nav nav-list tree">
+                                        <li><a href="#">Horizontal</a></li>
+                                        <li><a href="#">Vertical</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    </div>
 </div>
