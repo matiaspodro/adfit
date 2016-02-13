@@ -1,14 +1,7 @@
 angular.module('CategoriasCtrl', []).controller('CategoriasController', function($scope, DB) {
 
-  	var array = function(object){
-	  	return $.map(object, function(value, index) {
-		    return [value];
-		});
-  	}
-
 	DB.soloLasCategoriasConProductos().then(function(catsConProds){
 		$scope.catsConProds 		= array(catsConProds);
-
 
 		//////////// pasar categorias a casacada
 		$scope.arbol = [];
@@ -17,59 +10,105 @@ angular.module('CategoriasCtrl', []).controller('CategoriasController', function
 		});
 		////////////
 
-		////////// meter categorias dentro de su padre correspondiente
+
 		$scope.arbol2 = angular.copy($scope.arbol);
+
 		$scope.aux = [];
-		angular.forEach($scope.arbol, function(hoja) {
-
-			var result = $scope.arbol2.filter(function( obj ) {
-				if (obj.yo.id == hoja.yo.id) return true;
-				else return false;
+		angular.forEach($scope.arbol, function(hoja) {			
+			var tree = new TreeModel();
+			var masterTree = tree.parse(hoja);
+			angular.forEach($scope.arbol2, function(hoja2) {
+				var additionalData = tree.parse(hoja2);
+				if (hoja.id == hoja2.id) mergeNodes(masterTree, additionalData);
 			});
-
-			hoja.hijos = [];
-			angular.forEach(result, function(r) {
-				hoja.hijos.push(r.hijos);
-			});
+			$scope.aux.push(masterTree.model);
 		});
-		//////////
-		
+
 		////////// ordenar
-		$scope.arbol.sort(compare);
+		$scope.aux.sort(compare);
 		//////////
-
-
-		////////// quitar repetidos
-		$scope.arbol2 = angular.copy($scope.arbol);
-		$scope.arbol = [];
+		$scope.aux2 = angular.copy($scope.aux);
+		$scope.aux = [];
 		var cod = '';
-		angular.forEach($scope.arbol2, function(hoja) {
-			if (cod != hoja.yo.id) $scope.arbol.push(hoja);
-			cod = hoja.yo.id;
+		angular.forEach($scope.aux2, function(hoja) {
+			if (cod != hoja.id) $scope.aux.push(hoja);
+			cod = hoja.id;
 		});
 		//////////
 
 	});
 
 
+
+
+	$('.tree-toggle').click(function () {
+		$(this).parent().children('ul.tree').toggle(200);
+	});
+	$(function(){
+		$('.tree-toggle').parent().children('ul.tree').toggle(200);
+	})
+
+  	var array = function(object){
+	  	return $.map(object, function(value, index) {
+		    return [value];
+		});
+  	}
+
 	var pushEnCascada = function(array){
 		var niveles = array.length;
 		var aux = [];
 		for (var i = niveles - 1; i >= 0; i--) {
-			aux = {'yo':array[i], 'hijos':aux}
+			aux = {'id':array[i].id, 'name':array[i].name, 'children':[aux]}
 		};
 		return aux
 	}
 
 
+
 	var compare = function(a,b) {
-	  if (a.yo.name < b.yo.name)
+	  if (a.name < b.name)
 	    return -1;
-	  else if (a.yo.name > b.yo.name)
+	  else if (a.name > b.name)
 	    return 1;
 	  else 
 	    return 0;
 	}
 
+
+
+
+	// Check if n1 and n2 have the same id
+	function idEq(n1) {
+	    return function (n2) {
+	        return n1.model.id === n2.model.id;
+	    };
+	}
+
+	// Check if n1 contains the given n2 child
+	function hasChild(n1) {
+	    return function (n2Child) {
+	        return n1.children.some(idEq(n2Child));
+	    };
+	}
+
+	function mergeNodes(n1, n2) {
+	    var n1HasN2Child, i, n2Child;
+	    
+	    // Check which n2 children are present in n1
+	    n1HasN2Child = n2.children.map(hasChild(n1));
+	    
+	    // Iterate over n2 children
+	    for (i = 0; i < n1HasN2Child.length; i++) {
+	        n2Child = n2.children[i];
+	        if (n1HasN2Child[i]) {
+	            // n1 already has this n2 child, so lets merge them
+	            n1Child = n1.first({strategy: 'breadth'}, idEq(n2Child));
+	            mergeNodes(n1Child, n2Child);
+	        } else {
+	            // n1 does not have this n2 child, so add it
+	            n1.addChild(n2Child);
+	        }
+	    }
+	}
 
 });

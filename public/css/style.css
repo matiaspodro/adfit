@@ -11,6 +11,14 @@ body {
     left: 40px !important;
 }
 
+.categories .nav-list {
+	padding-left: 80px;
+}
+
+
+
+
+
 
 .glyphicon-refresh-animate {
     -animation: spin .7s infinite linear;

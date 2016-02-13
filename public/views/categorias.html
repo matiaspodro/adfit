@@ -3,86 +3,73 @@
 </div>
 
 <div class="row">
-  <div class="span3">
-    <div class="well">
-        <div>
-            <ul  class="nav nav-list">
-                
-                <li ng-repeat="cat in catsConProds" ><label class="tree-toggle nav-header">{{cat.path_from_root[0].name}}</label>
-                	{{cat.path_from_root.length}}
-                    <ul ng-if="cat.path_from_root.length > 1" class="nav nav-list tree">
-                        <li><label class="tree-toggle nav-header">{{cat.path_from_root[1].name}}</label>
-                            <ul ng-if="cat.path_from_root.length > 2" class="nav nav-list tree">
-                                <li><label class="tree-toggle nav-header">{{cat.path_from_root[2].name}}</label>
-                                    <ul ng-if="cat.path_from_root.length > 3" class="nav nav-list tree">
-                                        <li><label class="tree-toggle nav-header">{{cat.path_from_root[3].name}}</label>
-		                                    <ul ng-if="cat.path_from_root.length > 4" class="nav nav-list tree">
-		                                        <li><label class="tree-toggle nav-header">{{cat.path_from_root[4].name}}</label>
-				                                    <ul ng-if="cat.path_from_root.length > 5" class="nav nav-list tree">
-				                                        <li><label class="tree-toggle nav-header">{{cat.path_from_root[5].name}}</label>
-				                                        </li>
-				                                    </ul>
-		                                        </li>
-		                                    </ul>
+  <div class="span10">
+    <div class="well well-lg">
+        <div class="categories">
 
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
+<!-- 
+			<ul  class="nav nav-list" ng-init="tree={}">
+			</ul>
 
+			<category-directive /> -->
 
-				<li><label class="tree-toggle nav-header">{{catsConProds[0].path_from_root[0].name}}</label>
-                    <ul class="nav nav-list tree">
-                        <li><a href="#">{{catsConProds[0].name}}</a></li>
-                        <li><a href="#">{{catsConProds[0].name}}</a></li>
-                        <li><label class="tree-toggle nav-header">{{catsConProds[0].name}}</label>
-                            <ul class="nav nav-list tree">
-                                <li><a href="#">{{catsConProds[0].name}}</a></li>
-                                <li><a href="#">{{catsConProds[0].name}}</a></li>
-                                <li><label class="tree-toggle nav-header">{{catsConProds[0].name}}</label>
-                                    <ul class="nav nav-list tree">
-                                        <li><a href="#">{{catsConProds[0].name}}</a></li>
-                                        <li><a href="#">{{catsConProds[0].name}}</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
+            <ul  class="nav nav-list" ng-init="tree={}">
+	            <li ng-repeat="a in aux">
+		            <label class="nav-header black" ng-init="tree[a.id]={value:false}" ng-click="tree[a.id].value=!tree[a.id].value">
+		            	<span ng-show="!tree[a.id].value" class="glyphicon glyphicon-plus-sign"></span>
+		            	<span ng-show="tree[a.id].value" class="glyphicon glyphicon-minus-sign"></span>
+		            	{{a.name}}
+		            	<span class="badge">{{a.children.length}}</span>
+			        </label>				   
+	            	<ul class="nav nav-list" ng-show="tree[a.id].value">
+	            		<li ng-repeat="b in a.children">
+	            		<label class="nav-header" ng-init="tree[a.id][b.id]={value:false}" ng-click="tree[a.id][b.id].value=!tree[a.id][b.id].value">
+			            	<span ng-show="!tree[a.id][b.id].value" class="glyphicon glyphicon-plus-sign"></span>
+			            	<span ng-show="tree[a.id][b.id].value" class="glyphicon glyphicon-minus-sign"></span>
+		            		{{b.name}}
+		            		<span class="badge">{{b.children.length}}</span>
+	            		</label>
+		            	<ul class="nav nav-list" ng-show="tree[a.id][b.id].value">
+		            		<li ng-repeat="c in b.children">
+		            		<label class="nav-header" ng-init="tree[a.id][b.id][c.id]={value:false}" ng-click="tree[a.id][b.id][c.id].value=!tree[a.id][b.id][c.id].value">
+				            	<span ng-show="!tree[a.id][b.id][c.id].value" class="glyphicon glyphicon-plus-sign"></span>
+				            	<span ng-show="tree[a.id][b.id][c.id].value" class="glyphicon glyphicon-minus-sign"></span>
+				            	{{c.name}} <span class="badge">{{c.children.length}}</span>
+			            	</label>
 
-                <li><label class="tree-toggle nav-header">Bootstrap</label>
-                    <ul class="nav nav-list tree">
-                        <li><a href="#">JavaScript</a></li>
-                        <li><a href="#">CSS</a></li>
-                        <li><label class="tree-toggle nav-header">Buttons</label>
-                            <ul class="nav nav-list tree">
-                                <li><a href="#">Colors</a></li>
-                                <li><a href="#">Sizes</a></li>
-                                <li><label class="tree-toggle nav-header">Forms</label>
-                                    <ul class="nav nav-list tree">
-                                        <li><a href="#">Horizontal</a></li>
-                                        <li><a href="#">Vertical</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
+				            	<ul class="nav nav-list" ng-show="tree[a.id][b.id][c.id].value">
+				            		<li ng-repeat="d in c.children">
+				            		<label class="nav-header" ng-init="tree[a.id][b.id][c.id][d.id]={value:false}" ng-click="tree[a.id][b.id][c.id][d.id].value=!tree[a.id][b.id][c.id][d.id].value">
+						            	<span ng-show="!tree[a.id][b.id][c.id][d.id].value" class="glyphicon glyphicon-plus-sign"></span>
+						            	<span ng-show="tree[a.id][b.id][c.id][d.id].value" class="glyphicon glyphicon-minus-sign"></span>
+						            	{{d.name}}
+						            	<span class="badge">{{d.children.length}}</span>
+					            	</label>
+							            		
+						            	<ul class="nav nav-list" ng-show="tree[a.id][b.id][c.id][d.id].value">
+						            		<li ng-repeat="e in d.children">
+						            		<label class="nav-header" ng-init="tree[a.id][b.id][c.id][d.id][e.id]={value:false}" ng-click="tree[a.id][b.id][c.id][d.id][e.id].value=!tree[a.id][b.id][c.id][d.id][e.id].value">
+								            	<span ng-show="!tree[a.id][b.id][c.id][d.id][e.id].value" class="glyphicon glyphicon-plus-sign"></span>
+								            	<span ng-show="tree[a.id][b.id][c.id][d.id][e.id].value" class="glyphicon glyphicon-minus-sign"></span>
+								            	{{e.name}}
+								            	<span class="badge">{{e.children.length}}</span>
+								            </label>
+								            <ul class="nav nav-list" ng-show="tree[a.id][b.id][c.id][d.id][e.id].value">
+								            		<li ng-repeat="f in e.children"><label class="nav-header" ng-init="tree[a.id][b.id][c.id][d.id][e.id][f.id]={value:false}" ng-click="tree[a.id][b.id][c.id][d.id][e.id][f.id].value=!tree[a.id][b.id][c.id][d.id][e.id][f.id].value">{{f.name}} <span class="badge">{{f.children.length}}</span></label>
+								            		</li>
+								            	</ul>
+						            		</li>
+						            	</ul>
+				            		</li>
+				            	</ul>
+
+		            		</li>
+		            	</ul>
+
+	            		</li>
+	            	</ul>
+	            </li>
             </ul>
-
-
-
-
-            <li ng-repeat="n in arbol">{{n.yo.name}}
-            	<ul>
-            		<li ng-repeat="h in n.hijos">{{h.yo.name}}</li>
-            	</ul>
-            </li>
-
-
 
 
         </div>
