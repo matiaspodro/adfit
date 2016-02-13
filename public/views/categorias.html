@@ -6,16 +6,52 @@
   <div class="span3">
     <div class="well">
         <div>
-            <ul class="nav nav-list">
+            <ul  class="nav nav-list">
+                
+                <li ng-repeat="cat in catsConProds" ><label class="tree-toggle nav-header">{{cat.path_from_root[0].name}}</label>
+                	{{cat.path_from_root.length}}
+                    <ul ng-if="cat.path_from_root.length > 1" class="nav nav-list tree">
+                        <li><label class="tree-toggle nav-header">{{cat.path_from_root[1].name}}</label>
+                            <ul ng-if="cat.path_from_root.length > 2" class="nav nav-list tree">
+                                <li><label class="tree-toggle nav-header">{{cat.path_from_root[2].name}}</label>
+                                    <ul ng-if="cat.path_from_root.length > 3" class="nav nav-list tree">
+                                        <li><label class="tree-toggle nav-header">{{cat.path_from_root[3].name}}</label>
+		                                    <ul ng-if="cat.path_from_root.length > 4" class="nav nav-list tree">
+		                                        <li><label class="tree-toggle nav-header">{{cat.path_from_root[4].name}}</label>
+				                                    <ul ng-if="cat.path_from_root.length > 5" class="nav nav-list tree">
+				                                        <li><label class="tree-toggle nav-header">{{cat.path_from_root[5].name}}</label>
+				                                        </li>
+				                                    </ul>
+		                                        </li>
+		                                    </ul>
 
-                <li><label ng-repeat="cat in categoriasPadres" class="tree-toggle nav-header">{{cat.name}}</label>
-
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
                 </li>
 
 
-
-
-
+				<li><label class="tree-toggle nav-header">{{catsConProds[0].path_from_root[0].name}}</label>
+                    <ul class="nav nav-list tree">
+                        <li><a href="#">{{catsConProds[0].name}}</a></li>
+                        <li><a href="#">{{catsConProds[0].name}}</a></li>
+                        <li><label class="tree-toggle nav-header">{{catsConProds[0].name}}</label>
+                            <ul class="nav nav-list tree">
+                                <li><a href="#">{{catsConProds[0].name}}</a></li>
+                                <li><a href="#">{{catsConProds[0].name}}</a></li>
+                                <li><label class="tree-toggle nav-header">{{catsConProds[0].name}}</label>
+                                    <ul class="nav nav-list tree">
+                                        <li><a href="#">{{catsConProds[0].name}}</a></li>
+                                        <li><a href="#">{{catsConProds[0].name}}</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
 
                 <li><label class="tree-toggle nav-header">Bootstrap</label>
                     <ul class="nav nav-list tree">
@@ -36,6 +72,19 @@
                     </ul>
                 </li>
             </ul>
+
+
+
+
+            <li ng-repeat="n in arbol">{{n.yo.name}}
+            	<ul>
+            		<li ng-repeat="h in n.hijos">{{h.yo.name}}</li>
+            	</ul>
+            </li>
+
+
+
+
         </div>
     </div>
     </div>

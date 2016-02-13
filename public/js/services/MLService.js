@@ -12,21 +12,35 @@ angular.module('MLService', []).factory('ML', ['$http', '$q', 'DB', function($ht
 	    var promise = defered.promise;
 
 
-		DB.getProductos().then(function(data) {
-			var productos = array(data);
+		DB.getProductos().then(function(prods) {
+			var productos = array(prods);
 			var countProds = productos.length;
 
 			var cats = [];
 			angular.forEach(productos, function(prod) {
-				ML.getItem(prod.id).then(function(data) {
-					if (cats.indexOf(data.category_id) === -1){
-				        cats.push(data.category_id);
-				    }
-				    countProds--;
-					if (countProds == 0){
-						DB.saveCategorias(cats);
+				ml.getItem(prod.id).then(function(item) {
+
+					$http.get('https://api.mercadolibre.com/categories/'+item.category_id)
+					.success(function(cat) {
+
+						var result = cats.filter(function( obj ) {
+						  return obj.id == cat.id;
+						});
+
+						if(result.length == 0){
+							cats.push(cat);
+							var formatArray = [cat];
+							DB.saveCategorias(formatArray);
+						}
+
 						defered.resolve('Se han guardado las actualizaciones en la Base de Datos.');
-					}
+
+					})
+					.error(function(err) {
+					    defered.reject(err)
+					});
+
+
 				}, function(err) {
 			       defered.reject(err);
 				});
@@ -37,16 +51,7 @@ angular.module('MLService', []).factory('ML', ['$http', '$q', 'DB', function($ht
 
 
 
-		// $http.get('https://api.mercadolibre.com/categories/'+catId)
-		// .success(function(data) {
-		// 	var items1 = data.path_from_root;
-		// 	DB.saveCategorias(items1);
 
-		// 	defered.resolve('Se han guardado las actualizaciones en la Base de Datos.');				
-		// })
-	 //   .error(function(err) {
-	 //       defered.reject(err)
-	 //   });
 
 
         return promise;

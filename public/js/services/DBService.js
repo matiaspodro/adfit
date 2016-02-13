@@ -1,7 +1,7 @@
 angular.module('DBService', []).factory('DB', ['$http', '$q', function($http, $q) {
 	var db = {};
 
-	db.soloLasCategoriasPadresConProductos = function(){	
+	db.soloLasCategoriasConProductos = function(){	
 	    var defered = $q.defer();
 	    var promise = defered.promise;
 
