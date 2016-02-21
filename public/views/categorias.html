@@ -54,7 +54,7 @@
 								            	{{e.name}}
 								            	<span class="badge">{{e.children.length}}</span>
 								            </label>
-								            <ul class="nav nav-list" ng-show="tree[a.id][b.id][c.id][d.id][e.id].value">
+								            	<ul class="nav nav-list" ng-show="tree[a.id][b.id][c.id][d.id][e.id].value">
 								            		<li ng-repeat="f in e.children"><label class="nav-header" ng-init="tree[a.id][b.id][c.id][d.id][e.id][f.id]={value:false}" ng-click="tree[a.id][b.id][c.id][d.id][e.id][f.id].value=!tree[a.id][b.id][c.id][d.id][e.id][f.id].value">{{f.name}} <span class="badge">{{f.children.length}}</span></label>
 								            		</li>
 								            	</ul>

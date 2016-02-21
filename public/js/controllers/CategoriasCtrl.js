@@ -6,7 +6,7 @@ angular.module('CategoriasCtrl', []).controller('CategoriasController', function
 		//////////// pasar categorias a casacada
 		$scope.arbol = [];
 		angular.forEach($scope.catsConProds, function(cat) {
-			$scope.arbol.push(pushEnCascada(cat.path_from_root));
+			$scope.arbol.push(pushEnCascada(cat.path_from_root, cat.associated_prods));
 		});
 		////////////
 
@@ -54,12 +54,13 @@ angular.module('CategoriasCtrl', []).controller('CategoriasController', function
 		});
   	}
 
-	var pushEnCascada = function(array){
+	var pushEnCascada = function(array, associated_prods){
 		var niveles = array.length;
-		var aux = [];
+		var aux = associated_prods;
 		for (var i = niveles - 1; i >= 0; i--) {
 			aux = {'id':array[i].id, 'name':array[i].name, 'children':[aux]}
 		};
+
 		return aux
 	}
 
