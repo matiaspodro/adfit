@@ -25,7 +25,7 @@ angular.module('MLService', []).factory('ML', ['$http', '$q', 'DB', function($ht
 
 						var result = cats.filter(function( obj ) {
 						  if (obj.id == cat.id){
-						  	obj.associated_prods.push({'id':prod.id, 'name':prod.name});
+						  	obj.associated_prods.push({'name':prod.id, 'name':prod.id});
 						  	return true;
 						  }else{
 						  	return false;
@@ -33,7 +33,7 @@ angular.module('MLService', []).factory('ML', ['$http', '$q', 'DB', function($ht
 						});
 
 						if(result.length == 0){
-							cat.associated_prods = [{'id':prod.id, 'name':prod.name}];
+							cat.associated_prods = [{'id':prod.id, 'name':prod.id}];
 							cats.push(cat);
 							var formatArray = [cat];
 							DB.saveCategorias(formatArray);
