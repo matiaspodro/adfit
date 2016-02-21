@@ -24,10 +24,16 @@ angular.module('MLService', []).factory('ML', ['$http', '$q', 'DB', function($ht
 					.success(function(cat) {
 
 						var result = cats.filter(function( obj ) {
-						  return obj.id == cat.id;
+						  if (obj.id == cat.id){
+						  	obj.associatd_prods.push(prod.id);
+						  	return true;
+						  }else{
+						  	return false;
+						  }
 						});
 
 						if(result.length == 0){
+							cat.associatd_prods = [prod.id];
 							cats.push(cat);
 							var formatArray = [cat];
 							DB.saveCategorias(formatArray);
