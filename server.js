@@ -17,7 +17,7 @@ var MercadoLibreStrategy 	= require('passport-mercadolibre').Strategy;
 // config files
 var db = require('./config/db');
 
-var port = process.env.PORT || 8080; // set our port
+var port = process.env.PORT || config.port; // set our port
 mongoose.connect(db.url); // connect to our mongoDB database (commented out after you enter in your own credentials)
 
 // get all data/stuff of the body (POST) parameters
@@ -189,7 +189,7 @@ var profile_user = '';
 passport.use(new MercadoLibreStrategy({
     clientID: '8767318679796615',
     clientSecret: 'elBDPKVpiQztGCpWjrtymnuo5pwzcDW6',
-    callbackURL: 'https://'+config.URL+':8080/auth/mercadolibre/callback',
+    callbackURL: 'https://'+config.URL+':'+config.port+'/auth/mercadolibre/callback',
   },
   function (accessToken, refreshToken, profile, done) {
     // + store/retrieve user from database, together with access token and refresh token 
