@@ -58,7 +58,7 @@ angular.module('CategoriasCtrl', []).controller('CategoriasController', function
 		var niveles = array.length;
 		var aux = associated_prods;
 		for (var i = niveles - 1; i >= 0; i--) {
-			aux = {'id':array[i].id, 'name':array[i].name, 'children':aux}
+			aux = {'id':array[i].id, 'name':array[i].name, 'children':[aux]}
 		};
 
 		return aux
