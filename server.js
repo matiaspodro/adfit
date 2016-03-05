@@ -78,7 +78,6 @@ app.post('/saveVentas', function(req, res) {
 	}
 });
 
-
 app.post('/saveProductos', function(req, res) {
 	var reformattedArray = req.body.map(function(obj){ 
 	   	var rObj = {};
@@ -115,6 +114,18 @@ app.post('/saveCategorias', function(req, res) {
 
 app.get('/getAllVentas', function(req, res) {
   Ventas.find({}, function(err, ventas) {
+    var ventaMap = {};
+
+    ventas.forEach(function(venta) {
+      ventaMap[venta._id] = venta;
+    });
+
+    res.send(ventaMap);  
+  });
+});
+
+app.get('/getVentasByLimit', function(req, res) {
+  Ventas.find({},{}, { skip: req.query.begin, limit : req.query.cant }, function(err, ventas) {
     var ventaMap = {};
 
     ventas.forEach(function(venta) {

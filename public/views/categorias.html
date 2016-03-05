@@ -2,76 +2,12 @@
 <div class="row"><h1>Categorías</h1></div>
 </div>
 
+
 <div class="row">
   <div class="span10">
     <div class="well well-lg">
         <div class="categories">
-
-<!-- 
-			<ul  class="nav nav-list" ng-init="tree={}">
-			</ul>
-
-			<category-directive /> -->
-
-            <ul  class="nav nav-list" ng-init="tree={}">
-	            <li ng-repeat="a in aux">
-		            <label class="nav-header black" ng-init="tree[a.id]={value:false}" ng-click="tree[a.id].value=!tree[a.id].value">
-		            	<span ng-show="!tree[a.id].value" class="glyphicon glyphicon-plus-sign"></span>
-		            	<span ng-show="tree[a.id].value" class="glyphicon glyphicon-minus-sign"></span>
-		            	{{a.name}}
-		            	<span class="badge">{{a.children.length}}</span>
-			        </label>				   
-	            	<ul class="nav nav-list" ng-show="tree[a.id].value">
-	            		<li ng-repeat="b in a.children">
-	            		<label class="nav-header" ng-init="tree[a.id][b.id]={value:false}" ng-click="tree[a.id][b.id].value=!tree[a.id][b.id].value">
-			            	<span ng-show="!tree[a.id][b.id].value" class="glyphicon glyphicon-plus-sign"></span>
-			            	<span ng-show="tree[a.id][b.id].value" class="glyphicon glyphicon-minus-sign"></span>
-		            		{{b.name}}
-		            		<span class="badge">{{b.children.length}}</span>
-	            		</label>
-		            	<ul class="nav nav-list" ng-show="tree[a.id][b.id].value">
-		            		<li ng-repeat="c in b.children">
-		            		<label class="nav-header" ng-init="tree[a.id][b.id][c.id]={value:false}" ng-click="tree[a.id][b.id][c.id].value=!tree[a.id][b.id][c.id].value">
-				            	<span ng-show="!tree[a.id][b.id][c.id].value" class="glyphicon glyphicon-plus-sign"></span>
-				            	<span ng-show="tree[a.id][b.id][c.id].value" class="glyphicon glyphicon-minus-sign"></span>
-				            	{{c.name}} <span class="badge">{{c.children.length}}</span>
-			            	</label>
-
-				            	<ul class="nav nav-list" ng-show="tree[a.id][b.id][c.id].value">
-				            		<li ng-repeat="d in c.children">
-				            		<label class="nav-header" ng-init="tree[a.id][b.id][c.id][d.id]={value:false}" ng-click="tree[a.id][b.id][c.id][d.id].value=!tree[a.id][b.id][c.id][d.id].value">
-						            	<span ng-show="!tree[a.id][b.id][c.id][d.id].value" class="glyphicon glyphicon-plus-sign"></span>
-						            	<span ng-show="tree[a.id][b.id][c.id][d.id].value" class="glyphicon glyphicon-minus-sign"></span>
-						            	{{d.name}}
-						            	<span class="badge">{{d.children.length}}</span>
-					            	</label>
-							            		
-						            	<ul class="nav nav-list" ng-show="tree[a.id][b.id][c.id][d.id].value">
-						            		<li ng-repeat="e in d.children">
-						            		<label class="nav-header" ng-init="tree[a.id][b.id][c.id][d.id][e.id]={value:false}" ng-click="tree[a.id][b.id][c.id][d.id][e.id].value=!tree[a.id][b.id][c.id][d.id][e.id].value">
-								            	<span ng-show="!tree[a.id][b.id][c.id][d.id][e.id].value" class="glyphicon glyphicon-plus-sign"></span>
-								            	<span ng-show="tree[a.id][b.id][c.id][d.id][e.id].value" class="glyphicon glyphicon-minus-sign"></span>
-								            	{{e.name}}
-								            	<span class="badge">{{e.children.length}}</span>
-								            </label>
-								            	<ul class="nav nav-list" ng-show="tree[a.id][b.id][c.id][d.id][e.id].value">
-								            		<li ng-repeat="f in e.children"><label class="nav-header" ng-init="tree[a.id][b.id][c.id][d.id][e.id][f.id]={value:false}" ng-click="tree[a.id][b.id][c.id][d.id][e.id][f.id].value=!tree[a.id][b.id][c.id][d.id][e.id][f.id].value">{{f.name}} <span class="badge">{{f.children.length}}</span></label>
-								            		</li>
-								            	</ul>
-						            		</li>
-						            	</ul>
-				            		</li>
-				            	</ul>
-
-		            		</li>
-		            	</ul>
-
-	            		</li>
-	            	</ul>
-	            </li>
-            </ul>
-
-
+			<category padre="aux" padre-visible="true" ></category>
         </div>
     </div>
     </div>

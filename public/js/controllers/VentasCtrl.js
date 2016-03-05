@@ -1,19 +1,29 @@
 angular.module('VentasCtrl', ['ui.bootstrap']).controller('VentasController', function($scope, $http, ML, DB, ventaShareData) {
 
 	$scope.filteredVentas 	= [];
-	$scope.ventas 			= [];
 	$scope.maxSize 			= 5;
 	$scope.isActive			= true;
-  
-	$scope.numPages = function () {
-    	return Math.ceil($scope.ventas.length / $scope.numPerPage);
+	$scope.numPerPage 		= 10;
+	$scope.currentPage 		= 1;
+
+	$scope.cantVentas 		= 0;
+
+	var calcularCantVentas = function () {
+		DB.getCantVentas().then(function(data) {
+			$scope.cantVentas = data.cant;
+		});
   	};
   
-  	$scope.$watch('currentPage + numPerPage', function() {
+	$scope.numPages = function () {
+    	return Math.ceil($scope.cantVentas / $scope.numPerPage);
+  	};
+  
+  	$scope.$watch('currentPage', function() {
     	var begin = (($scope.currentPage - 1) * $scope.numPerPage)
     	, end = begin + $scope.numPerPage;
-    
-    	$scope.filteredVentas = $scope.ventas.slice(begin, end);
+    	
+    	traerPagina(begin, $scope.numPerPage);
+    	
   	});
       
   	var array = function(object){
@@ -22,16 +32,18 @@ angular.module('VentasCtrl', ['ui.bootstrap']).controller('VentasController', fu
 		});
   	}
 
-	DB.getVentas().then(function(data) {
-		$scope.ventas 		= array(data);
-		$scope.currentPage 	= 1;
-		$scope.numPerPage 	= 10;
-		$scope.isActive		= false;
-	});
+	var traerPagina = function(begin, cant){
+		DB.getVentasPaginada(begin, cant).then(function(data) {			
+			$scope.isActive			= false;
+			$scope.filteredVentas 	= array(data);
 
+		});
+	};
 
 	$scope.verDetalle = function(venta){
 		ventaShareData.ventaActual = venta;			
 	};
+
+	calcularCantVentas();
 
 });

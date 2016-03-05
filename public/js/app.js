@@ -12,7 +12,10 @@ angular.module('sampleApp', ['ngRoute', 'appRoutes',
 'EventosCtrl', 
 'MLService', 
 'DBService', 
+'ArbolService', 
 'ventaShareData', 
 'productoShareData', 
-'eventoShareData']);
+'eventoShareData',
+'categoryDirective'
+]);
 

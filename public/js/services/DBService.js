@@ -143,6 +143,20 @@ angular.module('DBService', []).factory('DB', ['$http', '$q', function($http, $q
         return promise;
 	};
 
+	db.getVentasPaginada = function(begin, cant){		
+	    var defered = $q.defer();
+	    var promise = defered.promise;
+		$http.get('/getVentasByLimit?begin='+begin+'&'+'cant='+cant)
+		.success(function(data) {
+            defered.resolve(data);
+		})
+        .error(function(err) {
+            defered.reject(err)
+        });
+
+        return promise;
+	};
+
 
 	db.getProductos = function(params){		
 	    var defered = $q.defer();
