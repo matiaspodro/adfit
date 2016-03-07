@@ -1,21 +1,19 @@
 
 <ul  class="nav nav-list" ng-show="padreVisible">
     <li ng-repeat="a in padre">
-        <label class="nav-header black" ng-click="visible=!visible">
+        <label class="nav-header black expansion" ng-click="visible=!visible">
         	<span ng-show="!visible" class="glyphicon glyphicon-plus-sign"></span>
-        	<span ng-show="visible" class="glyphicon glyphicon-minus-sign"></span>
+        	<span ng-show="visible" class="glyphicon glyphicon-minus-sign"></span>        	
+        </label>
+
+        <label class="nav-header black title" ng-click="callbackModal()" >
         	{{a.name}}
         	<span class="badge">{{a.children.length}}</span>
         </label>
 
        	<div ng-if="a.children.length > 0">
-			
-       	<category padre="a.children" padre-visible="visible" ></category>
-
-			
-
+       		<category padre="a.children" padre-visible="visible" callback-modal="callbackModal" ></category>
        	</div>
-
 
     </li>
 </ul>

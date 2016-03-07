@@ -4,12 +4,14 @@ angular.module('categoryDirective', []).directive('category', ['$compile', funct
     transclude: false,
     scope: {
       padre: '=padre',
-      padreVisible: '=padreVisible'
+      padreVisible: '=padreVisible',
+      callbackModal: '=callbackModal'
     },
     templateUrl: 'js/directives/views/categoria.html',
     link: function (scope) {
       scope.visible = true;
       scope.visible2 = true;
+
     },
             compile: function (el) {
                 var contents = el.contents().remove();

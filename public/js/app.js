@@ -5,6 +5,7 @@ angular.module('sampleApp', ['ngRoute', 'appRoutes',
 'DetalleVentaCtrl', 
 'DetalleProductoCtrl', 
 'CategoriasCtrl', 
+'CategoriaCtrl', 
 'ProductosCtrl', 
 'ProcesarVentasCtrl', 
 'ProcesarProductosCtrl', 
@@ -16,6 +17,7 @@ angular.module('sampleApp', ['ngRoute', 'appRoutes',
 'ventaShareData', 
 'productoShareData', 
 'eventoShareData',
-'categoryDirective'
+'categoryDirective',
+'modalDirective'
 ]);
 

@@ -15,8 +15,15 @@ body {
 	padding-left: 80px;
 }
 
+.nav-header.expansion{
+	float:left;
+	margin-right: -8px !important;
+}
 
 
+.nav-header.title:hover{
+	color:white;
+}
 
 
 
