@@ -25,6 +25,18 @@ body {
 	color:white;
 }
 
+.modal-content{
+	height:100%;
+	width:100%;
+}
+
+.modal.fade.in{
+	padding-left:0px !important;
+}
+
+.modal.fade{
+	padding-left:0px !important;
+}
 
 
 .glyphicon-refresh-animate {
