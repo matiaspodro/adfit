@@ -6,7 +6,10 @@ angular.module('modalDirective', []).directive('modal', [function() {
       replace:true,
       scope:true,
       link: function postLink(scope, element, attrs) {
-        scope.title = attrs.title;
+
+        scope.$watch(attrs.title, function(value){
+          scope.title = value;
+        });
 
         scope.$watch(attrs.visible, function(value){
           if(value == true)

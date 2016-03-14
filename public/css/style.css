@@ -38,6 +38,25 @@ body {
 	padding-left:0px !important;
 }
 
+.modal {
+    /* new custom width */
+    width: 560px !important;
+    /* must be half of the width, minus scrollbar on the left (30px) */
+    margin-left: -280px !important;
+}
+
+.modal-admin{
+    width: 800px !important;
+    margin-left: -400px !important;
+}
+
+.modal-body{
+	    max-height: 4000px !important;
+}
+
+.modal-categorias .tab-content{
+	height: 200px;
+}
 
 .glyphicon-refresh-animate {
     -animation: spin .7s infinite linear;

@@ -18,6 +18,8 @@ angular.module('sampleApp', ['ngRoute', 'appRoutes',
 'productoShareData', 
 'eventoShareData',
 'categoryDirective',
-'modalDirective'
+'modalDirective',
+'arbolDirective',
+'ArbolCtrl'
 ]);
 

@@ -14,6 +14,89 @@
     </div>
 </div>
 
-  <modal title="Login form" visible="showModal">
-  sarasa
+
+
+  <modal class="modal-categorias" title="titleModal" visible="showModal" >
+  	<div class="tabbable"> <!-- Only required for left/right tabs -->
+		<ul class="nav nav-tabs">
+		    <li class="active"><a data-target="#tab1" data-toggle="tab">Cross-Selling</a></li>
+		    <li><a data-target="#tab2" data-toggle="tab">Re-Selling</a></li>
+		    <li><a data-target="#tab3" data-toggle="tab">Cross-Product</a></li>
+		</ul>
+		<div class="tab-content">
+		    <div class="tab-pane active" id="tab1">
+		    
+
+
+		    				<div class="row">
+								<div class="span8">
+							  		<div class="well well-lg">
+										<span ng-class="{'glyphicon glyphicon-refresh glyphicon-refresh-animate': 	isActive}"></span>
+							        	<div class="categories"  ng-show="!isActive">
+											<category padre="aux" padre-visible="true" callback-modal="selectCategory"></category>
+							        	</div>
+							    	</div>
+								</div>
+							</div>
+
+
+		    </div>
+		    <div class="tab-pane" id="tab2">
+
+				<div class="dropdown">
+				  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" ng-click="selectResellingOption()">
+				    Seleccione el Tipo de Reselling...
+				    <span class="caret"></span>
+				  </button>
+				  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+				    <li><a href="#" ng-click="alert('entroo');">Día</a></li>
+				    <li><a href="#" ng-click="selectResellingOption()">Mes</a></li>
+				  </ul>
+				</div>
+
+				<div class="dropdown">
+				  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+				    Seleccione la frecuencia...
+				    <span class="caret"></span>
+				  </button>
+				  <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+				    <li><a href="#" ng-repeat="number in numbersDays">{{number}}</a></li>
+				  </ul>
+				</div>
+
+
+		    </div>
+		    <div class="tab-pane" id="tab3">
+		    
+
+
+		    				<div class="row">
+								<div class="span8">
+							  		<div class="well well-lg">
+										<span ng-class="{'glyphicon glyphicon-refresh glyphicon-refresh-animate': 	isActive}"></span>
+							        	<div class="categories"  ng-show="!isActive">
+											<category padre="aux" padre-visible="true" callback-modal="selectCategory"></category>
+							        	</div>
+							    	</div>
+								</div>
+							</div>
+
+
+		    </div>
+		</div>
+	</div>
+
+
+
+
+
   </modal>
+
+
+
+
+
+
+
+
+
