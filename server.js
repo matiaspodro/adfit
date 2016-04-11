@@ -38,6 +38,8 @@ res.setHeader('Access-Control-Allow-Origin', '*');
 
 //Mongoose =================
 
+
+
 var ventaSchema = new mongoose.Schema({
 	  id: Number
 	, comments: String
@@ -59,9 +61,17 @@ var categoriaSchema = new mongoose.Schema({
 	,name: String
 });
 
+var eventoSchema = new mongoose.Schema({
+     origen: mongoose.Schema.Types.Mixed
+  ,destino: mongoose.Schema.Types.Mixed
+  ,reselling: mongoose.Schema.Types.Mixed
+  ,tipo: Number
+});
+
 var Ventas = mongoose.model('Ventas', ventaSchema);
 var Productos = mongoose.model('Productos', productoSchema);
 var Categorias = mongoose.model('Categorias', categoriaSchema);
+var Eventos = mongoose.model('Eventos', eventoSchema);
 
 
 
@@ -100,8 +110,6 @@ app.post('/saveProductos', function(req, res) {
 app.post('/saveCategorias', function(req, res) {
 	Categorias.collection.insert(req.body, onInsert);
 
-	console.log(req.body);
-
 	function onInsert(err, docs) {
 	    if (err) {
 	    res.status(403)        // HTTP status 404: NotFound
@@ -110,6 +118,20 @@ app.post('/saveCategorias', function(req, res) {
 	        res.send(docs.length + ' categoria/s ha/n sido guardada/s.');
 	    }
 	}
+});
+
+
+app.post('/saveEventos', function(req, res) {
+  Eventos.collection.insert(req.body, onInsert);
+
+  function onInsert(err, docs) {
+      if (err) {
+      res.status(403)        // HTTP status 404: NotFound
+      .send(err);
+      } else {
+          res.send(docs.length + ' evento/s ha/n sido guardada/s.');
+      }
+  }
 });
 
 app.get('/getAllVentas', function(req, res) {
@@ -160,6 +182,18 @@ app.get('/getAllCategorias', function(req, res) {
   });
 });
 
+app.get('/getAllEventos', function(req, res) {
+  Eventos.find({}, function(err, eventos) {
+    var eveMap = {};
+
+    eventos.forEach(function(eve) {
+      eveMap[eve._id] = eve;
+    });
+
+    res.send(eveMap);  
+  });
+});
+
 
 app.get('/getLast', function(req, res) {
 	Ventas.find({}, null, {limit:1}, function(err, ventas) {
@@ -187,6 +221,7 @@ app.get('/test', function(req, res) {
 
 app.get('/getMLAccess', function(req, res) {
 		res.json({access_token:access_token, profile_user:profile_user});
+    console.log({access_token:access_token, profile_user:profile_user});
 });
 
 

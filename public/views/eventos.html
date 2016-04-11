@@ -3,12 +3,18 @@
 <div ng-show="!isActive">
   <table class="table table-striped">
     <thead><tr>
-      <th>Fecha</th>
       <th>Tipo</th>
+      <th>Origen</th>
+      <th>Destino</th>
+      <th>Tipo de Reselling</th>
+      <th>Cantidad de Reselling</th>
     </tr></thead>
     <tbody><tr ng-repeat="evento in filteredEventos">
-      <td>{{ evento.fecha }}</td>
       <td>{{ evento.tipo }}</td>
+      <td>...</td>
+      <td>...</td>
+      <td>{{ evento.reselling.tipo }}</td>
+      <td>{{ evento.reselling.name }}</td>
     </tr></tbody>
   </table>
     <div data-pagination="" data-num-pages="numPages()" 

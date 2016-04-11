@@ -28,41 +28,49 @@
 		    
 
 
-		    				<div class="row">
-								<div class="span8">
-							  		<div class="well well-lg">
-										<span ng-class="{'glyphicon glyphicon-refresh glyphicon-refresh-animate': 	isActive}"></span>
-							        	<div class="categories"  ng-show="!isActive">
-											<category padre="aux" padre-visible="true" callback-modal="selectCategory"></category>
-							        	</div>
-							    	</div>
-								</div>
-							</div>
+		    	<div class="row">
+					<div class="span8">
+				  		<div class="well well-lg">
+							<span ng-class="{'glyphicon glyphicon-refresh glyphicon-refresh-animate': 	isActive}"></span>
+				        	<div class="categories"  ng-show="!isActive">
+								<category padre="aux" padre-visible="true" callback-modal="selectCategoryCrossSelling"></category>
+				        	</div>
+				    	</div>
+					</div>
+				</div>
+
 
 
 		    </div>
 		    <div class="tab-pane" id="tab2">
 
-				<div class="dropdown">
-				  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" ng-click="selectResellingOption()">
-				    Seleccione el Tipo de Reselling...
-				    <span class="caret"></span>
+				<div class="btn-group" uib-dropdown is-open="status.isopen">
+				  <button id="single-button" type="button" class="btn btn-primary" uib-dropdown-toggle>
+				    {{button.name}} <span class="caret"></span>
 				  </button>
-				  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-				    <li><a href="#" ng-click="alert('entroo');">Día</a></li>
-				    <li><a href="#" ng-click="selectResellingOption()">Mes</a></li>
+				  <ul class="uib-dropdown-menu" role="menu" aria-labelledby="single-button">
+				    <li role="menuitem">
+				      <a href="#" ng-click="change(action)" ng-repeat="action in actions">{{action.name}}</a>
+				    </li>
 				  </ul>
 				</div>
 
-				<div class="dropdown">
-				  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-				    Seleccione la frecuencia...
-				    <span class="caret"></span>
-				  </button>
-				  <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
-				    <li><a href="#" ng-repeat="number in numbersDays">{{number}}</a></li>
-				  </ul>
+
+				<div ng-if="button.id > 0">
+					<div class="btn-group" uib-dropdown is-open="">
+					  <button id="single-button2" type="button" class="btn btn-primary" uib-dropdown-toggle>
+					    {{button2}} <span class="caret"></span>
+					  </button>
+					  <ul class="uib-dropdown-menu" role="menu" aria-labelledby="single-button2">
+					    <li role="menuitem">
+					      <a href="#" ng-click="change2(number)" ng-repeat="number in actions2">{{number}}</a>
+					    </li>
+					  </ul>
+					</div>
 				</div>
+
+				<button ng-click="confirmReselling()" type="button" class="btn btn-primary">Confirmar</button>
+
 
 
 		    </div>
@@ -75,7 +83,7 @@
 							  		<div class="well well-lg">
 										<span ng-class="{'glyphicon glyphicon-refresh glyphicon-refresh-animate': 	isActive}"></span>
 							        	<div class="categories"  ng-show="!isActive">
-											<category padre="aux" padre-visible="true" callback-modal="selectCategory"></category>
+											<category padre="aux" padre-visible="true" callback-modal="selectCategoryCrossProduct"></category>
 							        	</div>
 							    	</div>
 								</div>
