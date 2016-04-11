@@ -230,8 +230,6 @@ angular.module('MLService', []).factory('ML', ['$http', '$q', 'DB', function($ht
 	    var defered = $q.defer();
 	    var promise = defered.promise;
 
-	    $http.get('/getMLAccess')
-		.success(function(dataToken) {
 			$http.get('https://api.mercadolibre.com/items/'+itemId)
 			.success(function(data) {
             	defered.resolve(data);
@@ -239,10 +237,6 @@ angular.module('MLService', []).factory('ML', ['$http', '$q', 'DB', function($ht
 	        .error(function(err) {
 	            defered.reject(err)
 	        });
-		})
-        .error(function(err) {
-            defered.reject(err)
-        });
 
 
         return promise;
