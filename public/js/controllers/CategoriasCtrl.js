@@ -15,7 +15,7 @@ angular.module('CategoriasCtrl', ['ui.bootstrap']).controller('CategoriasControl
 	});
 
 
-	$scope.titleModal = 'a';
+	$scope.titleModal = 'Categoría seleccionada: ';
     $scope.showModal  = false;
     $scope.catOrigen = {};
     $scope.catDestino = {};
@@ -32,7 +32,7 @@ angular.module('CategoriasCtrl', ['ui.bootstrap']).controller('CategoriasControl
 		$scope.currentTab = 1;
 
 		$scope.toggleModal();
-		$scope.titleModal 	= cat.name;
+		$scope.titleModal 	= 'Categoría seleccionada: ' + cat.name;
     	$scope.catOrigen 	= cat;
 	};
 
