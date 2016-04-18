@@ -47,6 +47,7 @@ angular.module('CategoriasCtrl', ['ui.bootstrap']).controller('CategoriasControl
 	var generarEvento = function(type){
     	console.log($scope.catOrigen.name + ' a ' + $scope.catDestino.name + ' del tipo ' + type);
     	DB.saveEventos([{origen:$scope.catOrigen, destino:$scope.catDestino, tipo: type}]);
+    	resetModal();
 	}
 
 
@@ -76,11 +77,23 @@ angular.module('CategoriasCtrl', ['ui.bootstrap']).controller('CategoriasControl
   };
 
   $scope.confirmReselling = function(){
-    if ($scope.button.id > 0 && $scope.button2 > 0) DB.saveEventos([{origen:$scope.catOrigen, reselling:{tipo: $scope.button.id, cantidad: $scope.button2}, tipo: 2}]);
-  	else alert('ingrese reselling');
+    if ($scope.button.id > 0 && $scope.button2 > 0) {
+    	DB.saveEventos([{origen:$scope.catOrigen, reselling:{tipo: $scope.button.id, cantidad: $scope.button2}, tipo: 2}]);
+    	resetModal();
+    }else alert('ingrese reselling');
   }
 
 //////////////////////////
 
+
+
+  resetModal = function(){
+  	$scope.toggleModal();	  	
+	$scope.button = {id:0, name:"Seleccione tipo de Reselling"};
+	$scope.actions = [{id:1 , name:'Día'}, {id:2 , name:'Mes'}];
+
+	$scope.button2 = '';
+	$scope.actions2 = [];
+  }
 
 });
