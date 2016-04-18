@@ -38,12 +38,12 @@ angular.module('CategoriasCtrl', ['ui.bootstrap']).controller('CategoriasControl
 
 	$scope.selectCategoryCrossSelling = function(cat){
     	$scope.catDestino = cat;
-    	generarEvento(1);
+    	generarEvento({value:1, description: 'CrossSelling'});
 	};
 
 	$scope.selectCategoryCrossProduct = function(cat){
     	$scope.catDestino = cat;
-    	generarEvento(3);
+    	generarEvento({value:3, description: 'CrossProduct'});
 	};
 
     $scope.toggleModal = function(){
@@ -54,7 +54,6 @@ angular.module('CategoriasCtrl', ['ui.bootstrap']).controller('CategoriasControl
 	$scope.numbersMonths = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 
 	var generarEvento = function(type){
-    	console.log($scope.catOrigen.name + ' a ' + $scope.catDestino.name + ' del tipo ' + type);
     	DB.saveEventos([{origen:$scope.catOrigen, destino:$scope.catDestino, tipo: type}]);
     	resetModal();
 	}
@@ -81,7 +80,7 @@ angular.module('CategoriasCtrl', ['ui.bootstrap']).controller('CategoriasControl
 
   $scope.confirmReselling = function(){
     if ($scope.button.id > 0 && $scope.button2 > 0) {
-    	DB.saveEventos([{origen:$scope.catOrigen, reselling:{tipo: $scope.button.id, cantidad: $scope.button2}, tipo: 2}]);
+    	DB.saveEventos([{origen:$scope.catOrigen, reselling:{tipo: $scope.button.id, cantidad: $scope.button2}, tipo: {value:2, description:'ReSelling'} }]);
     	resetModal();
     }else alert('ingrese reselling');
   }

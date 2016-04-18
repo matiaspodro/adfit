@@ -65,7 +65,7 @@ var eventoSchema = new mongoose.Schema({
      origen: mongoose.Schema.Types.Mixed
   ,destino: mongoose.Schema.Types.Mixed
   ,reselling: mongoose.Schema.Types.Mixed
-  ,tipo: Number
+  ,tipo: mongoose.Schema.Types.Mixed
 });
 
 var Ventas = mongoose.model('Ventas', ventaSchema);
