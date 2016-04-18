@@ -22,6 +22,15 @@ angular.module('CategoriasCtrl', ['ui.bootstrap']).controller('CategoriasControl
 
 
 	$scope.openModal = function(cat){
+
+		$scope.button = {id:0, name:"Seleccione tipo de Reselling"};
+		$scope.actions = [{id:1 , name:'Día'}, {id:2 , name:'Mes'}];
+
+		$scope.button2 = '';
+		$scope.actions2 = [];
+
+		$scope.currentTab = 1;
+
 		$scope.toggleModal();
 		$scope.titleModal 	= cat.name;
     	$scope.catOrigen 	= cat;
@@ -55,12 +64,6 @@ angular.module('CategoriasCtrl', ['ui.bootstrap']).controller('CategoriasControl
 
 ////////Reselling ////////
 
-  $scope.button = {id:0, name:"Seleccione tipo de Reselling"};
-  $scope.actions = [{id:1 , name:'Día'}, {id:2 , name:'Mes'}];
-
-  $scope.button2 = '';
-  $scope.actions2 = [];
-
   $scope.change = function(action){
     $scope.button = action;
     if (action.id == 1){
@@ -88,12 +91,7 @@ angular.module('CategoriasCtrl', ['ui.bootstrap']).controller('CategoriasControl
 
 
   resetModal = function(){
-  	$scope.toggleModal();	  	
-	$scope.button = {id:0, name:"Seleccione tipo de Reselling"};
-	$scope.actions = [{id:1 , name:'Día'}, {id:2 , name:'Mes'}];
-
-	$scope.button2 = '';
-	$scope.actions2 = [];
+  	$scope.toggleModal();
   }
 
 });
