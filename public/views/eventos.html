@@ -10,11 +10,11 @@
       <th>Cantidad de Reselling</th>
     </tr></thead>
     <tbody><tr ng-repeat="evento in filteredEventos">
-      <td>{{ evento.tipo }}</td>
-      <td>...</td>
-      <td>...</td>
+      <td>{{ evento.tipo.description }}</td>
+      <td>{{ evento.origen.name }}</td>
+      <td>{{ evento.destino.name }}</td>
       <td>{{ evento.reselling.tipo.description }}</td>
-      <td>{{ evento.reselling.name }}</td>
+      <td>{{ evento.reselling.cantidad }}</td>
     </tr></tbody>
   </table>
     <div data-pagination="" data-num-pages="numPages()" 

@@ -1,4 +1,4 @@
-angular.module('CategoriasCtrl', ['ui.bootstrap']).controller('CategoriasController', function($scope, DB, Arbol) {
+angular.module('CategoriasCtrl', ['ui.bootstrap']).controller('CategoriasController', function($scope, $window, DB, Arbol) {
 
 	$scope.isActive		= true;
 
@@ -80,16 +80,21 @@ angular.module('CategoriasCtrl', ['ui.bootstrap']).controller('CategoriasControl
 
   $scope.confirmReselling = function(){
     if ($scope.button.id > 0 && $scope.button2 > 0) {
-    	DB.saveEventos([{origen:$scope.catOrigen, reselling:{tipo: $scope.button.id, cantidad: $scope.button2}, tipo: {value:2, description:'ReSelling'} }]);
+    	DB.saveEventos([{origen:$scope.catOrigen, reselling:{tipo: {value:$scope.button.id, description:($scope.button.id == 1) ? 'Día/s' : 'Mes/es' }, cantidad: $scope.button2}, tipo: {value:2, description:'ReSelling'} }]);
     	resetModal();
     }else alert('ingrese reselling');
+  }
+
+  $scope.relatedCategories = function(){
+  	resetModal();
+  	$window.location.href = '/eventos';
   }
 
 //////////////////////////
 
 
 
-  resetModal = function(){
+  var resetModal = function(){
   	$scope.toggleModal();
   }
 
