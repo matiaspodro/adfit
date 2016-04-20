@@ -25,9 +25,11 @@
 		    <li><a data-target="#tab2" data-toggle="tab">Re-Selling</a></li>
 		    <li><a data-target="#tab3" data-toggle="tab">Cross-Product</a></li>
 		</ul>
-		<div class="tab-content" ng-model="currentTab">
+		<div class="tab-content tab-categorias" ng-model="currentTab">
 		    <div class="tab-pane active" id="tab1" value="1">
 		    
+
+				<button ng-click="confirmCrossSelling()" type="button" class="btn btn-primary">Confirmar</button>
 
 
 		    	<div class="row">
@@ -35,7 +37,7 @@
 				  		<div class="well well-lg">
 							<span ng-class="{'glyphicon glyphicon-refresh glyphicon-refresh-animate': 	isActive}"></span>
 				        	<div class="categories"  ng-show="!isActive">
-								<category padre="aux" padre-visible="true" callback-modal="selectCategoryCrossSelling"></category>
+								<category padre="aux" padre-visible="true" callback-modal="selectCategoryCrossSelling" selected="catOrigen"></category>
 				        	</div>
 				    	</div>
 					</div>
@@ -79,13 +81,15 @@
 		    <div class="tab-pane" id="tab3" value="3">
 		    
 
+				<button ng-click="confirmCrossProduct()" type="button" class="btn btn-primary">Confirmar</button>
+
 
 		    				<div class="row">
 								<div class="span8">
 							  		<div class="well well-lg">
 										<span ng-class="{'glyphicon glyphicon-refresh glyphicon-refresh-animate': 	isActive}"></span>
 							        	<div class="categories"  ng-show="!isActive">
-											<category padre="aux" padre-visible="true" callback-modal="selectCategoryCrossProduct"></category>
+											<category padre="aux" padre-visible="true" callback-modal="selectCategoryCrossProduct" selected="catOrigen"></category>
 							        	</div>
 							    	</div>
 								</div>

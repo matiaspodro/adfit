@@ -58,6 +58,15 @@ body {
 	height: 200px;
 }
 
+.modal-categorias .origen{
+	font-weight: bold;
+	color: red;
+}
+.modal-categorias .destino{
+	font-weight: bold;
+	color: green;
+}
+
 .glyphicon-refresh-animate {
     -animation: spin .7s infinite linear;
     -webkit-animation: spin2 .7s infinite linear;

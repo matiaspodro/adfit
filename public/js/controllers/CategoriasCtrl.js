@@ -18,6 +18,7 @@ angular.module('CategoriasCtrl', ['ui.bootstrap']).controller('CategoriasControl
 	$scope.titleModal = 'Categoría seleccionada: ';
     $scope.showModal  = false;
     $scope.catOrigen = {};
+    $scope.tipo = {};
     $scope.catDestino = {};
 
 
@@ -37,13 +38,17 @@ angular.module('CategoriasCtrl', ['ui.bootstrap']).controller('CategoriasControl
 	};
 
 	$scope.selectCategoryCrossSelling = function(cat){
+		colorearCategoria(cat, 1);
+		$scope.tipo = {value:1, description: 'CrossSelling'};
     	$scope.catDestino = cat;
-    	generarEvento({value:1, description: 'CrossSelling'});
+    	//generarEvento();
 	};
 
 	$scope.selectCategoryCrossProduct = function(cat){
+		colorearCategoria(cat, 3);
+		$scope.tipo = {value:3, description: 'CrossProduct'};
     	$scope.catDestino = cat;
-    	generarEvento({value:3, description: 'CrossProduct'});
+    	//generarEvento();
 	};
 
     $scope.toggleModal = function(){
@@ -53,12 +58,32 @@ angular.module('CategoriasCtrl', ['ui.bootstrap']).controller('CategoriasControl
 	$scope.numbersDays = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30];
 	$scope.numbersMonths = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 
-	var generarEvento = function(type){
-    	DB.saveEventos([{origen:$scope.catOrigen, destino:$scope.catDestino, tipo: type}]);
-    	resetModal();
+	var generarEvento = function(){
+		resetModal();
+    	DB.saveEventos([{origen:$scope.catOrigen, destino:$scope.catDestino, tipo: $scope.tipo}]);
 	}
 
+	var colorearCategoria = function(cat, tab){
+		angular.element(document.querySelector('.tab-categorias #tab'+tab)).find('*').removeClass("destino","");
+		var sarasa = angular.element(document.querySelector('.tab-categorias #tab'+tab+' #cat_'+cat.id));
+		sarasa.addClass('destino');
+	};
 
+
+
+
+  	var resetModal = function(){
+        $scope.showModal = false;
+  	}
+
+
+	$scope.confirmCrossSelling = function(){
+		generarEvento();
+	}
+
+	$scope.confirmCrossProduct = function(){
+		generarEvento();
+	}
 
 
 ////////Reselling ////////
@@ -91,11 +116,5 @@ angular.module('CategoriasCtrl', ['ui.bootstrap']).controller('CategoriasControl
   }
 
 //////////////////////////
-
-
-
-  var resetModal = function(){
-  	$scope.toggleModal();
-  }
 
 });

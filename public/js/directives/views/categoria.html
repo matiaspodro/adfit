@@ -8,18 +8,18 @@
           <span ng-show="visible" class="glyphicon glyphicon-minus-sign"></span>          
         </label>
 
-        <label class="nav-header black title" ng-click="callbackModal(a)" >
+        <label  id="cat_{{a.id}}"  class="nav-header black title link" ng-click="callbackModal(a)" ng-class="{'origen': selected.id == a.id}">
           {{a.name}}
           <span class="badge">{{a.children.length}}</span>
         </label>
 
         <div ng-if="a.children.length > 0">
-          <category padre="a.children" padre-visible="visible" callback-modal="callbackModal" ></category>
+          <category padre="a.children" padre-visible="visible" callback-modal="callbackModal" selected="selected"></category>
         </div>
 
     </div>
 
-    <label ng-if="a.length > 0" ng-repeat="prod in a" class="nav-header black title" ng-click="callbackModal(prod)" >
+    <label  id="cat_{{prod.id}}"  ng-if="a.length > 0" ng-repeat="prod in a" class="nav-header black title link" ng-click="callbackModal(prod)" ng-class="{'origen': selected.id == prod.id}">
       {{prod.name}}
     </label>
 
