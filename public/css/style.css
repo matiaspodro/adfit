@@ -1,10 +1,24 @@
+
 body { 
-		padding-top:30px;
-		color: white;
+		/*padding-top:30px;*/
+		font-family: 'Open Sans', sans-serif !important;
 	 }
 
-.navbar{
-	color:white;
+.navbar {
+    color: #000;
+    border-bottom: 5px solid #000;
+}
+.navbar .nav>li>a {
+	color: #777;
+	text-transform: uppercase;
+	-o-transition:.5s;
+	-ms-transition:.5s;
+	-moz-transition:.5s;
+	-webkit-transition:.5s;
+	transition:.5s;
+}
+.navbar .nav>li>a:link {
+	color: #000;
 }
 .user{
 	top: 10px;
