@@ -9,7 +9,10 @@
     "passport": "latest",
     "passport-mercadolibre" : "latest",
     "request" : "latest",
-    "node-rest-client" : "latest"
+    "node-rest-client" : "latest",
+    "socket.io": "latest",
+    "nodemailer":"latest",
+    "async":"0.7.1"
   }
 }
 

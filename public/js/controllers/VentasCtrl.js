@@ -1,7 +1,6 @@
 angular.module('VentasCtrl', ['ui.bootstrap']).controller('VentasController', function($scope, $http, ML, DB, ventaShareData) {
 
 	$scope.filteredVentas 	= [];
-	$scope.maxSize 			= 5;
 	$scope.isActive			= true;
 	$scope.numPerPage 		= 10;
 	$scope.currentPage 		= 1;

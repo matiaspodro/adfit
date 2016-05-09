@@ -3,6 +3,10 @@
 
 <span ng-class="{'glyphicon glyphicon-refresh glyphicon-refresh-animate': isActive}"></span>
 <div ng-show="!isActive">
+
+
+    <pagination total-items="cantVentas" ng-model="currentPage" max-size="numPerPage" class="pagination-sm" boundary-links="true" items-per-page="numPerPage"></pagination>
+
   <table class="table table-striped">
     <thead><tr>
       <th>Detalle:</th>
@@ -21,8 +25,5 @@
       <td>{{ venta.date_last_updated }}</td>
     </tr></tbody>
   </table>
-    <div data-pagination="" data-num-pages="numPages()" 
-        data-current-page="currentPage" data-max-size="maxSize"  
-        data-boundary-links="true"></div> 
 
 </div>

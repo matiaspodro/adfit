@@ -38,17 +38,13 @@ angular.module('CategoriasCtrl', ['ui.bootstrap']).controller('CategoriasControl
 	};
 
 	$scope.selectCategoryCrossSelling = function(cat){
-		colorearCategoria(cat, 1);
 		$scope.tipo = {value:1, description: 'CrossSelling'};
     	$scope.catDestino = cat;
-    	//generarEvento();
 	};
 
 	$scope.selectCategoryCrossProduct = function(cat){
-		colorearCategoria(cat, 3);
 		$scope.tipo = {value:3, description: 'CrossProduct'};
-    	$scope.catDestino = cat;
-    	//generarEvento();
+    	$scope.catDestino = cat;    	//generarEvento();
 	};
 
     $scope.toggleModal = function(){
@@ -63,19 +59,9 @@ angular.module('CategoriasCtrl', ['ui.bootstrap']).controller('CategoriasControl
     	DB.saveEventos([{origen:$scope.catOrigen, destino:$scope.catDestino, tipo: $scope.tipo}]);
 	}
 
-	var colorearCategoria = function(cat, tab){
-		angular.element(document.querySelector('.tab-categorias #tab'+tab)).find('*').removeClass("destino","");
-		var sarasa = angular.element(document.querySelector('.tab-categorias #tab'+tab+' #cat_'+cat.id));
-		sarasa.addClass('destino');
-	};
-
-
-
-
   	var resetModal = function(){
         $scope.showModal = false;
   	}
-
 
 	$scope.confirmCrossSelling = function(){
 		generarEvento();

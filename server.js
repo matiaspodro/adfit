@@ -8,11 +8,11 @@ var app            			= express();
 var mongoose       			= require('mongoose');
 var bodyParser     			= require('body-parser');
 var methodOverride 			= require('method-override');
-var passport 				= require('passport');
+var passport 				     = require('passport');
 var MercadoLibreStrategy 	= require('passport-mercadolibre').Strategy;
+var mailer              = require('./server/mailer');
 
 // configuration ===========================================
-
 	
 // config files
 var db = require('./config/db');
@@ -210,6 +210,8 @@ app.get('/getCantVentas', function(req, res) {
 
 
 //==========================
+app.post('/prepareMailer', mailer.prepare);
+app.post('/sendMailer', mailer.send);
 
 
 //==========================
@@ -221,7 +223,7 @@ app.get('/test', function(req, res) {
 
 app.get('/getMLAccess', function(req, res) {
 		res.json({access_token:access_token, profile_user:profile_user});
-    console.log({access_token:access_token, profile_user:profile_user});
+  //console.log({access_token:access_token, profile_user:profile_user});
 });
 
 
@@ -277,6 +279,13 @@ function ensureAuthenticated(req, res, next) {
   };
   res.redirect('/auth/mercadolibre');
 };
+
+
+app.post('/notifications', function(req, res) {
+  console.log('-------------new notify-------------');
+  console.log('req');
+  console.log('-----------------new notify--------------');
+});
 // ============================
 
 
