@@ -1,6 +1,8 @@
 <h1>Productos</h1>
 <span ng-class="{'glyphicon glyphicon-refresh glyphicon-refresh-animate': isActive}"></span>
 <div ng-show="!isActive">
+
+    <pagination total-items="productos.length" ng-model="currentPage" max-size="maxSize" class="pagination-sm" boundary-links="true" items-per-page="numPerPage"></pagination>
   <table class="table table-striped">
     <thead><tr>
       <th>Detalle</th>
@@ -16,8 +18,4 @@
       <td>{{ producto.id }}</td>
     </tr></tbody>
   </table>
-    <div data-pagination="" data-num-pages="numPages()" 
-        data-current-page="currentPage" data-max-size="maxSize"  
-        data-boundary-links="true"></div> 
-
 </div>

@@ -34,4 +34,9 @@ angular.module('EventosCtrl', ['ui.bootstrap']).controller('EventosController', 
 	// 	eventoShareData.eventoActual = evento;			
 	// };
 
+	DB.postMailer({}).then(function(data) {
+		console.log('sdad');
+	});
+
+
 });

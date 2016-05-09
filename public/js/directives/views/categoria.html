@@ -8,7 +8,7 @@
           <span ng-show="visible" class="glyphicon glyphicon-minus-sign"></span>          
         </label>
 
-        <label  id="cat_{{a.id}}"  class="nav-header black title link" ng-click="callbackModal(a)" ng-class="{'origen': selected.id == a.id}">
+        <label  id="cat_{{a.id}}"  class="nav-header black title link" ng-click="doClick(a);" ng-class="{'origen': selected.id == a.id, 'destino': destinoId == a.id}">
           {{a.name}}
           <span class="badge">{{a.children.length}}</span>
         </label>
@@ -19,7 +19,7 @@
 
     </div>
 
-    <label  id="cat_{{prod.id}}"  ng-if="a.length > 0" ng-repeat="prod in a" class="nav-header black title link" ng-click="callbackModal(prod)" ng-class="{'origen': selected.id == prod.id}">
+    <label  id="cat_{{prod.id}}"  ng-if="a.length > 0" ng-repeat="prod in a" class="nav-header black title link" ng-click="doClick(prod);" ng-class="{'origen': selected.id == prod.id}">
       {{prod.name}}
     </label>
 

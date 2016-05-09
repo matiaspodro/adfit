@@ -201,6 +201,40 @@ angular.module('DBService', []).factory('DB', ['$http', '$q', function($http, $q
 
         return promise;
 	};
+
+
+
+	db.postNotifiactions = function(params){		
+	    var defered = $q.defer();
+	    var promise = defered.promise;
+		$http.post('/notifications', params)
+		.success(function(data) {
+            defered.resolve(data);
+		})
+        .error(function(err) {
+            defered.reject(err)
+        });
+
+        return promise;
+	};
+
+
+
+
+	db.postMailer = function(params){		
+	    var defered = $q.defer();
+	    var promise = defered.promise;
+		$http.post('/mailer', params)
+		.success(function(data) {
+            defered.resolve(data);
+		})
+        .error(function(err) {
+            defered.reject(err)
+        });
+
+        return promise;
+	};
+
 	return db;
 
 }]);
