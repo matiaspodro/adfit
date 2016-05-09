@@ -8,6 +8,7 @@
 
 	<!-- CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans:400,800,700,600,300&subset=latin,latin-ext' type='text/css'>
   <link rel="stylesheet" href="css/style.css"> <!-- custom styles -->
 
 	<!-- JS -->
@@ -53,15 +54,22 @@
 <div class="container">
 	<!-- HEADER -->
 
-	<nav class="navbar navbar-inverse">
+	<nav class="navbar"> 
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">
+        <img src="/public/images/hdLogo.png">
+      </a>
+    </div>
 		<ul class="nav navbar-nav">
       <li><a href="/ventas">Ventas</a></li>
 			<li><a href="/categorias">Categorías</a></li>
       <li><a href="/productos">Productos</a></li>
       <li><a href="/eventos">Eventos</a></li>  
+      <!--
       <li><a href="/procesarVentas">Procesar Ventas</a></li>
       <li><a href="/procesarProductos">Procesar Productos</a></li>
       <li><a href="/procesarCategorias">Procesar Categorías</a></li> 
+      -->
 		</ul>
     <ul class="nav navbar-nav user ">
     <span class="glyphicon glyphicon-user pull-left" aria-hidden="true"></span>
