@@ -61,7 +61,7 @@ var categoriaSchema = new mongoose.Schema({
 	,name: String
 });
 
-var eventoSchema = new mongoose.Schema({
+var relacionSchema = new mongoose.Schema({
      origen: mongoose.Schema.Types.Mixed
   ,destino: mongoose.Schema.Types.Mixed
   ,reselling: mongoose.Schema.Types.Mixed
@@ -71,7 +71,7 @@ var eventoSchema = new mongoose.Schema({
 var Ventas = mongoose.model('Ventas', ventaSchema);
 var Productos = mongoose.model('Productos', productoSchema);
 var Categorias = mongoose.model('Categorias', categoriaSchema);
-var Eventos = mongoose.model('Eventos', eventoSchema);
+var Relaciones = mongoose.model('Relaciones', relacionSchema);
 
 
 
@@ -121,15 +121,15 @@ app.post('/saveCategorias', function(req, res) {
 });
 
 
-app.post('/saveEventos', function(req, res) {
-  Eventos.collection.insert(req.body, onInsert);
+app.post('/saveRelaciones', function(req, res) {
+  Relaciones.collection.insert(req.body, onInsert);
 
   function onInsert(err, docs) {
       if (err) {
       res.status(403)        // HTTP status 404: NotFound
       .send(err);
       } else {
-          res.send(docs.length + ' evento/s ha/n sido guardada/s.');
+          res.send(docs.length + ' relacion/es ha/n sido guardada/s.');
       }
   }
 });
@@ -182,11 +182,11 @@ app.get('/getAllCategorias', function(req, res) {
   });
 });
 
-app.get('/getAllEventos', function(req, res) {
-  Eventos.find({}, function(err, eventos) {
+app.get('/getAllRelaciones', function(req, res) {
+  Relaciones.find({}, function(err, relaciones) {
     var eveMap = {};
 
-    eventos.forEach(function(eve) {
+    relaciones.forEach(function(eve) {
       eveMap[eve._id] = eve;
     });
 

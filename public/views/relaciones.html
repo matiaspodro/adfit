@@ -1,0 +1,26 @@
+<h1>Relaciones</h1>
+<span ng-class="{'glyphicon glyphicon-refresh glyphicon-refresh-animate': isActive}"></span>
+<div ng-show="!isActive">
+
+    <pagination total-items="relaciones.length" ng-model="currentPage" max-size="maxSize" class="pagination-sm" boundary-links="true" items-per-page="10"></pagination>
+    
+  <table class="table table-striped">
+    <thead><tr>
+      <th>Tipo</th>
+      <th>Origen</th>
+      <th>Destino</th>
+      <th>Tipo de Reselling</th>
+      <th>Cantidad de Reselling</th>
+    </tr></thead>
+    <tbody><tr ng-repeat="relacion in filteredRelaciones">
+      <td>{{ relacion.tipo.description }}</td>
+      <td>{{ relacion.origen.name }}</td>
+      <td>{{ relacion.destino.name }}</td>
+      <td>{{ relacion.reselling.tipo.description }}</td>
+      <td>{{ relacion.reselling.cantidad }}</td>
+    </tr></tbody>
+  </table>
+
+
+
+</div>

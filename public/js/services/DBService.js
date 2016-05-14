@@ -87,10 +87,10 @@ angular.module('DBService', []).factory('DB', ['$http', '$q', function($http, $q
         return promise;
 	};
 
-	db.saveEventos = function(params){		
+	db.saveRelaciones = function(params){		
 	    var defered = $q.defer();
 	    var promise = defered.promise;
-		$http.post('/saveEventos', params)
+		$http.post('/saveRelaciones', params)
 		.success(function(data) {
             defered.resolve(data);
 		})
@@ -188,10 +188,10 @@ angular.module('DBService', []).factory('DB', ['$http', '$q', function($http, $q
 	};
 
 
-	db.getEventos = function(params){		
+	db.getRelaciones = function(params){		
 	    var defered = $q.defer();
 	    var promise = defered.promise;
-		$http.get('/getAllEventos')
+		$http.get('/getAllRelaciones')
 		.success(function(data) {
             defered.resolve(data);
 		})
