@@ -11,6 +11,8 @@ var methodOverride 			= require('method-override');
 var passport 				     = require('passport');
 var MercadoLibreStrategy 	= require('passport-mercadolibre').Strategy;
 var mailer              = require('./server/mailer');
+var notifications              = require('./server/notifications');
+var fs                  = require('fs');
 
 // configuration ===========================================
 	
@@ -88,6 +90,54 @@ app.post('/saveVentas', function(req, res) {
 	}
 });
 
+
+var saveVenta = function(order) {
+  fs.readFile('./token.txt', 'utf8', function (err,token) {
+    if (err) {
+      return console.log(err);
+    }
+    var str = '';
+    var options = {
+          host: 'api.mercadolibre.com',
+          path: order.resource+'?access_token='+token
+    };
+              
+    callback = function(response) {
+
+      response.on('data', function (chunk) {
+        str += chunk;
+      });
+
+      response.on('end', function () {
+          str = JSON.parse(str);
+          var ventas = [{
+              id: str.id
+            , comments: str.comments
+            , status: str.status
+            , date_created: str.date_created
+            , date_closed: str.date_closed
+            , date_last_updated: str.last_updated
+            , currency: str.currency_id
+            , order_items: str.order_items
+          }];   
+          Ventas.collection.insert(ventas
+          , onInsert);
+          function onInsert(err, docs) {
+              if (err) {
+                console.log('403');
+              } else {
+                console.log(docs.length + ' venta ha sido guardada.');
+              }
+          }
+      });
+    }
+
+    var req = https.request(options, callback).end();
+
+  });
+}
+
+
 app.post('/saveProductos', function(req, res) {
 	var reformattedArray = req.body.map(function(obj){ 
 	   	var rObj = {};
@@ -122,6 +172,7 @@ app.post('/saveCategorias', function(req, res) {
 
 
 app.post('/saveRelaciones', function(req, res) {
+  console.log(req.body);
   Relaciones.collection.insert(req.body, onInsert);
 
   function onInsert(err, docs) {
@@ -242,6 +293,12 @@ passport.use(new MercadoLibreStrategy({
   function (accessToken, refreshToken, profile, done) {
     // + store/retrieve user from database, together with access token and refresh token 
     access_token = accessToken;
+
+    // Writing...
+    var fs = require("fs");
+
+    fs.writeFile( "token.txt", accessToken, "utf8", function(){} );
+
     profile_user = profile;
     return done(null, profile); 
   }
@@ -283,8 +340,17 @@ function ensureAuthenticated(req, res, next) {
 
 app.post('/notifications', function(req, res) {
   console.log('-------------new notify-------------');
-  console.log('req');
-  console.log('-----------------new notify--------------');
+  console.log(req.body);
+
+
+  switch(req.body.topic) {
+    case 'orders': return saveVenta(req.body);break;
+    case 'items': return notifications.orderNotifiactions(req.body);break;
+    case 'questions': return notifications.orderNotifiactions(req.body);break;
+    case 'payments': return notifications.orderNotifiactions(req.body);break;
+    default: return notifications.orderNotifiactions(req.body);break;
+  }
+  console.log('-----------------end new notify--------------');
 });
 // ============================
 
@@ -309,3 +375,6 @@ require('./app/routes')(app); // pass our application into our routes
 
 	console.log('Magic happens on port ' + port); 			// shoutout to the user
 	exports = module.exports = app; 						// expose app
+
+
+
