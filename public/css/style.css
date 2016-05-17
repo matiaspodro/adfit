@@ -13,6 +13,14 @@ body {
 .user {
 	padding-top: 6px;
 }
+.nav>li>a>img, .dropdown-menu>li>a>img {
+    width: 29px;
+}
+.dropdown-menu li {
+	line-height: 10px;
+    padding: 10px;
+    font-weight: 400;
+}
 .navbar .nav>li>a {
 	color: #777;
 	text-transform: uppercase;
