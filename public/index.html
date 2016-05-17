@@ -58,12 +58,12 @@
 	<nav class="navbar"> 
     <div class="navbar-header">
       <a class="navbar-brand" href="#">
-        <img src="/public/images/hdLogo.png">
+        <img src="/images/hdLogo.png">
       </a>
     </div>
-		<ul class="nav navbar-nav">
-      <li><a href="/ventas">Ventas</a></li>
-			<li><a href="/categorias">Categorías</a></li>
+    <ul class="nav navbar-nav user navbar-right">
+    <li><a href="/ventas">Ventas</a></li>
+      <li><a href="/categorias">Categorías</a></li>
       <li><a href="/productos">Productos</a></li>
       <li><a href="/eventos">Eventos</a></li>  
       <!--
@@ -71,13 +71,9 @@
       <li><a href="/procesarProductos">Procesar Productos</a></li>
       <li><a href="/procesarCategorias">Procesar Categorías</a></li> 
       -->
-		</ul>
-    <ul class="nav navbar-nav user ">
-    <span class="glyphicon glyphicon-user pull-left" aria-hidden="true"></span>
-      <li ng-show="nickname == undefined">
-
-      <a href="#" ng-click="login()">Ingresar a MercadoLibre</a></li>
-      <li ng-show="nickname != undefined" ng-bind='nickname'></li>
+      <span class="glyphicon glyphicon-user pull-left" aria-hidden="true"></span>
+      <li ng-show="nickname == undefined"><a href="#" ng-click="login()">Ingresar a MercadoLibre</a></li>
+      <li ng-show="nickname != undefined" ng-bind='nickname'><a href="#"></a>></li>
     </ul>
 
 	</nav>
