@@ -71,9 +71,21 @@
       <li><a href="/procesarProductos">Procesar Productos</a></li>
       <li><a href="/procesarCategorias">Procesar Categorías</a></li> 
       -->
-      <span class="glyphicon glyphicon-user pull-left" aria-hidden="true"></span>
-      <li ng-show="nickname == undefined"><a href="#" ng-click="login()">Ingresar a MercadoLibre</a></li>
-      <li ng-show="nickname != undefined" ng-bind='nickname'><a href="#"></a>></li>
+      <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> 
+            <img src="images/hdUserIcon.png">
+            <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu">
+            <li ng-show="nickname == undefined"><a href="#" ng-click="login()">Ingresar a MercadoLibre</a></li>
+            <li ng-show="nickname != undefined" ng-bind='nickname'><a href="#"></a></li>
+            <li>Configuración</li>
+            <li>Cerrar Sesión</li>
+          </ul>
+        </li>
+
+      
+      
     </ul>
 
 	</nav>
