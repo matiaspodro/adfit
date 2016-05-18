@@ -13,6 +13,8 @@ body {
 .user {
 	padding-top: 6px;
 }
+.col-grey { background-color: #eeeeee; }
+.col-grey h3 { text-align: center; text-transform: uppercase; font-size: 16px; }
 .dropdown-menu li {
 	line-height: 10px;
     padding: 10px;
@@ -185,10 +187,8 @@ a:link { color: #E60C89; }
 .ui-slider-horizontal { height: .2em !important; }
 .ui-slider-horizontal .ui-slider-handle { top: -.5em !important; }
 
-.chat .grey { background-color: #E5E5EA; max-width: 400px; }
-.chat .pink { background-color: #E72C8A; max-width: 400px; float: right; color: #fff; clear: both }
-.chat .list td { padding-bottom: 10px !important; }
-.chat .list img { margin-right: 20px !important; }
+.list td { padding-bottom: 10px !important; background-color: #fff; }
+.list img { margin-right: 20px !important; }
 
 /* css pablo */
 /* css custom */
