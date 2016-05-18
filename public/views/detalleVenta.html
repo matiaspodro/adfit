@@ -13,7 +13,7 @@
     </tbody>
   </table>
   </div>
-  <div class="col-md-7">
+  <div class="col-md-6">
     <ol class="breadcrumb">
       <li><a href="#">Categoría 1</a></li>
       <li><a href="#">Categoría 2</a></li>
@@ -67,24 +67,23 @@
     </tbody></table>
   </div>
   </div>
-  <div class="col-md-2 col-grey">
+  <div class="col-md-3 col-grey">
     <div class="vendor-data">
     <h4 ng-bind="vendedor.nickname"></h4>
           <p ng-bind="vendedor.first_name+' '+vendedor.last_name"></p>
           <p ng-bind="vendedor.email"></p>
     </div>
-    <h3>Estado de la venta:</h3>
     <h4>Envio</h4>
-    <div class="status" ng-bind="envio.status"></div>
+    <div class="status" ng-bind="envio.status">Sin datos</div>
     <hr>
     <h4>Pago</h4>
-    <div class="status" ng-bind="pagos.status"></div>
+    <div class="status" ng-bind="pagos.status">Sin datos</div>
     <hr>
     <h4>Estado de la compra</h4>
-    <div class="status" ng-bind="venta.status"></div>
+    <div class="status" ng-bind="venta.status">Sin datos</div>
     <hr>
     <h4>Calificación</h4>
-    <div class="status" ng-bind="feedback.sale.rating"></div>
+    <div class="status" ng-bind="feedback.sale.rating">Sin datos</div>
   </div>
 </div>
 
