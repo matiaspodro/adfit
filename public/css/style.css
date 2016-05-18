@@ -188,7 +188,8 @@ a:link { color: #E60C89; }
 .ui-slider-horizontal { height: .2em !important; }
 .ui-slider-horizontal .ui-slider-handle { top: -.5em !important; }
 
-.list td { padding-bottom: 10px !important; background-color: #fff; width: 100%; margin-bottom: 10px; }
+.list { width: 100%; }
+.list td { padding-bottom: 10px !important; background-color: #fff; margin-bottom: 10px; }
 .list img { margin-right: 20px !important; }
 
 /* css pablo */
