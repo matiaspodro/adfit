@@ -18,6 +18,8 @@ body {
 .col-grey h3 { text-align: center; text-transform: uppercase; font-size: 16px; }
 .col-grey h4 { text-align: left; text-transform: uppercase; font-size: 14px; padding: 0px; margin: 0px;  }
 .col-grey .status { text-align: left; font-size: 12px; }
+.col-grey .vendor-data { padding-top: 15px; background-color: #d7d7d7; }
+.col-grey hr { border-top: 1px solid #000; }
 .dropdown-menu li {
 	line-height: 10px;
     padding: 10px;

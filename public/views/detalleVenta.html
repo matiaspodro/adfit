@@ -60,9 +60,7 @@
     <table class="vendor">
       <tbody><tr>
         <td>
-          <h4 ng-bind="vendedor.nickname"></h4>
-          <p ng-bind="vendedor.first_name+' '+vendedor.last_name"></p>
-          <p ng-bind="vendedor.email"></p>
+          
         </td>
         <td></td>
       </tr>
@@ -70,16 +68,22 @@
   </div>
   </div>
   <div class="col-md-2 col-grey">
-    <h4>Envio:</h4>
+    <div class="vendor-data">
+    <h4 ng-bind="vendedor.nickname"></h4>
+          <p ng-bind="vendedor.first_name+' '+vendedor.last_name"></p>
+          <p ng-bind="vendedor.email"></p>
+    </div>
+    <h3>Estado de la venta:</h3>
+    <h4>Envio</h4>
     <div class="status" ng-bind="envio.status"></div>
     <hr>
-    <h4>Pago:</h4>
+    <h4>Pago</h4>
     <div class="status" ng-bind="pagos.status"></div>
     <hr>
-    <h4>Estado de la compra:</h4>
+    <h4>Estado de la compra</h4>
     <div class="status" ng-bind="venta.status"></div>
     <hr>
-    <h4>Calificación:</h4>
+    <h4>Calificación</h4>
     <div class="status" ng-bind="feedback.sale.rating"></div>
   </div>
 </div>
