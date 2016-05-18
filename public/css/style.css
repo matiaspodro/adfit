@@ -9,6 +9,7 @@ body {
     font-weight: 900;
     border-bottom: 5px solid #000;
     border-radius: 0px;
+    margin-bottom: 0px !important;
 }
 .user {
 	padding-top: 6px;
@@ -187,7 +188,7 @@ a:link { color: #E60C89; }
 .ui-slider-horizontal { height: .2em !important; }
 .ui-slider-horizontal .ui-slider-handle { top: -.5em !important; }
 
-.list td { padding-bottom: 10px !important; background-color: #fff; }
+.list td { padding-bottom: 10px !important; background-color: #fff; width: 100%; margin-bottom: 10px; }
 .list img { margin-right: 20px !important; }
 
 /* css pablo */
