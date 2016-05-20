@@ -45,6 +45,7 @@ angular.module('DBService', []).factory('DB', ['$http', '$q', function($http, $q
 
 
 
+
 	db.saveVentas = function(params){		
 	    var defered = $q.defer();
 	    var promise = defered.promise;
@@ -58,6 +59,22 @@ angular.module('DBService', []).factory('DB', ['$http', '$q', function($http, $q
 
         return promise;
 	};
+
+
+	db.generateReselling = function(params){		
+	    var defered = $q.defer();
+	    var promise = defered.promise;
+		$http.post('/generateReselling', params)
+		.success(function(data) {
+            defered.resolve(data);
+		})
+        .error(function(err) {
+            defered.reject(err)
+        });
+
+        return promise;
+	};
+
 
 	db.saveProductos = function(params){		
 	    var defered = $q.defer();
@@ -192,6 +209,22 @@ angular.module('DBService', []).factory('DB', ['$http', '$q', function($http, $q
 	    var defered = $q.defer();
 	    var promise = defered.promise;
 		$http.get('/getAllRelaciones')
+		.success(function(data) {
+            defered.resolve(data);
+		})
+        .error(function(err) {
+            defered.reject(err)
+        });
+
+        return promise;
+	};
+
+
+
+	db.getEventos = function(params){		
+	    var defered = $q.defer();
+	    var promise = defered.promise;
+		$http.get('/getAllEventos')
 		.success(function(data) {
             defered.resolve(data);
 		})

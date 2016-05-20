@@ -1,0 +1,25 @@
+<h1>Eventos</h1>
+<span ng-class="{'glyphicon glyphicon-refresh glyphicon-refresh-animate': isActive}"></span>
+<div ng-show="!isActive">
+
+<button ng-click="procesarReselling()" type="button" class="btn btn-primary">Procesar Reselling</button>
+
+
+    <pagination total-items="eventos.length" ng-model="currentPage" max-size="maxSize" class="pagination-sm" boundary-links="true" items-per-page="10"></pagination>
+    
+  <table class="table table-striped">
+    <thead><tr>
+      <th>Tipo</th>
+      <th>Id</th>
+      <th>Fecha</th>
+    </tr></thead>
+    <tbody><tr ng-repeat="evento in filteredEventos">
+      <td>{{ evento.tipo }}</td>
+      <td>{{ evento.id }}</td>
+      <td>{{ evento.fecha }}</td>
+    </tr></tbody>
+  </table>
+
+
+
+</div>

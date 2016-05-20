@@ -1,21 +1,21 @@
 // modules =================================================
-var config 					= require('./config');
-var fs 						= require('fs');
-var https 					= require('https');
-var http					= require('http');
-var express        			= require('express');
-var app            			= express();
-var mongoose       			= require('mongoose');
-var bodyParser     			= require('body-parser');
-var methodOverride 			= require('method-override');
-var passport 				     = require('passport');
-var MercadoLibreStrategy 	= require('passport-mercadolibre').Strategy;
+var config          = require('./config');
+var fs            = require('fs');
+var https           = require('https');
+var http          = require('http');
+var express             = require('express');
+var app                 = express();
+var mongoose            = require('mongoose');
+var bodyParser          = require('body-parser');
+var methodOverride      = require('method-override');
+var passport             = require('passport');
+var MercadoLibreStrategy  = require('passport-mercadolibre').Strategy;
 var mailer              = require('./server/mailer');
 var notifications              = require('./server/notifications');
 var fs                  = require('fs');
 
 // configuration ===========================================
-	
+  
 // config files
 var db = require('./config/db');
 
@@ -43,67 +43,100 @@ res.setHeader('Access-Control-Allow-Origin', '*');
 
 
 var ventaSchema = new mongoose.Schema({
-	  id: Number
-	, comments: String
-	, status: String
-	, date_created: Date
-	, date_closed: Date
-	, date_last_updated: Date
-	, currency: String
-	, order_items: mongoose.Schema.Types.Mixed
+    id: Number
+  , comments: String
+  , status: String
+  , date_created: Date
+  , date_closed: Date
+  , date_last_updated: Date
+  , currency: String
+  , order_items: mongoose.Schema.Types.Mixed
 });
 
 var productoSchema = new mongoose.Schema({
-	id: String
+  id: String
 });
 
 
 var categoriaSchema = new mongoose.Schema({
-	   id: String
-	,name: String
+     id: String
+  ,name: String
 });
 
 var relacionSchema = new mongoose.Schema({
-     origen: mongoose.Schema.Types.Mixed
+  origen: mongoose.Schema.Types.Mixed
   ,destino: mongoose.Schema.Types.Mixed
   ,reselling: mongoose.Schema.Types.Mixed
   ,tipo: mongoose.Schema.Types.Mixed
+});
+
+var eventoSchema = new mongoose.Schema({
+  tipo: Number,
+  id: String,
+  category_id: String,
+  fecha: Date,
+  tienePublicidad: Boolean
 });
 
 var Ventas = mongoose.model('Ventas', ventaSchema);
 var Productos = mongoose.model('Productos', productoSchema);
 var Categorias = mongoose.model('Categorias', categoriaSchema);
 var Relaciones = mongoose.model('Relaciones', relacionSchema);
-
-
+var Eventos = mongoose.model('Eventos', eventoSchema);
 
 app.post('/saveVentas', function(req, res) {
-	Ventas.collection.insert(req.body, onInsert);
+  Ventas.collection.insert(req.body, onInsert);
 
-	function onInsert(err, docs) {
-	    if (err) {
-	    res.status(403)        // HTTP status 404: NotFound
-   		.send(err);
-	    } else {
-	        res.send(docs.length + ' venta/s ha/n sido guardada/s.');
-	    }
-	}
+  function onInsert(err, docs) {
+      if (err) {
+      res.status(403)        // HTTP status 404: NotFound
+      .send(err);
+      } else {
+          res.send(docs.length + ' venta/s ha/n sido guardada/s.');
+      }
+  }
 });
 
 
-var saveVenta = function(order) {
-  fs.readFile('./token.txt', 'utf8', function (err,token) {
-    if (err) {
-      return console.log(err);
-    }
-    var str = '';
-    var options = {
-          host: 'api.mercadolibre.com',
-          path: order.resource+'?access_token='+token
-    };
-              
-    callback = function(response) {
+app.post('/saveProductos', function(req, res) {
+  var reformattedArray = req.body.map(function(obj){ 
+      var rObj = {};
+      rObj.id = obj;
+      return rObj;
+  });
 
+  Productos.collection.insert(reformattedArray, onInsert);
+
+  function onInsert(err, docs) {
+      if (err) {
+      res.status(403)        // HTTP status 404: NotFound
+      .send(err);
+      } else {
+          res.send(docs.length + ' Producto/s ha/n sido guardada/s.');
+      }
+  }
+});
+
+
+  saveOne = function(body, saveCallback) {
+    fs.readFile('./token.txt', 'utf8', function (err,token) {
+      if (err) {
+        return console.log(err);
+      }
+      var options = {
+            host: 'api.mercadolibre.com',
+            path: body.resource+'?access_token='+token
+      };
+                
+      callback = saveCallback;
+
+      var req = https.request(options, callback).end();
+
+    });
+  }
+
+    saveVentaCallback = function(response) {
+      var str = '';
       response.on('data', function (chunk) {
         str += chunk;
       });
@@ -127,47 +160,76 @@ var saveVenta = function(order) {
                 console.log('403');
               } else {
                 console.log(docs.length + ' venta ha sido guardada.');
+                saveEvento(1, str.order_items[0].item.id, str.order_items[0].item.category_id, str.date_created);
               }
           }
       });
     }
 
-    var req = https.request(options, callback).end();
-
-  });
-}
 
 
-app.post('/saveProductos', function(req, res) {
-	var reformattedArray = req.body.map(function(obj){ 
-	   	var rObj = {};
-	   	rObj.id = obj;
-	   	return rObj;
-	});
+    saveProductoCallback = function(response) {
+      var str = '';
+      response.on('data', function (chunk) {
+        str += chunk;
+      });
 
-	Productos.collection.insert(reformattedArray, onInsert);
+      response.on('end', function () {
+          str = JSON.parse(str);
+          var productos = [str.id];
 
-	function onInsert(err, docs) {
-	    if (err) {
-	    res.status(403)        // HTTP status 404: NotFound
-   		.send(err);
-	    } else {
-	        res.send(docs.length + ' Producto/s ha/n sido guardada/s.');
-	    }
-	}
-});
+          var reformattedArray = productos.map(function(obj){ 
+              var rObj = {};
+              rObj.id = obj;
+              return rObj;
+          });
+
+          Productos.collection.insert(reformattedArray, onInsert);
+
+          function onInsert(err, docs) {
+              if (err) {
+                console.log('403');
+              } else {
+                console.log(docs.length + ' producto ha sido guardado.');
+                saveEvento(3, str.id, '', str.date_created);
+              }
+          }
+
+      });
+    }
+
+
+
+  saveEvento = function(tipo, id, category_id, fecha){
+          var eventos = [{
+              tipo: tipo
+            , id: id
+            , category_id: category_id
+            , fecha: fecha
+            , tienePublicidad: false
+          }];   
+          Eventos.collection.insert(eventos
+          , onInsert);
+          function onInsert(err, docs) {
+              if (err) {
+                console.log('403');
+              } else {
+                console.log(docs.length + ' EVENTO ha sido creado.');
+              }
+          }
+  }
 
 app.post('/saveCategorias', function(req, res) {
-	Categorias.collection.insert(req.body, onInsert);
+  Categorias.collection.insert(req.body, onInsert);
 
-	function onInsert(err, docs) {
-	    if (err) {
-	    res.status(403)        // HTTP status 404: NotFound
-   		.send(err);
-	    } else {
-	        res.send(docs.length + ' categoria/s ha/n sido guardada/s.');
-	    }
-	}
+  function onInsert(err, docs) {
+      if (err) {
+      res.status(403)        // HTTP status 404: NotFound
+      .send(err);
+      } else {
+          res.send(docs.length + ' categoria/s ha/n sido guardada/s.');
+      }
+  }
 });
 
 
@@ -235,9 +297,21 @@ app.get('/getAllCategorias', function(req, res) {
 
 app.get('/getAllRelaciones', function(req, res) {
   Relaciones.find({}, function(err, relaciones) {
+    var relMap = {};
+
+    relaciones.forEach(function(rel) {
+      relMap[rel._id] = rel;
+    });
+
+    res.send(relMap);  
+  });
+});
+
+app.get('/getAllEventos', function(req, res) {
+  Eventos.find({}, function(err, eventos) {
     var eveMap = {};
 
-    relaciones.forEach(function(eve) {
+    eventos.forEach(function(eve) {
       eveMap[eve._id] = eve;
     });
 
@@ -247,16 +321,59 @@ app.get('/getAllRelaciones', function(req, res) {
 
 
 app.get('/getLast', function(req, res) {
-	Ventas.find({}, null, {limit:1}, function(err, ventas) {
-		if (ventas.length > 0) res.send(ventas[0]);  
-		else res.send({});  
-	});
+  Ventas.find({}, null, {limit:1}, function(err, ventas) {
+    if (ventas.length > 0) res.send(ventas[0]);  
+    else res.send({});  
+  });
 });
 
 app.get('/getCantVentas', function(req, res) {
-	Ventas.count({}, function(err, c) {
-		res.send({cant:c});	
-	});
+  Ventas.count({}, function(err, c) {
+    res.send({cant:c}); 
+  });
+});
+
+app.post('/generateReselling', function(req, res) {
+  Relaciones.find({'tipo.value':2}, function(err, relaciones) {
+    relaciones.forEach(function(rel) {
+      Eventos.find({'tipo':1}, function(err, eventos) {
+        eventos.forEach(function(evento) { 
+          if (evento.id == rel.origen.id){
+            console.log('--');
+            console.log('--');
+            console.log('--');
+            console.log('--');
+            console.log('--');
+            console.log('--');
+            console.log('--');
+            console.log('--');
+            console.log(evento.id);
+            console.log('--');
+            console.log('--');
+            console.log('--');
+            console.log('--');
+            console.log('--');
+            console.log('--');
+            console.log('--');
+            console.log('--');
+            console.log('--');
+
+            console.log(moment().diff(evento.fecha, 'minutes'));
+          }
+
+
+        });
+      });
+
+
+
+    });
+
+
+
+    //res.send(relMap);  
+  });
+
 });
 
 
@@ -268,12 +385,12 @@ app.post('/sendMailer', mailer.send);
 //==========================
 
 app.get('/test', function(req, res) {
-	res.redirect('/auth/mercadolibre');
+  res.redirect('/auth/mercadolibre');
 });
 
 
 app.get('/getMLAccess', function(req, res) {
-		res.json({access_token:access_token, profile_user:profile_user});
+    res.json({access_token:access_token, profile_user:profile_user});
   //console.log({access_token:access_token, profile_user:profile_user});
 });
 
@@ -339,18 +456,18 @@ function ensureAuthenticated(req, res, next) {
 
 
 app.post('/notifications', function(req, res) {
-  console.log('-------------new notify-------------');
-  console.log(req.body);
+  //console.log('-------------new notify-------------');
+  //console.log(req.body);
 
 
   switch(req.body.topic) {
-    case 'orders': return saveVenta(req.body);break;
-    case 'items': return notifications.orderNotifiactions(req.body);break;
+    case 'orders': return saveOne(req.body, saveVentaCallback);break;
+    case 'items': return saveOne(req.body, saveProductoCallback);break;
     case 'questions': return notifications.orderNotifiactions(req.body);break;
     case 'payments': return notifications.orderNotifiactions(req.body);break;
     default: return notifications.orderNotifiactions(req.body);break;
   }
-  console.log('-----------------end new notify--------------');
+  //console.log('-----------------end new notify--------------');
 });
 // ============================
 
@@ -359,22 +476,22 @@ app.post('/notifications', function(req, res) {
 require('./app/routes')(app); // pass our application into our routes
 
 // // start app ===============================================
-// app.listen(port);	
-// console.log('Magic happens on port ' + port); 			// shoutout to the user
-// exports = module.exports = app; 						// expose app
+// app.listen(port);  
+// console.log('Magic happens on port ' + port);      // shoutout to the user
+// exports = module.exports = app;            // expose app
 
 
-	
-	//app.listen(port);
-	
+  
+  //app.listen(port);
+  
     https.createServer({
-    	secureProtocol: 'TLSv1_method',	
+      secureProtocol: 'TLSv1_method', 
       key: fs.readFileSync('./key.pem', 'utf8'),
       cert: fs.readFileSync('./server.crt', 'utf8')
     }, app).listen(port);
 
-	console.log('Magic happens on port ' + port); 			// shoutout to the user
-	exports = module.exports = app; 						// expose app
+  console.log('Magic happens on port ' + port);       // shoutout to the user
+  exports = module.exports = app;             // expose app
 
 
 

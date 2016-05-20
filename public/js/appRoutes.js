@@ -51,6 +51,11 @@ angular.module('appRoutes', []).config(['$routeProvider', '$locationProvider', f
 		.when('/relaciones', {
 			templateUrl: 'views/relaciones.html',
 			controller: 'RelacionesController'
+		})
+
+		.when('/eventos', {
+			templateUrl: 'views/eventos.html',
+			controller: 'EventosController'
 		});
 
 	$locationProvider.html5Mode(true);
