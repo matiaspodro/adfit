@@ -12,8 +12,7 @@
     "node-rest-client" : "latest",
     "socket.io": "latest",
     "nodemailer":"latest",
-    "async":"0.7.1",
-    "moment": "latest"
+    "moment": "2.0.0"
   }
 }
 

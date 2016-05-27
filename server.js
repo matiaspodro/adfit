@@ -1,18 +1,19 @@
 // modules =================================================
-var config          = require('./config');
-var fs            = require('fs');
-var https           = require('https');
-var http          = require('http');
-var express             = require('express');
-var app                 = express();
-var mongoose            = require('mongoose');
-var bodyParser          = require('body-parser');
-var methodOverride      = require('method-override');
-var passport             = require('passport');
-var MercadoLibreStrategy  = require('passport-mercadolibre').Strategy;
-var mailer              = require('./server/mailer');
-var notifications              = require('./server/notifications');
-var fs                  = require('fs');
+var config                    = require('./config');
+var fs                        = require('fs');
+var https                     = require('https');
+var http                      = require('http');
+var express                   = require('express');
+var app                       = express();
+var mongoose                  = require('mongoose');
+var bodyParser                = require('body-parser');
+var methodOverride            = require('method-override');
+var passport                  = require('passport');
+var MercadoLibreStrategy      = require('passport-mercadolibre').Strategy;
+var mailer                    = require('./server/mailer');
+var notifications             = require('./server/notifications');
+var fs                        = require('fs');
+var moment                    = require('moment');
 
 // configuration ===========================================
   
@@ -334,31 +335,31 @@ app.get('/getCantVentas', function(req, res) {
 });
 
 app.post('/generateReselling', function(req, res) {
+  var today = moment().utc().format('YYYY-MM-DD');
+
   Relaciones.find({'tipo.value':2}, function(err, relaciones) {
-    relaciones.forEach(function(rel) {
+    relaciones.forEach(function(relacion) {
       Eventos.find({'tipo':1}, function(err, eventos) {
         eventos.forEach(function(evento) { 
-          if (evento.id == rel.origen.id){
+          if (evento.id == relacion.origen.id){
             console.log('--');
             console.log('--');
             console.log('--');
+            console.log(evento.fecha);
+            var fecha = moment(evento.fecha).utc().format('YYYY-MM-DD');
+            console.log(fecha);
+            if (relacion.reselling.tipo.value == '1'){
+              if (moment(today).diff(fecha, 'days') == relacion.reselling.cantidad){
+                saveEvento(2, evento.id, evento.category_id, moment(today).utc().format('YYYY-MM-DDTHH:mm:ss.sssZ'));
+              }
+            }else {
+              if (moment(today).diff(fecha, 'months') == relacion.reselling.cantidad){
+                saveEvento(2, evento.id, evento.category_id, moment(today).utc().format('YYYY-MM-DDTHH:mm:ss.sssZ'));
+              }
+            }
             console.log('--');
             console.log('--');
             console.log('--');
-            console.log('--');
-            console.log('--');
-            console.log(evento.id);
-            console.log('--');
-            console.log('--');
-            console.log('--');
-            console.log('--');
-            console.log('--');
-            console.log('--');
-            console.log('--');
-            console.log('--');
-            console.log('--');
-
-            console.log(moment().diff(evento.fecha, 'minutes'));
           }
 
 
