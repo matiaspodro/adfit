@@ -1,17 +1,27 @@
 <div class="container chat">
 <div class="row">
-  <div class="col-md-3">
-  <h3><span class="glyphicon glyphicon-usd" aria-hidden="true"></span> Mis ventas</h3>
+  <div class="col-md-3 col-grey">
+  <h3>Mis ventas</h3>
   <table class="list">
-    <tbody><tr>
-      <td><a href="#"><img src="{{item.secure_thumbnail}}" class="img-circle"></a></td>
-      <td><strong>$5000.-</strong><br>
+    <tbody>
+      <tr>
+        <td style="width: 60px; "><a href="#"><img src="{{item.secure_thumbnail}}" class="img-circle"></a></td>
+        <td><strong>$5000.-</strong><br>
         Cartera Prune<br>
         Moda</td>
-    </tr>
-  </tbody></table>
+      </tr>
+    </tbody>
+  </table>
   </div>
-  <div class="col-md-7">
+  <div class="col-md-6">
+    <ol class="breadcrumb">
+      <li><a href="#">Categoría 1</a></li>
+      <li><a href="#">Categoría 2</a></li>
+      <li class="active">Categoría 3</li>
+    </ol>
+    <div class="product"><h2 ng-bind="order_items.item.title"></h2></div>
+    <div class="price pull-right"><h3  ng-bind="'$'+venta.total_amount+'.-'"></h3></div>
+
     <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
       <!-- Indicators -->
       <ol class="carousel-indicators">
@@ -36,15 +46,8 @@
       </a>
     </div>
     <div class="col-md-12 detail">
-    <div class="product"><h2 ng-bind="order_items.item.title"></h2></div>
-    <div class="price pull-right"><h3  ng-bind="'$'+venta.total_amount+'.-'"></h3></div>
     <div style="clear: both"></div>
     
-    <ol class="breadcrumb">
-      <li><a href="#">Categoría 1</a></li>
-      <li><a href="#">Categoría 2</a></li>
-      <li class="active">Categoría 3</li>
-    </ol>
     <div class="panel panel-default">
       <div class="panel-body">
         Descripción renglón 1<br>
@@ -57,38 +60,30 @@
     <table class="vendor">
       <tbody><tr>
         <td>
-          <h4 ng-bind="vendedor.nickname"></h4>
-          <p ng-bind="vendedor.first_name+' '+vendedor.last_name"></p>
-          <p ng-bind="vendedor.email"></p>
+          
         </td>
         <td></td>
       </tr>
     </tbody></table>
   </div>
   </div>
-  <div class="col-md-2">
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h3 class="panel-title">Envio:</h3>
-      </div>
-      <div class="panel-body" ng-bind="envio.status">
-      </div>
-      <div class="panel-heading">
-        <h3 class="panel-title">Pago:</h3>
-      </div>
-      <div class="panel-body" ng-bind="pagos.status">
-      </div>
-      <div class="panel-heading">
-        <h3 class="panel-title">Estado de la compra:</h3>
-      </div>
-      <div class="panel-body" ng-bind="venta.status">
-      </div>
-      <div class="panel-heading">
-        <h3 class="panel-title">Calificación:</h3>
-      </div>
-      <div class="panel-body" ng-bind="feedback.sale.rating">
-      </div>
+  <div class="col-md-3 col-grey">
+    <div class="vendor-data">
+      <strong><p ng-bind="vendedor.nickname"></p></strong>
+      <p ng-bind="vendedor.first_name+' '+vendedor.last_name"></p>
+      <p ng-bind="vendedor.email"></p>
     </div>
+    <h4>Envio</h4>
+    <div class="status" ng-bind="envio.status">Sin datos</div>
+    <hr>
+    <h4>Pago</h4>
+    <div class="status" ng-bind="pagos.status">Sin datos</div>
+    <hr>
+    <h4>Estado de la compra</h4>
+    <div class="status" ng-bind="venta.status">Sin datos</div>
+    <hr>
+    <h4>Calificación</h4>
+    <div class="status" ng-bind="feedback.sale.rating">Sin datos</div>
   </div>
 </div>
 
