@@ -52,6 +52,7 @@ var ventaSchema = new mongoose.Schema({
   , date_last_updated: Date
   , currency: String
   , order_items: mongoose.Schema.Types.Mixed
+  , total_amount: Number
 });
 
 var productoSchema = new mongoose.Schema({
@@ -153,6 +154,7 @@ app.post('/saveProductos', function(req, res) {
             , date_last_updated: str.last_updated
             , currency: str.currency_id
             , order_items: str.order_items
+            , total_amount: str.total_amount
           }];   
           Ventas.collection.insert(ventas
           , onInsert);

@@ -4,11 +4,15 @@
   <h3>Mis ventas</h3>
   <table class="list">
     <tbody>
-      <tr>
-        <td style="width: 60px; "><a href="#"><img src="{{item.secure_thumbnail}}" class="img-circle"></a></td>
-        <td><strong>$5000.-</strong><br>
-        Cartera Prune<br>
-        Moda</td>
+      <tr style="border-style: inset;" ng-repeat="venta in filteredVentas">
+        <a href="#" style="cursor: pointer;" >
+        <div>
+          <td style="width: 60px; "><a href="#"><img src="{{item.secure_thumbnail}}" class="img-circle"></a></td>
+          <td><strong>${{venta.total_amount}}.-</strong><br>
+          {{venta.order_items[0].item.title}}<br>
+          {{venta.order_items[0].item.category_id}}(--Categoría--)</td>
+        </div>    
+        </a>
       </tr>
     </tbody>
   </table>
