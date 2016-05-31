@@ -77,7 +77,7 @@ var eventoSchema = new mongoose.Schema({
   id: String,
   category_id: String,
   fecha: Date,
-  tienePublicidad: Boolean
+  relacion_id: mongoose.Schema.Types.Mixed
 });
 
 var Ventas = mongoose.model('Ventas', ventaSchema);
@@ -203,13 +203,15 @@ app.post('/saveProductos', function(req, res) {
 
 
 
-  saveEvento = function(tipo, id, category_id, fecha){
+  saveEvento = function(tipo, id, category_id, fecha, relacion_id){
+          relacion_id = (relacion_id == undefined) ? '': relacion_id;
+
           var eventos = [{
               tipo: tipo
             , id: id
             , category_id: category_id
             , fecha: fecha
-            , tienePublicidad: false
+            , relacion_id: relacion_id
           }];   
           Eventos.collection.insert(eventos
           , onInsert);
@@ -352,11 +354,11 @@ app.post('/generateReselling', function(req, res) {
             console.log(fecha);
             if (relacion.reselling.tipo.value == '1'){
               if (moment(today).diff(fecha, 'days') == relacion.reselling.cantidad){
-                saveEvento(2, evento.id, evento.category_id, moment(today).utc().format('YYYY-MM-DDTHH:mm:ss.sssZ'));
+                saveEvento(2, evento.id, evento.category_id, moment(today).utc().format('YYYY-MM-DDTHH:mm:ss.sssZ'), relacion._id);
               }
             }else {
               if (moment(today).diff(fecha, 'months') == relacion.reselling.cantidad){
-                saveEvento(2, evento.id, evento.category_id, moment(today).utc().format('YYYY-MM-DDTHH:mm:ss.sssZ'));
+                saveEvento(2, evento.id, evento.category_id, moment(today).utc().format('YYYY-MM-DDTHH:mm:ss.sssZ'), relacion._id);
               }
             }
             console.log('--');

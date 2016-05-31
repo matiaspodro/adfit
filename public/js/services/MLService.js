@@ -243,6 +243,22 @@ angular.module('MLService', []).factory('ML', ['$http', '$q', 'DB', function($ht
 	};
 
 
+	ml.getItemDescription = function(itemId){
+	    var defered = $q.defer();
+	    var promise = defered.promise;
+
+			$http.get('https://api.mercadolibre.com/items/'+itemId+'/description')
+			.success(function(data) {
+            	defered.resolve(data);
+			})
+	        .error(function(err) {
+	            defered.reject(err)
+	        });
+
+
+        return promise;
+	};
+
 
 	ml.isLogged = function(){		
 	    var defered = $q.defer();
