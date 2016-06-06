@@ -36,5 +36,5 @@ If you have any questions or requests, email us at [chris@scotch.io](mailto:chri
 - use adfit
 - db.getCollection('ventas').createIndex( { "id": 1 }, { unique: true } )
 - db.getCollection('productos').createIndex( { "id": 1 }, { unique: true } )
-- db.getCollection('eventos').createIndex( { "tipo": 1, "id": 1, "repeticion": 1 }, { unique: true } )
+- db.getCollection('eventos').createIndex( { "tipo": 1, "venta_id": 1, "product_id": 1, "repeticion": 1 }, { unique: true } )
 - db.getCollection('publicidades').createIndex( { "evento_id": 1, "relacion_id": 1 }, { unique: true } )
