@@ -16,6 +16,8 @@
   <script src="https://code.jquery.com/jquery-latest.min.js"></script>
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.1/angular-route.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.3/moment.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/angular-moment/0.8.2/angular-moment.js"></script>
 
 
 <link data-require="bootstrap-css@2.3.2" data-semver="2.3.2" rel="stylesheet" href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" />
@@ -37,6 +39,7 @@
   <script src="js/controllers/ProductosCtrl.js"></script>
   <script src="js/controllers/RelacionesCtrl.js"></script>
   <script src="js/controllers/EventosCtrl.js"></script>
+  <script src="js/controllers/PublicidadesCtrl.js"></script>
   <script src="js/controllers/ProcesarVentasCtrl.js"></script>
   <script src="js/controllers/ProcesarProductosCtrl.js"></script>
   <script src="js/controllers/ProcesarCategoriasCtrl.js"></script>
@@ -53,42 +56,45 @@
 	<script src="js/app.js"></script>
 </head>
 <body ng-app="sampleApp" ng-controller="LoginController">
-<div class="container">
 	<!-- HEADER -->
 
 	<nav class="navbar"> 
     <div class="navbar-header">
       <a class="navbar-brand" href="#">
-        <img src="/public/images/hdLogo.png">
+        <img src="/images/hdLogo.png">
       </a>
     </div>
-		<ul class="nav navbar-nav">
-      <li><a href="/ventas">Ventas</a></li>
-			<li><a href="/categorias">Categorías</a></li>
+    <ul class="nav navbar-nav user navbar-right">
+    <li><a href="/ventas">Ventas</a></li>
+      <li><a href="/categorias">Categorías</a></li>
       <li><a href="/productos">Productos</a></li>
       <li><a href="/relaciones">Relaciones</a></li> 
       <li><a href="/eventos">Eventos</a></li>  
+      <li><a href="/publicidades">Publicidades</a></li>  
       <!--
       <li><a href="/procesarVentas">Procesar Ventas</a></li>
       <li><a href="/procesarProductos">Procesar Productos</a></li>
       -->
       <li><a href="/procesarCategorias">Procesar Categorías</a></li> 
+      <li class="dropdown" style="margin-top: -3px !important;">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> 
+            <img src="images/hdUserIcon.png">
+            <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu">
+            <li ng-show="nickname == undefined"><a href="#" ng-click="login()">Ingresar a MercadoLibre</a></li>
+            <li ng-show="nickname != undefined" ng-bind='nickname'><a href="#"></a></li>
+            <li>Configuración</li>
+            <li>Cerrar Sesión</li>
+          </ul>
+        </li>     
       
-		</ul>
-    <ul class="nav navbar-nav user ">
-    <span class="glyphicon glyphicon-user pull-left" aria-hidden="true"></span>
-      <li ng-show="nickname == undefined">
-
-      <a href="#" ng-click="login()">Ingresar a MercadoLibre</a></li>
-      <li ng-show="nickname != undefined" ng-bind='nickname'></li>
     </ul>
 
 	</nav>
 
 	<!-- ANGULAR DYNAMIC CONTENT -->
 	<div ng-view></div>
-
-</div>
 </body>
 </html>
 

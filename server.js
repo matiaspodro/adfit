@@ -52,6 +52,9 @@ var ventaSchema = new mongoose.Schema({
   , date_last_updated: Date
   , currency: String
   , order_items: mongoose.Schema.Types.Mixed
+  , total_amount: Number
+  , product: String
+  , info: mongoose.Schema.Types.Mixed
 });
 
 var productoSchema = new mongoose.Schema({
@@ -73,10 +76,20 @@ var relacionSchema = new mongoose.Schema({
 
 var eventoSchema = new mongoose.Schema({
   tipo: Number,
-  id: String,
+  venta_id: String,
+  product_id: String,
   category_id: String,
   fecha: Date,
-  tienePublicidad: Boolean
+  relacion_id: mongoose.Schema.Types.Mixed,
+  repeticion: Number
+});
+
+var publicidadSchema = new mongoose.Schema({
+  evento_id: mongoose.Schema.ObjectId,
+  relacion_id: mongoose.Schema.ObjectId,
+  email: String,
+  producto: String,
+  destino: mongoose.Schema.Types.Mixed
 });
 
 var Ventas = mongoose.model('Ventas', ventaSchema);
@@ -84,6 +97,7 @@ var Productos = mongoose.model('Productos', productoSchema);
 var Categorias = mongoose.model('Categorias', categoriaSchema);
 var Relaciones = mongoose.model('Relaciones', relacionSchema);
 var Eventos = mongoose.model('Eventos', eventoSchema);
+var Publicidades = mongoose.model('Publicidades', publicidadSchema);
 
 app.post('/saveVentas', function(req, res) {
   Ventas.collection.insert(req.body, onInsert);
@@ -153,6 +167,9 @@ app.post('/saveProductos', function(req, res) {
             , date_last_updated: str.last_updated
             , currency: str.currency_id
             , order_items: str.order_items
+            , total_amount: str.total_amount
+            , product: (str.order_items == undefined) ? '' : str.order_items[0].item.id
+            , info: {'email': str.buyer.email}
           }];   
           Ventas.collection.insert(ventas
           , onInsert);
@@ -161,7 +178,27 @@ app.post('/saveProductos', function(req, res) {
                 console.log('403');
               } else {
                 console.log(docs.length + ' venta ha sido guardada.');
-                saveEvento(1, str.order_items[0].item.id, str.order_items[0].item.category_id, str.date_created);
+                saveEvento(1, str.id, str.order_items[0].item.id, str.order_items[0].item.category_id, str.date_created, undefined, undefined, docs[0]);
+
+                ////////////////////////////
+                //Guardar producto
+                ////////////////////////////
+                var prods = [{
+                    id: str.order_items[0].item.id
+                }];   
+                Productos.collection.insert(prods
+                , onInsert);
+                function onInsert(err, docs) {
+                    if (err) {
+                      console.log('403');
+                    } else {
+                      console.log(docs.length + ' producto ha sido guardado.');
+                    }
+                }
+
+                //////////////////////////////
+                //////////////////////////////
+              
               }
           }
       });
@@ -192,33 +229,93 @@ app.post('/saveProductos', function(req, res) {
                 console.log('403');
               } else {
                 console.log(docs.length + ' producto ha sido guardado.');
-                saveEvento(3, str.id, '', str.date_created);
+                saveEvento(3, '', str.id, '', str.date_created);
               }
           }
 
       });
     }
 
+  saveEvento = function(tipo, venta_id, product_id, category_id, fecha, relacion_id, repeticion, venta){
 
+          relacion_id = (relacion_id == undefined) ? '': relacion_id;
+          repeticion = (repeticion == undefined) ? '' : repeticion; 
 
-  saveEvento = function(tipo, id, category_id, fecha){
           var eventos = [{
               tipo: tipo
-            , id: id
+            , venta_id: venta_id
+            , product_id: product_id
             , category_id: category_id
             , fecha: fecha
-            , tienePublicidad: false
+            , relacion_id: relacion_id
+            ,  repeticion: repeticion
           }];   
           Eventos.collection.insert(eventos
           , onInsert);
           function onInsert(err, docs) {
               if (err) {
+                console.log(err);
                 console.log('403');
               } else {
                 console.log(docs.length + ' EVENTO ha sido creado.');
+                //SOLO PARA CROSSSELLING (POR AHORA)
+                if (tipo == 1) savePublicidad(docs[0], venta);
+                //
               }
           }
   }
+
+  savePublicidad = function(evento, venta){
+       Relaciones.find({'tipo.value':1}, function(err, relaciones) {
+        relaciones.forEach(function(rel) {
+
+          var publis = [];
+          /////////////////////////////////////////////////////////
+          //Manganeta para tener todos los productos de la relacion          
+          /////////////////////////////////////////////////////////
+          var str = JSON.stringify(rel.origen)
+          var arr = str.split('children');
+          arr.forEach(function(it) {
+            var minArr = it.split('"}]');
+            if (minArr.length > 1){
+              var minimumArr = minArr[0].split('"');
+              publis.push(minimumArr[minimumArr.length-1]);
+            }
+          });
+          /////////////////////////////////////////////////////////
+          /////////////////////////////////////////////////////////
+
+          publis.forEach(function(publi) {
+              var publicidades = [];
+                if (venta.order_items != undefined && publi == venta.order_items[0].item.id){
+                  publicidades.push({
+                    evento_id: evento._id,
+                    relacion_id: rel._id,
+                    email: venta.info.email,
+                    producto: publi,
+                    destino: rel.destino
+                  });
+                }
+
+              if (publicidades.length > 0){
+                Publicidades.collection.insert(publicidades, onInsert);
+                function onInsert(err, docs) {
+                    if (err) {
+                      console.log(err);
+                      console.log('403');
+                    } else {
+                      console.log(docs.length + ' Publicidad/es han sido creadas.');
+                      //
+                    }
+                }
+              }
+          });
+        });
+      });
+
+
+  }
+
 
 app.post('/saveCategorias', function(req, res) {
   Categorias.collection.insert(req.body, onInsert);
@@ -235,7 +332,7 @@ app.post('/saveCategorias', function(req, res) {
 
 
 app.post('/saveRelaciones', function(req, res) {
-  console.log(req.body);
+  //console.log(req.body);
   Relaciones.collection.insert(req.body, onInsert);
 
   function onInsert(err, docs) {
@@ -320,6 +417,18 @@ app.get('/getAllEventos', function(req, res) {
   });
 });
 
+app.get('/getAllPublicidades', function(req, res) {
+  Publicidades.find({}, function(err, publicidades) {
+    var pubMap = {};
+
+    publicidades.forEach(function(pub) {
+      pubMap[pub._id] = pub;
+    });
+
+    res.send(pubMap);  
+  });
+});
+
 
 app.get('/getLast', function(req, res) {
   Ventas.find({}, null, {limit:1}, function(err, ventas) {
@@ -335,31 +444,43 @@ app.get('/getCantVentas', function(req, res) {
 });
 
 app.post('/generateReselling', function(req, res) {
-  var today = moment().utc().format('YYYY-MM-DD');
+  var repeticion = 0;
+  var today = moment().utc().format('YYYY-MM-DD'); //comparo con hoy
 
   Relaciones.find({'tipo.value':2}, function(err, relaciones) {
     relaciones.forEach(function(relacion) {
       Eventos.find({'tipo':1}, function(err, eventos) {
         eventos.forEach(function(evento) { 
-          if (evento.id == relacion.origen.id){
-            console.log('--');
-            console.log('--');
-            console.log('--');
-            console.log(evento.fecha);
-            var fecha = moment(evento.fecha).utc().format('YYYY-MM-DD');
-            console.log(fecha);
-            if (relacion.reselling.tipo.value == '1'){
-              if (moment(today).diff(fecha, 'days') == relacion.reselling.cantidad){
-                saveEvento(2, evento.id, evento.category_id, moment(today).utc().format('YYYY-MM-DDTHH:mm:ss.sssZ'));
-              }
-            }else {
-              if (moment(today).diff(fecha, 'months') == relacion.reselling.cantidad){
-                saveEvento(2, evento.id, evento.category_id, moment(today).utc().format('YYYY-MM-DDTHH:mm:ss.sssZ'));
-              }
+          if (evento.product_id == relacion.origen.id){
+
+
+            
+            if (true){
+
+            //if ('MLA622421876' == evento.id){
+              //console.log(evento.id);
+
+                var fecha = moment(evento.fecha).utc().format('YYYY-MM-DD');
+                console.log(fecha);
+                //console.log('cantidad' + relacion.reselling.cantidad);
+                if (relacion.reselling.tipo.value == '1'){
+                  var days = moment(today).diff(fecha, 'days');
+                  //console.log('days' + days);
+                  if (days % relacion.reselling.cantidad == 0){
+                    repeticion = Math.floor(days/relacion.reselling.cantidad);
+                    saveEvento(2, evento.venta_id, evento.product_id, evento.category_id, moment(today).utc().format('YYYY-MM-DDTHH:mm:ss.sssZ'), relacion._id, repeticion);
+                    
+                  }
+                }else {
+                  var months = moment(today).diff(fecha, 'months');
+                  //console.log('months' + months);
+                  if (months % relacion.reselling.cantidad == 0){
+                    repeticion = Math.floor(months/relacion.reselling.cantidad);
+                    saveEvento(2, evento.id, evento.category_id, moment(today).utc().format('YYYY-MM-DDTHH:mm:ss.sssZ'), relacion._id, repeticion);
+                  }
+                }
+
             }
-            console.log('--');
-            console.log('--');
-            console.log('--');
           }
 
 
@@ -376,6 +497,24 @@ app.post('/generateReselling', function(req, res) {
   });
 
 });
+
+
+
+app.post('/generatePublicidades', function(req, res) {
+  Eventos.find({tipo:1}, function(err, eventos) {
+    eventos.forEach(function(eve) {
+        console.log('ENTROOO');
+      Ventas.find({id:eve.venta_id}, function(err, ventas) {
+        ventas.forEach(function(ven) {
+           savePublicidad(eve, ven);
+        });
+
+      });
+    });
+
+  });
+});
+
 
 
 //==========================

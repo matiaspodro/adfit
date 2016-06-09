@@ -1,29 +1,111 @@
-<h1>Ventas</h1>
+<div class="container chat">
+  <div class="row">
+    <div class="col-md-3 col-grey">
+    <h3>Mis ventas</h3>
 
+    <span ng-class="{'glyphicon glyphicon-refresh glyphicon-refresh-animate': isActive}"></span>
+    <div ng-show="!isActive">
+      <pagination total-items="cantVentas" ng-model="currentPage" max-size="numPerPage" boundary-links="true"
+        items-per-page="numPerPage"
+        class="pagination-sm" 
+        previous-text="&lsaquo;" next-text="&rsaquo;" first-text="&laquo;" last-text="&raquo;">
+      </pagination>
+      <table class="list ventas">
+        <tbody>
+            <tr class="item" ng-repeat="venta in filteredVentas">
+                <td>
+                  <a href="" ng-click="verDetalle(venta)">
+                  <img src="{{venta.thumbnail}}" class="img-circle">
+                  </a>
+                </td>
+                <td>
+                  <a href="" ng-click="verDetalle(venta)"><strong>${{venta.total_amount}}.-</strong></a>
+                  <br>
+                  <a  href="" ng-click="verDetalle(venta)">{{venta.order_items[0].item.title}}</a>
+                  <br>
+                  Categoría: {{venta.category}}
+                </td>
+            </tr>
+        </tbody>
+      </table>
+    </div>
 
-<span ng-class="{'glyphicon glyphicon-refresh glyphicon-refresh-animate': isActive}"></span>
-<div ng-show="!isActive">
+    </div>
+    <div class="col-md-6">
+      <ol class="breadcrumb">
+        <li  ng-repeat="cat in detalle.venta.categories" ng-class="{active: detalle.venta.categories.length == $index+1}">{{cat.name}}</li>
+      </ol>
+      <div class="product"><h2 ng-bind="detalle.order_items.item.title"></h2></div>
+      <div class="price pull-right"><h3  ng-bind="'$'+detalle.venta.total_amount+'.-'"></h3></div>
 
+      <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <li  ng-repeat="picture in detalle.item.pictures" data-target="#carousel-example-generic" data-slide-to="{{$index}}" ng-class="{active:$index==0}"></li>
+        </ol>
 
-    <pagination total-items="cantVentas" ng-model="currentPage" max-size="numPerPage" class="pagination-sm" boundary-links="true" items-per-page="numPerPage"></pagination>
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+          <div class="item" ng-class="{active:$index==0}" ng-repeat="picture in detalle.venta.pictures">
+            <img src="{{picture.secure_url}}">
+          </div>
+        </div>
 
-  <table class="table table-striped">
-    <thead><tr>
-      <th>Detalle:</th>
-      <th>ID:</th>
-      <th>Estado:</th>
-      <th>Fecha:</th>
-    </tr></thead>
-    <tbody><tr ng-repeat="venta in filteredVentas">
-      <td>
-        <a class="btn" href="/detalleVenta" ng-click="verDetalle(venta)">
-          <span class="glyphicon glyphicon-plus-sign"></span>&nbsp;&nbsp;Ver Detalles
+        <!-- Controls -->
+        <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
         </a>
-      </td>
-      <td>{{ venta.id }}</td>
-      <td>{{ venta.status }}</td>
-      <td>{{ venta.date_last_updated }}</td>
-    </tr></tbody>
-  </table>
+        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+      <div class="col-md-12 detail">
+      <div style="clear: both"></div>
+      
+      <div class="panel panel-default">
+        <div class="panel-body">
+        <p ng-bind-html="getHtml(detalle.venta.description)">
+        </p>
+        </div>
+      </div>
+      <hr>
+      <table class="vendor">
+        <tbody><tr>
+          <td>
+            
+          </td>
+          <td></td>
+        </tr>
+      </tbody></table>
+    </div>
+    </div>
+    <div class="col-md-3 col-grey">
+      <div class="vendor-data">
+        <strong><p ng-bind="detalle.vendedor.nickname"></p></strong>
+        <p ng-bind="detalle.vendedor.first_name+' '+detalle.vendedor.last_name"></p>
+        <p ng-bind="detalle.vendedor.email"></p>
+      </div>
+      <h4>Creada hace:</h4>
+      <div class="status">
+
+       <span am-time-ago="detalle.fechaAlta"></span>
+       </div>
+      <hr>
+      <h4>Envio</h4>
+      <div class="status" ng-bind="detalle.envio.status">Sin datos</div>
+      <hr>
+      <h4>Pago</h4>
+      <div class="status" ng-bind="detalle.pagos.status">Sin datos</div>
+      <hr>
+      <h4>Estado de la compra</h4>
+      <div class="status" ng-bind="detalle.venta.status">Sin datos</div>
+      <hr>
+      <h4>Calificación</h4>
+      <div class="status" ng-bind="detalle.feedback.sale.rating">Sin datos</div>
+    </div>
+  </div>
+
 
 </div>
