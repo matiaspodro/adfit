@@ -75,6 +75,19 @@ angular.module('DBService', []).factory('DB', ['$http', '$q', function($http, $q
         return promise;
 	};
 
+	db.generatePublicidades = function(params){		
+	    var defered = $q.defer();
+	    var promise = defered.promise;
+		$http.post('/generatePublicidades', params)
+		.success(function(data) {
+            defered.resolve(data);
+		})
+        .error(function(err) {
+            defered.reject(err)
+        });
+
+        return promise;
+	};
 
 	db.saveProductos = function(params){		
 	    var defered = $q.defer();
@@ -225,6 +238,21 @@ angular.module('DBService', []).factory('DB', ['$http', '$q', function($http, $q
 	    var defered = $q.defer();
 	    var promise = defered.promise;
 		$http.get('/getAllEventos')
+		.success(function(data) {
+            defered.resolve(data);
+		})
+        .error(function(err) {
+            defered.reject(err)
+        });
+
+        return promise;
+	};
+
+
+	db.getPublicidades = function(params){		
+	    var defered = $q.defer();
+	    var promise = defered.promise;
+		$http.get('/getAllPublicidades')
 		.success(function(data) {
             defered.resolve(data);
 		})

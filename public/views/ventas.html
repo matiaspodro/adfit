@@ -87,6 +87,12 @@
         <p ng-bind="detalle.vendedor.first_name+' '+detalle.vendedor.last_name"></p>
         <p ng-bind="detalle.vendedor.email"></p>
       </div>
+      <h4>Creada hace:</h4>
+      <div class="status">
+
+       <span am-time-ago="detalle.fechaAlta"></span>
+       </div>
+      <hr>
       <h4>Envio</h4>
       <div class="status" ng-bind="detalle.envio.status">Sin datos</div>
       <hr>

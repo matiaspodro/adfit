@@ -70,9 +70,12 @@ angular.module('VentasCtrl', ['ui.bootstrap']).controller('VentasController', fu
 		$scope.detalle.venta 		= venta;
 		$scope.detalle.order_items	= $scope.detalle.venta.order_items[0];
 		$scope.detalle.vendedor		= $scope.detalle.venta.buyer;
-		$scope.detalle.envio		= $scope.detalle.venta.shipping;
-		$scope.detalle.pagos		= $scope.detalle.venta.payments[0];
-		$scope.detalle.feedback		= $scope.detalle.venta.feedback;
+		//$scope.detalle.fechaAlta	= ($scope.detalle.venta.date_created) ? moment($scope.detalle.venta.date_created).utc().format('DD-MM-YYYY') : '';
+		
+		$scope.detalle.fechaAlta	= ($scope.detalle.venta.date_created) ? $scope.detalle.venta.date_created : '';
+		$scope.detalle.envio		= ($scope.detalle.venta.shipping) ? $scope.detalle.venta.shipping : '';
+		$scope.detalle.pagos		= ($scope.detalle.venta.payments) ? $scope.detalle.venta.payments[0] : '';
+		$scope.detalle.feedback		= ($scope.detalle.venta.feedback) ? $scope.detalle.venta.feedback : '';
 	};
 
 	calcularCantVentas();
