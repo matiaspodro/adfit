@@ -1,0 +1,28 @@
+<h1>Publicidades</h1>
+<span ng-class="{'glyphicon glyphicon-refresh glyphicon-refresh-animate': isActive}"></span>
+<div ng-show="!isActive">
+
+
+    <button ng-click="procesarPublicidades()" type="button" class="btn btn-primary">Procesar Publicidades</button>
+
+
+    <pagination total-items="publicidades.length" ng-model="currentPage" max-size="maxSize" class="pagination-sm" boundary-links="true" items-per-page="10"></pagination>
+    
+  <table class="table table-striped">
+    <thead><tr>
+      <th>Evento</th>
+      <th>Email</th>
+      <th>Producto</th>
+      <th>Destino</th>
+    </tr></thead>
+    <tbody><tr ng-repeat="publicidad in filteredPublicidades">
+      <td>{{ publicidad.evento.tipo }}</td>
+      <td>{{ publicidad.email }}</td>
+      <td>{{ publicidad.producto }}</td>
+      <td>{{ publicidad.destino.name }}</td>
+    </tr></tbody>
+  </table>
+
+
+
+</div>

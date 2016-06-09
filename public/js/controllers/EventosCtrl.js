@@ -1,9 +1,9 @@
-angular.module('EventosCtrl', ['ui.bootstrap']).controller('EventosController', function($scope, $http, ML, DB, eventoShareData) {
+angular.module('EventosCtrl', ['ui.bootstrap']).controller('EventosController', function($scope, $http, ML, DB) {
 
 	$scope.filteredEventos 		= [];
-	$scope.eventos 				= [];
-	$scope.maxSize 				= 5;
-	$scope.isActive				= true;
+	$scope.eventos 					= [];
+	$scope.maxSize 					= 5;
+	$scope.isActive					= true;
   
 	$scope.numPages = function () {
     	return Math.ceil($scope.eventos.length / $scope.numPerPage);
@@ -30,13 +30,15 @@ angular.module('EventosCtrl', ['ui.bootstrap']).controller('EventosController', 
 	});
 
 
-	// $scope.verDetalle = function(evento){
-	// 	eventoShareData.eventoActual = evento;			
-	// };
+	// DB.postMailer({}).then(function(data) {
+	// 	console.log('sdad');
+	// });
 
-	DB.postMailer({}).then(function(data) {
-		console.log('sdad');
-	});
+	$scope.procesarReselling = function(){
 
+		DB.generateReselling({}).then(function(data) {
+
+		});
+	};
 
 });

@@ -112,6 +112,22 @@ body {
     to { transform: scale(1) rotate(360deg);}
 }
 
+.ventas .item{
+	border-style: inset; 
+}
+
+.ventas .item td{
+	width: 60px;
+}
+
+.img-circle td .img-circle{
+
+}
+
+.ventas .item td a{
+	cursor:pointer;
+	text-decoration: none;
+}
 /* MOM'S MARKETPLACE*/
 
 Skip to content

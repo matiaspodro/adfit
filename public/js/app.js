@@ -1,4 +1,4 @@
-angular.module('sampleApp', ['ngRoute', 'appRoutes', 
+angular.module('sampleApp', ['ngRoute', 'appRoutes', 'angularMoment', 
 'LoginCtrl', 
 'MainCtrl', 
 'VentasCtrl', 
@@ -10,14 +10,20 @@ angular.module('sampleApp', ['ngRoute', 'appRoutes',
 'ProcesarVentasCtrl', 
 'ProcesarProductosCtrl', 
 'ProcesarCategoriasCtrl', 
+'RelacionesCtrl',  
 'EventosCtrl', 
+'PublicidadesCtrl', 
 'MLService', 
 'DBService', 
 'ArbolService', 
 'ventaShareData', 
 'productoShareData', 
-'eventoShareData',
+'relacionShareData',
 'categoryDirective',
 'modalDirective'
-]);
+])
 
+.constant('angularMomentConfig', {
+  preprocess: 'utc',
+  timezone: 'Europe/Berlin'
+});

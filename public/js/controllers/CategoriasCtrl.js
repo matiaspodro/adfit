@@ -44,7 +44,7 @@ angular.module('CategoriasCtrl', ['ui.bootstrap']).controller('CategoriasControl
 
 	$scope.selectCategoryCrossProduct = function(cat){
 		$scope.tipo = {value:3, description: 'CrossProduct'};
-    	$scope.catDestino = cat;    	//generarEvento();
+    	$scope.catDestino = cat;    	//generarRelacion();
 	};
 
     $scope.toggleModal = function(){
@@ -56,7 +56,7 @@ angular.module('CategoriasCtrl', ['ui.bootstrap']).controller('CategoriasControl
 
 	var generarEvento = function(){
 		resetModal();
-    	DB.saveEventos([{origen:$scope.catOrigen, destino:$scope.catDestino, tipo: $scope.tipo}]);
+    	DB.saveRelaciones([{origen:$scope.catOrigen, destino:$scope.catDestino, tipo: $scope.tipo}]);
 	}
 
   	var resetModal = function(){
@@ -91,14 +91,14 @@ angular.module('CategoriasCtrl', ['ui.bootstrap']).controller('CategoriasControl
 
   $scope.confirmReselling = function(){
     if ($scope.button.id > 0 && $scope.button2 > 0) {
-    	DB.saveEventos([{origen:$scope.catOrigen, reselling:{tipo: {value:$scope.button.id, description:($scope.button.id == 1) ? 'Día/s' : 'Mes/es' }, cantidad: $scope.button2}, tipo: {value:2, description:'ReSelling'} }]);
+    	DB.saveRelaciones([{origen:$scope.catOrigen, reselling:{tipo: {value:$scope.button.id, description:($scope.button.id == 1) ? 'Día/s' : 'Mes/es' }, cantidad: $scope.button2}, tipo: {value:2, description:'ReSelling'} }]);
     	resetModal();
     }else alert('ingrese reselling');
   }
 
   $scope.relatedCategories = function(){
   	resetModal();
-  	$window.location.href = '/eventos';
+  	$window.location.href = '/relaciones';
   }
 
 //////////////////////////

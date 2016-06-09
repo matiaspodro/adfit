@@ -45,10 +45,40 @@ angular.module('DBService', []).factory('DB', ['$http', '$q', function($http, $q
 
 
 
+
 	db.saveVentas = function(params){		
 	    var defered = $q.defer();
 	    var promise = defered.promise;
 		$http.post('/saveVentas', params)
+		.success(function(data) {
+            defered.resolve(data);
+		})
+        .error(function(err) {
+            defered.reject(err)
+        });
+
+        return promise;
+	};
+
+
+	db.generateReselling = function(params){		
+	    var defered = $q.defer();
+	    var promise = defered.promise;
+		$http.post('/generateReselling', params)
+		.success(function(data) {
+            defered.resolve(data);
+		})
+        .error(function(err) {
+            defered.reject(err)
+        });
+
+        return promise;
+	};
+
+	db.generatePublicidades = function(params){		
+	    var defered = $q.defer();
+	    var promise = defered.promise;
+		$http.post('/generatePublicidades', params)
 		.success(function(data) {
             defered.resolve(data);
 		})
@@ -87,10 +117,10 @@ angular.module('DBService', []).factory('DB', ['$http', '$q', function($http, $q
         return promise;
 	};
 
-	db.saveEventos = function(params){		
+	db.saveRelaciones = function(params){		
 	    var defered = $q.defer();
 	    var promise = defered.promise;
-		$http.post('/saveEventos', params)
+		$http.post('/saveRelaciones', params)
 		.success(function(data) {
             defered.resolve(data);
 		})
@@ -188,10 +218,41 @@ angular.module('DBService', []).factory('DB', ['$http', '$q', function($http, $q
 	};
 
 
+	db.getRelaciones = function(params){		
+	    var defered = $q.defer();
+	    var promise = defered.promise;
+		$http.get('/getAllRelaciones')
+		.success(function(data) {
+            defered.resolve(data);
+		})
+        .error(function(err) {
+            defered.reject(err)
+        });
+
+        return promise;
+	};
+
+
+
 	db.getEventos = function(params){		
 	    var defered = $q.defer();
 	    var promise = defered.promise;
 		$http.get('/getAllEventos')
+		.success(function(data) {
+            defered.resolve(data);
+		})
+        .error(function(err) {
+            defered.reject(err)
+        });
+
+        return promise;
+	};
+
+
+	db.getPublicidades = function(params){		
+	    var defered = $q.defer();
+	    var promise = defered.promise;
+		$http.get('/getAllPublicidades')
 		.success(function(data) {
             defered.resolve(data);
 		})
