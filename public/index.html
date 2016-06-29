@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans:400,800,700,600,300&subset=latin,latin-ext' type='text/css'>
   <link rel="stylesheet" href="css/style.css"> <!-- custom styles -->
+  <link rel="stylesheet" href="css/email.css"> <!-- custom styles -->
 
 	<!-- JS -->
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
@@ -43,14 +44,19 @@
   <script src="js/controllers/ProcesarVentasCtrl.js"></script>
   <script src="js/controllers/ProcesarProductosCtrl.js"></script>
   <script src="js/controllers/ProcesarCategoriasCtrl.js"></script>
+  <script src="js/controllers/ConfiguracionCtrl.js"></script>
+  <script src="js/controllers/VistaPreviaCtrl.js"></script>
 	<script src="js/services/MLService.js"></script>
   <script src="js/services/DBService.js"></script>
   <script src="js/services/ArbolService.js"></script>
+  <script src="js/services/MailerService.js"></script>
+  <script src="js/services/PublicidadService.js"></script>
   <script src="js/services/ventaShareData.js"></script>
   <script src="js/services/productoShareData.js"></script>
   <script src="js/services/relacionShareData.js"></script>
   <script src="js/directives/categoryDirective.js"></script>
   <script src="js/directives/modalDirective.js"></script>
+  <script src="js/directives/templateDirective.js"></script>
   
 	<script src="js/appRoutes.js"></script>
 	<script src="js/app.js"></script>
@@ -84,7 +90,7 @@
           <ul class="dropdown-menu">
             <li ng-show="nickname == undefined"><a href="#" ng-click="login()">Ingresar a MercadoLibre</a></li>
             <li ng-show="nickname != undefined" ng-bind='nickname'><a href="#"></a></li>
-            <li>Configuración</li>
+            <li><a href="/configuracion">Configuración</a></li>
             <li>Cerrar Sesión</li>
           </ul>
         </li>     

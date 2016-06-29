@@ -11,18 +11,28 @@
   <table class="table table-striped">
     <thead><tr>
       <th>Evento</th>
+      <th>Nickname</th>
       <th>Email</th>
       <th>Producto</th>
       <th>Destino</th>
+      <th>E-mail</th>
     </tr></thead>
     <tbody><tr ng-repeat="publicidad in filteredPublicidades">
-      <td>{{ publicidad.evento.tipo }}</td>
-      <td>{{ publicidad.email }}</td>
+      <td>{{ publicidad.evento.tipo.description }}</td>
+      <td>{{ publicidad.info.nickname }}</td>
+      <td>{{ publicidad.info.email }}</td>
       <td>{{ publicidad.producto }}</td>
       <td>{{ publicidad.destino.name }}</td>
+
+      <td ng-show="publicidad.enviado">Enviado</td>
+      <td ng-show="!publicidad.enviado">
+        <a href="/vistaPrevia/{{publicidad._id}}" >Vista Previa</a>
+        <!--<button ng-click="enviarEmail(publicidad)" type="button" class="btn btn-primary">Enviar</button>-->
+      </td>
+      
     </tr></tbody>
   </table>
 
-
-
 </div>
+
+
