@@ -63,6 +63,16 @@ angular.module('appRoutes', []).config(['$routeProvider', '$locationProvider', f
 			controller: 'PublicidadesController'
 		})
 
+		.when('/configuracion', {
+			templateUrl: 'views/configuracion.html',
+			controller: 'ConfiguracionController'
+		})
+
+
+		.when('/vistaPrevia/:id', {
+			templateUrl: 'views/vistaPrevia.html',
+			controller: 'VistaPreviaController'
+		})
 
 		;
 

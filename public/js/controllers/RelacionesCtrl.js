@@ -28,15 +28,4 @@ angular.module('RelacionesCtrl', ['ui.bootstrap']).controller('RelacionesControl
 		$scope.numPerPage 		= 10;
 		$scope.isActive			= false;
 	});
-
-
-	// $scope.verDetalle = function(relacion){
-	// 	relacionShareData.relacionActual = relacion;			
-	// };
-
-	DB.postMailer({}).then(function(data) {
-		console.log('sdad');
-	});
-
-
 });

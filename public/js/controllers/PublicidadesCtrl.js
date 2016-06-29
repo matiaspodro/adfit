@@ -1,4 +1,4 @@
-angular.module('PublicidadesCtrl', ['ui.bootstrap']).controller('PublicidadesController', function($scope, $http, ML, DB) {
+angular.module('PublicidadesCtrl', ['ui.bootstrap']).controller('PublicidadesController', function($scope, $window, $http, $templateCache, ML, DB, Mailer) {
 
 	$scope.filteredPublicidades 		= [];
 	$scope.publicidades 					= [];
@@ -22,18 +22,38 @@ angular.module('PublicidadesCtrl', ['ui.bootstrap']).controller('PublicidadesCon
 		});
   	}
 
-	DB.getPublicidades().then(function(data) {
-		$scope.publicidades 		= array(data);
-		$scope.currentPage 		= 1;
-		$scope.numPerPage 		= 10;
-		$scope.isActive			= false;
-	});
 
 	$scope.procesarPublicidades = function(){
-
 		DB.generatePublicidades({}).then(function(data) {
-
 		});
 	};
+
+
+	$scope.enviarEmail = function(publicidad){
+
+		Mailer.enviarEmail(publicidad).then(function(){
+			$window.location.reload();
+		});
+
+	};
+
+	var obtenerPublicidades = function(){
+		DB.getPublicidades().then(function(data) {
+			$scope.publicidades 		= array(data);
+			$scope.currentPage 		= 1;
+			$scope.numPerPage 		= 10;
+			$scope.isActive			= false;
+		});
+	}
+
+	obtenerPublicidades();
+
+
+
+
+	var template = '';
+
+
+
 
 });

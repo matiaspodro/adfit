@@ -30,9 +30,6 @@ angular.module('EventosCtrl', ['ui.bootstrap']).controller('EventosController', 
 	});
 
 
-	// DB.postMailer({}).then(function(data) {
-	// 	console.log('sdad');
-	// });
 
 	$scope.procesarReselling = function(){
 

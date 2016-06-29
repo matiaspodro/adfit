@@ -11,8 +11,9 @@
     "request" : "latest",
     "node-rest-client" : "latest",
     "socket.io": "latest",
-    "nodemailer":"latest",
-    "moment": "2.0.0"
+    "nodemailer":"0.7.1",
+    "moment": "2.0.0",
+    "styliner": "latest"
   }
 }
 

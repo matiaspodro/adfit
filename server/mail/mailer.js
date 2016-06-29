@@ -1,13 +1,14 @@
 var async = require("async");
 var nodemailer = require("nodemailer");
 
+var fs = require('fs');
 var express        			= require('express');
 var app            			= express.Router();
 
 
 // This will store emails needed to send.
 // We can fetch it from DB (MySQL,Mongo) and store here.
-var listofemails = ["ivan@melul.com"]; 
+var listofemails = ["adfitfidelizacion@gmail.com"]; //DEPRECADO
 // Will store email sent successfully.
 var success_email = [];
 // Will store email whose sending is failed. 
@@ -16,6 +17,13 @@ var failure_email = [];
 var transporter;
 
 var userMail = 'adfitfidelizacion@gmail.com';
+var example = '';
+
+
+
+var data_html = '';
+var subject = '';
+var email = '';
 
 /* Loading modules done. */
 
@@ -66,9 +74,10 @@ massMailer.prototype.SendEmail = function(Email,callback) {
         function(callback) {                
             var mailOptions = {
                 from: userMail,     
-                to: Email,
-                subject: 'Hi ! This is from Async Script', 
-                text: "Hello World !"
+                to: email,
+                subject: subject, 
+                //html: "<h1>Hello Worl</h1>d !" + ' ' + example
+                html: data_html
             };
             transporter.sendMail(mailOptions, function(error, info) {               
                 if(error) {
@@ -86,15 +95,23 @@ massMailer.prototype.SendEmail = function(Email,callback) {
                 callback();
         }
         ],function(){
-            //When everything is done return back to caller.
+            //When everything is done return back to caller.    
             callback();
     });
 }
 
 exports.prepare = function(req, res){
-
+    
 };
 
 exports.send = function(req, res){
-  new massMailer(); //lets begin
+    example = req.body.publicidad.producto;
+    subject = req.body.asunto;
+    //email = req.body.email;
+    email = 'adfitfidelizacion@gmail.com';
+
+    data_html = req.body.template;
+
+    new massMailer(); //lets begin
+   
 };

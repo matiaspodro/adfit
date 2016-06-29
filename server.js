@@ -10,7 +10,7 @@ var bodyParser                = require('body-parser');
 var methodOverride            = require('method-override');
 var passport                  = require('passport');
 var MercadoLibreStrategy      = require('passport-mercadolibre').Strategy;
-var mailer                    = require('./server/mailer');
+var mailer                    = require('./server/mail/mailer');
 var notifications             = require('./server/notifications');
 var fs                        = require('fs');
 var moment                    = require('moment');
@@ -87,9 +87,10 @@ var eventoSchema = new mongoose.Schema({
 var publicidadSchema = new mongoose.Schema({
   evento_id: mongoose.Schema.ObjectId,
   relacion_id: mongoose.Schema.ObjectId,
-  email: String,
+  info: mongoose.Schema.Types.Mixed,
   producto: String,
-  destino: mongoose.Schema.Types.Mixed
+  destino: mongoose.Schema.Types.Mixed,
+  enviado: Boolean
 });
 
 var Ventas = mongoose.model('Ventas', ventaSchema);
@@ -169,7 +170,7 @@ app.post('/saveProductos', function(req, res) {
             , order_items: str.order_items
             , total_amount: str.total_amount
             , product: (str.order_items == undefined) ? '' : str.order_items[0].item.id
-            , info: {'email': str.buyer.email}
+            , info: str.buyer
           }];   
           Ventas.collection.insert(ventas
           , onInsert);
@@ -291,9 +292,10 @@ app.post('/saveProductos', function(req, res) {
                   publicidades.push({
                     evento_id: evento._id,
                     relacion_id: rel._id,
-                    email: venta.info.email,
+                    info: venta.info,
                     producto: publi,
-                    destino: rel.destino
+                    destino: rel.destino,
+                    enviado: 0
                   });
                 }
 
@@ -358,7 +360,7 @@ app.get('/getAllVentas', function(req, res) {
 });
 
 app.get('/getVentasByLimit', function(req, res) {
-  Ventas.find({},{}, { skip: req.query.begin, limit : req.query.cant }, function(err, ventas) {
+  Ventas.find({},{}, { skip: req.query.begin, limit : req.query.cant, sort: {'date_created':-1} }, function(err, ventas) {
     var ventaMap = {};
 
     ventas.forEach(function(venta) {
@@ -370,6 +372,18 @@ app.get('/getVentasByLimit', function(req, res) {
 });
 
 app.get('/getAllProductos', function(req, res) {
+  Productos.find({}, function(err, productos) {
+    var prodMap = {};
+
+    productos.forEach(function(prod) {
+      prodMap[prod._id] = prod;
+    });
+
+    res.send(prodMap);  
+  });
+});
+
+app.get('/getProductosByCategoria', function(req, res) {
   Productos.find({}, function(err, productos) {
     var prodMap = {};
 
@@ -429,6 +443,11 @@ app.get('/getAllPublicidades', function(req, res) {
   });
 });
 
+app.get('/getOnePublicidad', function(req, res) {
+  Publicidades.find({'_id': req.query.id}, function(err, publicidad) {
+    res.send(publicidad[0]);  
+  });
+});
 
 app.get('/getLast', function(req, res) {
   Ventas.find({}, null, {limit:1}, function(err, ventas) {
@@ -519,7 +538,20 @@ app.post('/generatePublicidades', function(req, res) {
 
 //==========================
 app.post('/prepareMailer', mailer.prepare);
-app.post('/sendMailer', mailer.send);
+app.post('/sendMailer', function(req, res) {
+  mailer.send(req, res);
+
+  Publicidades.update({_id:req.body.publicidad._id}, {$set:{enviado:1}}, function(err, docs) {
+      if (err) {
+      res.status(403)        // HTTP status 404: NotFound
+      .send(err);
+      } else {
+          console.log('req.body._id: '+req.body._id);
+          res.send('Publicidad enviada');
+      }
+  });
+
+});
 
 
 //==========================

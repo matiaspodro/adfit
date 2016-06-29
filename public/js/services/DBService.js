@@ -14,15 +14,12 @@ angular.module('DBService', []).factory('DB', ['$http', '$q', function($http, $q
 			defered.reject(err);
 		});
 
-
         return promise;
 	};
-
 
 	db.unaCategoriaConProductos = function(catId){	
 	    var defered = $q.defer();
 	    var promise = defered.promise;
-
 
 		db.getProductos().then(function(prods) {
 			//console.log(prods);
@@ -38,7 +35,6 @@ angular.module('DBService', []).factory('DB', ['$http', '$q', function($http, $q
 		}, function(err) {
 			defered.reject(err);
 		});
-
 
         return promise;
 	};
@@ -203,6 +199,20 @@ angular.module('DBService', []).factory('DB', ['$http', '$q', function($http, $q
 	};
 
 
+	db.getProductosByCategoria = function(cat){		
+	    var defered = $q.defer();
+	    var promise = defered.promise;
+		$http.get('/getProductosByCategoria?cat='+cat)
+		.success(function(data) {
+            defered.resolve(data);
+		})
+        .error(function(err) {
+            defered.reject(err)
+        });
+
+        return promise;
+	};
+
 	db.getCategorias = function(params){		
 	    var defered = $q.defer();
 	    var promise = defered.promise;
@@ -263,7 +273,19 @@ angular.module('DBService', []).factory('DB', ['$http', '$q', function($http, $q
         return promise;
 	};
 
+	db.getOnePublicidad = function(id){		
+	    var defered = $q.defer();
+	    var promise = defered.promise;
+		$http.get('/getOnePublicidad?id='+id)
+		.success(function(data) {
+            defered.resolve(data);
+		})
+        .error(function(err) {
+            defered.reject(err)
+        });
 
+        return promise;
+	};
 
 	db.postNotifiactions = function(params){		
 	    var defered = $q.defer();
@@ -285,7 +307,7 @@ angular.module('DBService', []).factory('DB', ['$http', '$q', function($http, $q
 	db.postMailer = function(params){		
 	    var defered = $q.defer();
 	    var promise = defered.promise;
-		$http.post('/mailer', params)
+		$http.post('/sendMailer', params)
 		.success(function(data) {
             defered.resolve(data);
 		})

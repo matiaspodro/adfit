@@ -2,7 +2,7 @@ angular.module('VentasCtrl', ['ui.bootstrap']).controller('VentasController', fu
 
 	$scope.filteredVentas 	= [];
 	$scope.isActive			= true;
-	$scope.numPerPage 		= 3;
+	$scope.numPerPage 		= 10;
 	$scope.currentPage 		= 1;
 
 	$scope.cantVentas 		= 0;

@@ -13,14 +13,19 @@ angular.module('sampleApp', ['ngRoute', 'appRoutes', 'angularMoment',
 'RelacionesCtrl',  
 'EventosCtrl', 
 'PublicidadesCtrl', 
+'ConfiguracionCtrl',
+'VistaPreviaCtrl',
 'MLService', 
 'DBService', 
 'ArbolService', 
+'MailerService', 
+'PublicidadService', 
 'ventaShareData', 
 'productoShareData', 
 'relacionShareData',
 'categoryDirective',
-'modalDirective'
+'modalDirective',
+'templateDirective'
 ])
 
 .constant('angularMomentConfig', {
