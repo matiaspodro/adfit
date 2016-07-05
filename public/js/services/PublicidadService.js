@@ -1,4 +1,4 @@
-angular.module('PublicidadService', []).factory('Publicidad', ['$http', '$q', 'DB', 'ML', function($http, $q, $filter, DB,ML) {
+angular.module('PublicidadService', []).factory('Publicidad', ['$http', '$q', 'DB', 'ML', function($http, $q, DB,ML) {
 	var pub = {};
 	pub.obtenerProductosRandom = function(publicidad){	
 	    var defered = $q.defer();
@@ -7,11 +7,11 @@ angular.module('PublicidadService', []).factory('Publicidad', ['$http', '$q', 'D
 		DB.getProductosByCategoria(publicidad.destino.id).then(function(data) {
 			var arr = array(data);
 
-			$scope.random = function(){
+			var random = function(){
 			    return 0.5 - Math.random();
 			};
 
-			var sarassa = $filter('orderBy')(arr, $scope.random);
+			//var sarassa = $filter('orderBy')(arr, random);
 
 			var prods = [];
 			if (arr[0]!= undefined) prods.push(arr[0]);
