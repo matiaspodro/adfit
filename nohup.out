@@ -100976,3 +100976,2890 @@ Will update DB here for adfitfidelizacion@gmail.comWith false
 403
 403
 403
+Magic happens on port 8080
+403
+403
+403
+403
+403
+403
+403
+403
+{ id: 110242209,
+  nickname: 'VEINTEDOCEPC',
+  registration_date: '2012-04-23T09:58:00.000-04:00',
+  first_name: 'DAMARFU',
+  last_name: 'SA',
+  country_id: 'AR',
+  email: 'damarfusa@gmail.com',
+  identification: { type: 'Otro', number: '33708543409' },
+  address: 
+   { state: 'AR-C',
+     city: 'capital federal',
+     address: 'echeverria 1392',
+     zip_code: '1428' },
+  phone: 
+   { area_code: '11',
+     number: '47817077',
+     extension: '',
+     verified: false },
+  alternative_phone: { area_code: '11', number: '47817071', extension: '' },
+  user_type: 'normal',
+  tags: [ 'normal', 'user_info_verified', 'medium_seller' ],
+  logo: null,
+  points: 73637,
+  site_id: 'MLA',
+  permalink: 'http://perfil.mercadolibre.com.ar/VEINTEDOCEPC',
+  shipping_modes: [ 'custom', 'not_specified', 'me2' ],
+  seller_experience: 'ADVANCED',
+  bill_data: { accept_credit_note: null },
+  seller_reputation: 
+   { level_id: '5_green',
+     power_seller_status: 'platinum',
+     transactions: 
+      { period: 'historic',
+        total: 97703,
+        completed: 88087,
+        canceled: 9616,
+        ratings: [Object] } },
+  buyer_reputation: 
+   { canceled_transactions: 0,
+     transactions: 
+      { period: 'historic',
+        total: null,
+        completed: null,
+        canceled: [Object],
+        unrated: [Object],
+        not_yet_rated: [Object] },
+     tags: [] },
+  status: 
+   { site_status: 'active',
+     list: { allow: true, codes: [], immediate_payment: [Object] },
+     buy: { allow: true, codes: [], immediate_payment: [Object] },
+     sell: { allow: true, codes: [], immediate_payment: [Object] },
+     billing: { allow: true, codes: [] },
+     mercadopago_tc_accepted: true,
+     mercadopago_account_type: 'professional',
+     mercadoenvios: 'not_accepted',
+     immediate_payment: false,
+     confirmed_email: true,
+     user_type: 'simple_registration',
+     required_action: '' },
+  company: 
+   { corporate_name: 'DAMARFU SA ',
+     brand_name: null,
+     identification: '33708543409',
+     state_tax_id: null,
+     city_tax_id: null },
+  credit: { consumed: 208474.94, credit_level_id: 'MLA1' } }
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+403
+1 Publicidad/es han sido creadas.
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+403
+1 Publicidad/es han sido creadas.
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+1 producto ha sido guardado.
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+403
+1 Publicidad/es han sido creadas.
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+1 producto ha sido guardado.
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+1 producto ha sido guardado.
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+1 producto ha sido guardado.
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+403
+1 Publicidad/es han sido creadas.
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+1 producto ha sido guardado.
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+1 producto ha sido guardado.
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+1 producto ha sido guardado.
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+1 producto ha sido guardado.
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+1 producto ha sido guardado.
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+1 producto ha sido guardado.
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+1 producto ha sido guardado.
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+1 producto ha sido guardado.
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+1 producto ha sido guardado.
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+403
+1 Publicidad/es han sido creadas.
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+1 producto ha sido guardado.
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+1 producto ha sido guardado.
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+1 producto ha sido guardado.
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+1 producto ha sido guardado.
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+1 producto ha sido guardado.
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+1 producto ha sido guardado.
+403
+403
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+1 producto ha sido guardado.
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+1 producto ha sido guardado.
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+1 producto ha sido guardado.
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+1 producto ha sido guardado.
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+1 producto ha sido guardado.
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+1 producto ha sido guardado.
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+1 producto ha sido guardado.
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+1 producto ha sido guardado.
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+1 producto ha sido guardado.
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+1 producto ha sido guardado.
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+1 producto ha sido guardado.
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+403
+403
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+1 producto ha sido guardado.
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+1 producto ha sido guardado.
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+403
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+1 producto ha sido guardado.
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+1 producto ha sido guardado.
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+1 producto ha sido guardado.
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+1 producto ha sido guardado.
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+403
+1 Publicidad/es han sido creadas.
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+403
+403
+403
+403
+403
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+403
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+1 producto ha sido guardado.
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+1 producto ha sido guardado.
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+1 producto ha sido guardado.
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+403
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+1 producto ha sido guardado.
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+1 producto ha sido guardado.
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+403
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+403
+403
+403
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+403
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+1 producto ha sido guardado.
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+1 producto ha sido guardado.
+403
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+1 producto ha sido guardado.
+403
+403
+403
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+1 producto ha sido guardado.
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+1 producto ha sido guardado.
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+1 producto ha sido guardado.
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+403
+403
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+403
+1 Publicidad/es han sido creadas.
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+403
+403
+403
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+403
+1 Publicidad/es han sido creadas.
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+1 producto ha sido guardado.
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+403
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+1 producto ha sido guardado.
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+1 producto ha sido guardado.
+403
+403
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+403
+1 Publicidad/es han sido creadas.
+403
+403
+403
+403
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+1 producto ha sido guardado.
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+1 producto ha sido guardado.
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+1 producto ha sido guardado.
+403
+403
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+1 producto ha sido guardado.
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+403
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+1 producto ha sido guardado.
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+1 producto ha sido guardado.
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+1 producto ha sido guardado.
+403
+403
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+1 producto ha sido guardado.
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+1 producto ha sido guardado.
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+403
+403
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+1 producto ha sido guardado.
+403
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+403
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+1 producto ha sido guardado.
+403
+403
+403
+403
+403
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+1 producto ha sido guardado.
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+403
+1 Publicidad/es han sido creadas.
+403
+403
+403
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+1 producto ha sido guardado.
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+1 producto ha sido guardado.
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+1 producto ha sido guardado.
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+403
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+403
+403
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+1 producto ha sido guardado.
+403
+403
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+1 producto ha sido guardado.
+403
+403
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+1 producto ha sido guardado.
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+1 producto ha sido guardado.
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+1 producto ha sido guardado.
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+403
+1 Publicidad/es han sido creadas.
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+403
+1 Publicidad/es han sido creadas.
+403
+403
+403
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+1 producto ha sido guardado.
+403
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+403
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+1 producto ha sido guardado.
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+1 producto ha sido guardado.
+403
+403
+403
+403
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+403
+403
+403
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+403
+403
+403
+403
+403
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+1 producto ha sido guardado.
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+403
+1 Publicidad/es han sido creadas.
+403
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+403
+403
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+1 producto ha sido guardado.
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+1 producto ha sido guardado.
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+1 producto ha sido guardado.
+403
+403
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+1 producto ha sido guardado.
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+403
+1 Publicidad/es han sido creadas.
+403
+403
+403
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+1 producto ha sido guardado.
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+1 producto ha sido guardado.
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+1 producto ha sido guardado.
+Magic happens on port 8080
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+1 producto ha sido guardado.
+403
+{ id: 110242209,
+  nickname: 'VEINTEDOCEPC',
+  registration_date: '2012-04-23T09:58:00.000-04:00',
+  first_name: 'DAMARFU',
+  last_name: 'SA',
+  country_id: 'AR',
+  email: 'damarfusa@gmail.com',
+  identification: { type: 'Otro', number: '33708543409' },
+  address: 
+   { state: 'AR-C',
+     city: 'capital federal',
+     address: 'echeverria 1392',
+     zip_code: '1428' },
+  phone: 
+   { area_code: '11',
+     number: '47817077',
+     extension: '',
+     verified: false },
+  alternative_phone: { area_code: '11', number: '47817071', extension: '' },
+  user_type: 'normal',
+  tags: [ 'normal', 'user_info_verified', 'medium_seller' ],
+  logo: null,
+  points: 73637,
+  site_id: 'MLA',
+  permalink: 'http://perfil.mercadolibre.com.ar/VEINTEDOCEPC',
+  shipping_modes: [ 'custom', 'not_specified', 'me2' ],
+  seller_experience: 'ADVANCED',
+  bill_data: { accept_credit_note: null },
+  seller_reputation: 
+   { level_id: '5_green',
+     power_seller_status: 'platinum',
+     transactions: 
+      { period: 'historic',
+        total: 97704,
+        completed: 88088,
+        canceled: 9616,
+        ratings: [Object] } },
+  buyer_reputation: 
+   { canceled_transactions: 0,
+     transactions: 
+      { period: 'historic',
+        total: null,
+        completed: null,
+        canceled: [Object],
+        unrated: [Object],
+        not_yet_rated: [Object] },
+     tags: [] },
+  status: 
+   { site_status: 'active',
+     list: { allow: true, codes: [], immediate_payment: [Object] },
+     buy: { allow: true, codes: [], immediate_payment: [Object] },
+     sell: { allow: true, codes: [], immediate_payment: [Object] },
+     billing: { allow: true, codes: [] },
+     mercadopago_tc_accepted: true,
+     mercadopago_account_type: 'professional',
+     mercadoenvios: 'not_accepted',
+     immediate_payment: false,
+     confirmed_email: true,
+     user_type: 'simple_registration',
+     required_action: '' },
+  company: 
+   { corporate_name: 'DAMARFU SA ',
+     brand_name: null,
+     identification: '33708543409',
+     state_tax_id: null,
+     city_tax_id: null },
+  credit: { consumed: 208474.94, credit_level_id: 'MLA1' } }
+403
+403
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+403
+{ _id: 577b3416ee4dee7464ef0503,
+  id: 'MLA614450458',
+  cat: 'MLA1716' }
+403
+403
+403
+{ _id: 577b3416ee4dee7464ef0503,
+  id: 'MLA614450458',
+  cat: 'MLA1716' }
+403
+{ _id: 577b3416ee4dee7464ef0503,
+  id: 'MLA614450458',
+  cat: 'MLA1716' }
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+403
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+1 producto ha sido guardado.
+403
+403
+403
+403
+403
+403
+{ _id: 577b3416ee4dee7464ef0503,
+  id: 'MLA614450458',
+  cat: 'MLA1716' }
+403
+403
+Sending email to adfitfidelizacion@gmail.com
+[Error: Unsupported configuration, downgrade Nodemailer to v0.7.1 to use it]
+req.body._id: undefined
+Will update DB here for adfitfidelizacion@gmail.comWith false
+[]
+[ 'adfitfidelizacion@gmail.com' ]
+403
+403
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+403
+Sending email to adfitfidelizacion@gmail.com
+[Error: Unsupported configuration, downgrade Nodemailer to v0.7.1 to use it]
+req.body._id: undefined
+Will update DB here for adfitfidelizacion@gmail.comWith false
+[]
+[ 'adfitfidelizacion@gmail.com', 'adfitfidelizacion@gmail.com' ]
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+403
+403
+403
+403
+403
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+403
+403
+403
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+403
+1 Publicidad/es han sido creadas.
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+1 producto ha sido guardado.
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+403
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+1 producto ha sido guardado.
+403
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+1 producto ha sido guardado.
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+Magic happens on port 8080
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+403
+403
+{ _id: 577b3416ee4dee7464ef0503,
+  id: 'MLA614450458',
+  cat: 'MLA1716' }
+Sending email to adfitfidelizacion@gmail.com
+req.body._id: undefined
+SERVER 1:
+└──220 smtp.gmail.com ESMTP 49sm301710qtn.16 - gsmtp
+CLIENT 1:
+└──EHLO [127.0.0.1]
+SERVER 1:
+└──250-smtp.gmail.com at your service, [45.79.175.249]
+   250-SIZE 35882577
+   250-8BITMIME
+   250-STARTTLS
+   250-ENHANCEDSTATUSCODES
+   250-PIPELINING
+   250-CHUNKING
+   250 SMTPUTF8
+CLIENT 1:
+└──STARTTLS
+SERVER 1:
+└──220 2.0.0 Ready to start TLS
+Connection secured
+CLIENT 1:
+└──EHLO [127.0.0.1]
+SERVER 1:
+└──250-smtp.gmail.com at your service, [45.79.175.249]
+   250-SIZE 35882577
+   250-8BITMIME
+   250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+   250-ENHANCEDSTATUSCODES
+   250-PIPELINING
+   250-CHUNKING
+   250 SMTPUTF8
+CLIENT 1:
+└──AUTH PLAIN AGFkZml0ZmlkZWxpemFjaW9uQGdtYWlsLmNvbQBmaWRlbGl6YWNpb25hZGZpdA==
+SERVER 1:
+└──534-5.7.14 <https://accounts.google.com/signin/continue?sarp=1&scc=1&plt=AKgnsbtt
+   534-5.7.14 qXnr4oXCah9DGF7D4rBkpYeL-m3yJetZyVVirmaoHPHJAthyZTGqHe7Rozhtx1KIKxRFTY
+   534-5.7.14 FeKkFdwJJU5Indg9En3g9IsMAQlcqKY22uZYkSsxzqCDQOUvT0viopshBA7pWmt4wtl5qV
+   534-5.7.14 NRfBNfBmTY945ehCjbehbXPVUqS_x01M2SgUC524vc70JEbZpmHwQL9HQIO96X4y9GyDnD
+   534-5.7.14 uNKfjlTpSjh6s8pluL1XetEuxRJUk> Please log in via your web browser and
+   534-5.7.14 then try again.
+   534-5.7.14  Learn more at
+   534 5.7.14  https://support.google.com/mail/answer/78754 49sm301710qtn.16 - gsmtp
+{ [AuthError: Invalid login - 534-5.7.14 <https://accounts.google.com/signin/continue?sarp=1&scc=1&plt=AKgnsbtt
+534-5.7.14 qXnr4oXCah9DGF7D4rBkpYeL-m3yJetZyVVirmaoHPHJAthyZTGqHe7Rozhtx1KIKxRFTY
+534-5.7.14 FeKkFdwJJU5Indg9En3g9IsMAQlcqKY22uZYkSsxzqCDQOUvT0viopshBA7pWmt4wtl5qV
+534-5.7.14 NRfBNfBmTY945ehCjbehbXPVUqS_x01M2SgUC524vc70JEbZpmHwQL9HQIO96X4y9GyDnD
+534-5.7.14 uNKfjlTpSjh6s8pluL1XetEuxRJUk> Please log in via your web browser and
+534-5.7.14 then try again.
+534-5.7.14  Learn more at
+534 5.7.14  https://support.google.com/mail/answer/78754 49sm301710qtn.16 - gsmtp]
+  name: 'AuthError',
+  data: '534-5.7.14 <https://accounts.google.com/signin/continue?sarp=1&scc=1&plt=AKgnsbtt\r\n534-5.7.14 qXnr4oXCah9DGF7D4rBkpYeL-m3yJetZyVVirmaoHPHJAthyZTGqHe7Rozhtx1KIKxRFTY\r\n534-5.7.14 FeKkFdwJJU5Indg9En3g9IsMAQlcqKY22uZYkSsxzqCDQOUvT0viopshBA7pWmt4wtl5qV\r\n534-5.7.14 NRfBNfBmTY945ehCjbehbXPVUqS_x01M2SgUC524vc70JEbZpmHwQL9HQIO96X4y9GyDnD\r\n534-5.7.14 uNKfjlTpSjh6s8pluL1XetEuxRJUk> Please log in via your web browser and\r\n534-5.7.14 then try again.\r\n534-5.7.14  Learn more at\r\n534 5.7.14  https://support.google.com/mail/answer/78754 49sm301710qtn.16 - gsmtp',
+  stage: 'auth' }
+Closing connection to the server
+Will update DB here for adfitfidelizacion@gmail.comWith false
+[]
+[ 'adfitfidelizacion@gmail.com' ]
+403
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+403
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+1 producto ha sido guardado.
+403
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+1 producto ha sido guardado.
+{ id: 110242209,
+  nickname: 'VEINTEDOCEPC',
+  registration_date: '2012-04-23T09:58:00.000-04:00',
+  first_name: 'DAMARFU',
+  last_name: 'SA',
+  country_id: 'AR',
+  email: 'damarfusa@gmail.com',
+  identification: { type: 'Otro', number: '33708543409' },
+  address: 
+   { state: 'AR-C',
+     city: 'capital federal',
+     address: 'echeverria 1392',
+     zip_code: '1428' },
+  phone: 
+   { area_code: '11',
+     number: '47817077',
+     extension: '',
+     verified: false },
+  alternative_phone: { area_code: '11', number: '47817071', extension: '' },
+  user_type: 'normal',
+  tags: [ 'normal', 'user_info_verified', 'medium_seller' ],
+  logo: null,
+  points: 73637,
+  site_id: 'MLA',
+  permalink: 'http://perfil.mercadolibre.com.ar/VEINTEDOCEPC',
+  shipping_modes: [ 'custom', 'not_specified', 'me2' ],
+  seller_experience: 'ADVANCED',
+  bill_data: { accept_credit_note: null },
+  seller_reputation: 
+   { level_id: '5_green',
+     power_seller_status: 'platinum',
+     transactions: 
+      { period: 'historic',
+        total: 97704,
+        completed: 88088,
+        canceled: 9616,
+        ratings: [Object] } },
+  buyer_reputation: 
+   { canceled_transactions: 0,
+     transactions: 
+      { period: 'historic',
+        total: null,
+        completed: null,
+        canceled: [Object],
+        unrated: [Object],
+        not_yet_rated: [Object] },
+     tags: [] },
+  status: 
+   { site_status: 'active',
+     list: { allow: true, codes: [], immediate_payment: [Object] },
+     buy: { allow: true, codes: [], immediate_payment: [Object] },
+     sell: { allow: true, codes: [], immediate_payment: [Object] },
+     billing: { allow: true, codes: [] },
+     mercadopago_tc_accepted: true,
+     mercadopago_account_type: 'professional',
+     mercadoenvios: 'not_accepted',
+     immediate_payment: false,
+     confirmed_email: true,
+     user_type: 'simple_registration',
+     required_action: '' },
+  company: 
+   { corporate_name: 'DAMARFU SA ',
+     brand_name: null,
+     identification: '33708543409',
+     state_tax_id: null,
+     city_tax_id: null },
+  credit: { consumed: 208474.94, credit_level_id: 'MLA1' } }
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+403
+{ _id: 577b3416ee4dee7464ef0503,
+  id: 'MLA614450458',
+  cat: 'MLA1716' }
+403
+403
+Sending email to adfitfidelizacion@gmail.com
+req.body._id: undefined
+SERVER 1:
+└──220 smtp.gmail.com ESMTP 131sm333435qkf.17 - gsmtp
+CLIENT 1:
+└──EHLO [127.0.0.1]
+SERVER 1:
+└──250-smtp.gmail.com at your service, [45.79.175.249]
+   250-SIZE 35882577
+   250-8BITMIME
+   250-STARTTLS
+   250-ENHANCEDSTATUSCODES
+   250-PIPELINING
+   250-CHUNKING
+   250 SMTPUTF8
+CLIENT 1:
+└──STARTTLS
+SERVER 1:
+└──220 2.0.0 Ready to start TLS
+Connection secured
+CLIENT 1:
+└──EHLO [127.0.0.1]
+SERVER 1:
+└──250-smtp.gmail.com at your service, [45.79.175.249]
+   250-SIZE 35882577
+   250-8BITMIME
+   250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+   250-ENHANCEDSTATUSCODES
+   250-PIPELINING
+   250-CHUNKING
+   250 SMTPUTF8
+CLIENT 1:
+└──AUTH PLAIN AGFkZml0ZmlkZWxpemFjaW9uQGdtYWlsLmNvbQBmaWRlbGl6YWNpb25hZGZpdA==
+SERVER 1:
+└──534-5.7.14 <https://accounts.google.com/signin/continue?sarp=1&scc=1&plt=AKgnsbsB
+   534-5.7.14 uYs4aHGwwtVyWSQoQ-WO2F_7n6hpNYS2e4cYUUGSAaEd4kovIjFeLRMQ8Fucm5cg8Tmj5P
+   534-5.7.14 _05f6YqoLNT7xxnJa-iiWYK_LFBfZdPovxm1iGs7J7y29mO_qmkkrIHe9r5EqSqZsOSBXI
+   534-5.7.14 7vcCwZ0voFRtjK07k78LO_ZFvb1GbU1vsMBvAot7ddPWOQibEpQiBJAOoBvP1rLHEfJutL
+   534-5.7.14 Y5-XICI_cAHaqUGxu2cKqLpr26xG4> Please log in via your web browser and
+   534-5.7.14 then try again.
+   534-5.7.14  Learn more at
+   534 5.7.14  https://support.google.com/mail/answer/78754 131sm333435qkf.17 - gsmtp
+{ [AuthError: Invalid login - 534-5.7.14 <https://accounts.google.com/signin/continue?sarp=1&scc=1&plt=AKgnsbsB
+534-5.7.14 uYs4aHGwwtVyWSQoQ-WO2F_7n6hpNYS2e4cYUUGSAaEd4kovIjFeLRMQ8Fucm5cg8Tmj5P
+534-5.7.14 _05f6YqoLNT7xxnJa-iiWYK_LFBfZdPovxm1iGs7J7y29mO_qmkkrIHe9r5EqSqZsOSBXI
+534-5.7.14 7vcCwZ0voFRtjK07k78LO_ZFvb1GbU1vsMBvAot7ddPWOQibEpQiBJAOoBvP1rLHEfJutL
+534-5.7.14 Y5-XICI_cAHaqUGxu2cKqLpr26xG4> Please log in via your web browser and
+534-5.7.14 then try again.
+534-5.7.14  Learn more at
+534 5.7.14  https://support.google.com/mail/answer/78754 131sm333435qkf.17 - gsmtp]
+  name: 'AuthError',
+  data: '534-5.7.14 <https://accounts.google.com/signin/continue?sarp=1&scc=1&plt=AKgnsbsB\r\n534-5.7.14 uYs4aHGwwtVyWSQoQ-WO2F_7n6hpNYS2e4cYUUGSAaEd4kovIjFeLRMQ8Fucm5cg8Tmj5P\r\n534-5.7.14 _05f6YqoLNT7xxnJa-iiWYK_LFBfZdPovxm1iGs7J7y29mO_qmkkrIHe9r5EqSqZsOSBXI\r\n534-5.7.14 7vcCwZ0voFRtjK07k78LO_ZFvb1GbU1vsMBvAot7ddPWOQibEpQiBJAOoBvP1rLHEfJutL\r\n534-5.7.14 Y5-XICI_cAHaqUGxu2cKqLpr26xG4> Please log in via your web browser and\r\n534-5.7.14 then try again.\r\n534-5.7.14  Learn more at\r\n534 5.7.14  https://support.google.com/mail/answer/78754 131sm333435qkf.17 - gsmtp',
+  stage: 'auth' }
+Closing connection to the server
+Will update DB here for adfitfidelizacion@gmail.comWith false
+[]
+[ 'adfitfidelizacion@gmail.com', 'adfitfidelizacion@gmail.com' ]
+403
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+1 producto ha sido guardado.
+403
+403
+403
+403
+403
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+403
+1 Publicidad/es han sido creadas.
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+1 producto ha sido guardado.
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+1 producto ha sido guardado.
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+403
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+1 producto ha sido guardado.
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+1 producto ha sido guardado.
+403
+403
+403
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+1 producto ha sido guardado.
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+403
+403
+Magic happens on port 8080
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: listen EADDRINUSE
+    at errnoException (net.js:901:11)
+    at Server._listen2 (net.js:1039:14)
+    at listen (net.js:1061:10)
+    at Server.listen (net.js:1135:5)
+    at Object.<anonymous> (/home/adfit/server.js:700:13)
+    at Module._compile (module.js:456:26)
+    at Object.Module._extensions..js (module.js:474:10)
+    at Module.load (module.js:356:32)
+    at Function.Module._load (module.js:312:12)
+    at Function.Module.runMain (module.js:497:10)
+    at startup (node.js:119:16)
+    at node.js:902:3
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+1 producto ha sido guardado.
+403
+{ id: 110242209,
+  nickname: 'VEINTEDOCEPC',
+  registration_date: '2012-04-23T09:58:00.000-04:00',
+  first_name: 'DAMARFU',
+  last_name: 'SA',
+  country_id: 'AR',
+  email: 'damarfusa@gmail.com',
+  identification: { type: 'Otro', number: '33708543409' },
+  address: 
+   { state: 'AR-C',
+     city: 'capital federal',
+     address: 'echeverria 1392',
+     zip_code: '1428' },
+  phone: 
+   { area_code: '11',
+     number: '47817077',
+     extension: '',
+     verified: false },
+  alternative_phone: { area_code: '11', number: '47817071', extension: '' },
+  user_type: 'normal',
+  tags: [ 'normal', 'user_info_verified', 'medium_seller' ],
+  logo: null,
+  points: 73637,
+  site_id: 'MLA',
+  permalink: 'http://perfil.mercadolibre.com.ar/VEINTEDOCEPC',
+  shipping_modes: [ 'custom', 'not_specified', 'me2' ],
+  seller_experience: 'ADVANCED',
+  bill_data: { accept_credit_note: null },
+  seller_reputation: 
+   { level_id: '5_green',
+     power_seller_status: 'platinum',
+     transactions: 
+      { period: 'historic',
+        total: 97704,
+        completed: 88088,
+        canceled: 9616,
+        ratings: [Object] } },
+  buyer_reputation: 
+   { canceled_transactions: 0,
+     transactions: 
+      { period: 'historic',
+        total: null,
+        completed: null,
+        canceled: [Object],
+        unrated: [Object],
+        not_yet_rated: [Object] },
+     tags: [] },
+  status: 
+   { site_status: 'active',
+     list: { allow: true, codes: [], immediate_payment: [Object] },
+     buy: { allow: true, codes: [], immediate_payment: [Object] },
+     sell: { allow: true, codes: [], immediate_payment: [Object] },
+     billing: { allow: true, codes: [] },
+     mercadopago_tc_accepted: true,
+     mercadopago_account_type: 'professional',
+     mercadoenvios: 'not_accepted',
+     immediate_payment: false,
+     confirmed_email: true,
+     user_type: 'simple_registration',
+     required_action: '' },
+  company: 
+   { corporate_name: 'DAMARFU SA ',
+     brand_name: null,
+     identification: '33708543409',
+     state_tax_id: null,
+     city_tax_id: null },
+  credit: { consumed: 208474.94, credit_level_id: 'MLA1' } }
+{ id: 110242209,
+  nickname: 'VEINTEDOCEPC',
+  registration_date: '2012-04-23T09:58:00.000-04:00',
+  first_name: 'DAMARFU',
+  last_name: 'SA',
+  country_id: 'AR',
+  email: 'damarfusa@gmail.com',
+  identification: { type: 'Otro', number: '33708543409' },
+  address: 
+   { state: 'AR-C',
+     city: 'capital federal',
+     address: 'echeverria 1392',
+     zip_code: '1428' },
+  phone: 
+   { area_code: '11',
+     number: '47817077',
+     extension: '',
+     verified: false },
+  alternative_phone: { area_code: '11', number: '47817071', extension: '' },
+  user_type: 'normal',
+  tags: [ 'normal', 'user_info_verified', 'medium_seller' ],
+  logo: null,
+  points: 73637,
+  site_id: 'MLA',
+  permalink: 'http://perfil.mercadolibre.com.ar/VEINTEDOCEPC',
+  shipping_modes: [ 'custom', 'not_specified', 'me2' ],
+  seller_experience: 'ADVANCED',
+  bill_data: { accept_credit_note: null },
+  seller_reputation: 
+   { level_id: '5_green',
+     power_seller_status: 'platinum',
+     transactions: 
+      { period: 'historic',
+        total: 97704,
+        completed: 88088,
+        canceled: 9616,
+        ratings: [Object] } },
+  buyer_reputation: 
+   { canceled_transactions: 0,
+     transactions: 
+      { period: 'historic',
+        total: null,
+        completed: null,
+        canceled: [Object],
+        unrated: [Object],
+        not_yet_rated: [Object] },
+     tags: [] },
+  status: 
+   { site_status: 'active',
+     list: { allow: true, codes: [], immediate_payment: [Object] },
+     buy: { allow: true, codes: [], immediate_payment: [Object] },
+     sell: { allow: true, codes: [], immediate_payment: [Object] },
+     billing: { allow: true, codes: [] },
+     mercadopago_tc_accepted: true,
+     mercadopago_account_type: 'professional',
+     mercadoenvios: 'not_accepted',
+     immediate_payment: false,
+     confirmed_email: true,
+     user_type: 'simple_registration',
+     required_action: '' },
+  company: 
+   { corporate_name: 'DAMARFU SA ',
+     brand_name: null,
+     identification: '33708543409',
+     state_tax_id: null,
+     city_tax_id: null },
+  credit: { consumed: 208474.94, credit_level_id: 'MLA1' } }
+403
+{ _id: 577b3416ee4dee7464ef0503,
+  id: 'MLA614450458',
+  cat: 'MLA1716' }
+Sending email to adfitfidelizacion@gmail.com
+req.body._id: undefined
+SERVER 1:
+└──220 smtp.gmail.com ESMTP y33sm317198qtc.7 - gsmtp
+CLIENT 1:
+└──EHLO [127.0.0.1]
+SERVER 1:
+└──250-smtp.gmail.com at your service, [45.79.175.249]
+   250-SIZE 35882577
+   250-8BITMIME
+   250-STARTTLS
+   250-ENHANCEDSTATUSCODES
+   250-PIPELINING
+   250-CHUNKING
+   250 SMTPUTF8
+CLIENT 1:
+└──STARTTLS
+SERVER 1:
+└──220 2.0.0 Ready to start TLS
+Connection secured
+CLIENT 1:
+└──EHLO [127.0.0.1]
+SERVER 1:
+└──250-smtp.gmail.com at your service, [45.79.175.249]
+   250-SIZE 35882577
+   250-8BITMIME
+   250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+   250-ENHANCEDSTATUSCODES
+   250-PIPELINING
+   250-CHUNKING
+   250 SMTPUTF8
+CLIENT 1:
+└──AUTH PLAIN AGFkZml0ZmlkZWxpemFjaW9uQGdtYWlsLmNvbQBmaWRlbGl6YWNpb25hZGZpdA==
+SERVER 1:
+└──534-5.7.14 <https://accounts.google.com/signin/continue?sarp=1&scc=1&plt=AKgnsbv1
+   534-5.7.14 Fb_p0s4jyGPg3VuOJ6DIl7psmRPPgiQryfDiElA-JYlIcrxAMCModT4GpsaCd1CFhxgca2
+   534-5.7.14 66qfbpJa6YwFZk5XFEfZQL9deRvNR0FOgqWHBmM4GWlmaVsEHXSVYI8UPCWioygjvx299G
+   534-5.7.14 PvMQYPh6NpgyzAdGfPcp5rQblo27-F-ZIDLgVNNIUb7VrjFvN4Pzw0wpI85r-KSoPFpiRv
+   534-5.7.14 -OqTIr5tUe_AXdgW7UVVhd96ICmIs> Please log in via your web browser and
+   534-5.7.14 then try again.
+   534-5.7.14  Learn more at
+   534 5.7.14  https://support.google.com/mail/answer/78754 y33sm317198qtc.7 - gsmtp
+{ [AuthError: Invalid login - 534-5.7.14 <https://accounts.google.com/signin/continue?sarp=1&scc=1&plt=AKgnsbv1
+534-5.7.14 Fb_p0s4jyGPg3VuOJ6DIl7psmRPPgiQryfDiElA-JYlIcrxAMCModT4GpsaCd1CFhxgca2
+534-5.7.14 66qfbpJa6YwFZk5XFEfZQL9deRvNR0FOgqWHBmM4GWlmaVsEHXSVYI8UPCWioygjvx299G
+534-5.7.14 PvMQYPh6NpgyzAdGfPcp5rQblo27-F-ZIDLgVNNIUb7VrjFvN4Pzw0wpI85r-KSoPFpiRv
+534-5.7.14 -OqTIr5tUe_AXdgW7UVVhd96ICmIs> Please log in via your web browser and
+534-5.7.14 then try again.
+534-5.7.14  Learn more at
+534 5.7.14  https://support.google.com/mail/answer/78754 y33sm317198qtc.7 - gsmtp]
+  name: 'AuthError',
+  data: '534-5.7.14 <https://accounts.google.com/signin/continue?sarp=1&scc=1&plt=AKgnsbv1\r\n534-5.7.14 Fb_p0s4jyGPg3VuOJ6DIl7psmRPPgiQryfDiElA-JYlIcrxAMCModT4GpsaCd1CFhxgca2\r\n534-5.7.14 66qfbpJa6YwFZk5XFEfZQL9deRvNR0FOgqWHBmM4GWlmaVsEHXSVYI8UPCWioygjvx299G\r\n534-5.7.14 PvMQYPh6NpgyzAdGfPcp5rQblo27-F-ZIDLgVNNIUb7VrjFvN4Pzw0wpI85r-KSoPFpiRv\r\n534-5.7.14 -OqTIr5tUe_AXdgW7UVVhd96ICmIs> Please log in via your web browser and\r\n534-5.7.14 then try again.\r\n534-5.7.14  Learn more at\r\n534 5.7.14  https://support.google.com/mail/answer/78754 y33sm317198qtc.7 - gsmtp',
+  stage: 'auth' }
+Closing connection to the server
+Will update DB here for adfitfidelizacion@gmail.comWith false
+[]
+[ 'adfitfidelizacion@gmail.com',
+  'adfitfidelizacion@gmail.com',
+  'adfitfidelizacion@gmail.com' ]
+403
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+1 producto ha sido guardado.
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+403
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+403
+403
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+1 producto ha sido guardado.
+403
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+403
+403
+403
+403
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+1 producto ha sido guardado.
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+403
+403
+403
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+1 producto ha sido guardado.
+403
+403
+403
+403
+403
+403
+403
+{ _id: 577b3416ee4dee7464ef0503,
+  id: 'MLA614450458',
+  cat: 'MLA1716' }
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+403
+1 Publicidad/es han sido creadas.
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+1 producto ha sido guardado.
+Sending email to adfitfidelizacion@gmail.com
+req.body._id: undefined
+SERVER 1:
+└──220 smtp.gmail.com ESMTP g15sm296031qtc.17 - gsmtp
+CLIENT 1:
+└──EHLO [127.0.0.1]
+SERVER 1:
+└──250-smtp.gmail.com at your service, [45.79.175.249]
+   250-SIZE 35882577
+   250-8BITMIME
+   250-STARTTLS
+   250-ENHANCEDSTATUSCODES
+   250-PIPELINING
+   250-CHUNKING
+   250 SMTPUTF8
+CLIENT 1:
+└──STARTTLS
+SERVER 1:
+└──220 2.0.0 Ready to start TLS
+Connection secured
+CLIENT 1:
+└──EHLO [127.0.0.1]
+SERVER 1:
+└──250-smtp.gmail.com at your service, [45.79.175.249]
+   250-SIZE 35882577
+   250-8BITMIME
+   250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+   250-ENHANCEDSTATUSCODES
+   250-PIPELINING
+   250-CHUNKING
+   250 SMTPUTF8
+CLIENT 1:
+└──AUTH PLAIN AGFkZml0ZmlkZWxpemFjaW9uQGdtYWlsLmNvbQBmaWRlbGl6YWNpb25hZGZpdA==
+SERVER 1:
+└──534-5.7.14 <https://accounts.google.com/signin/continue?sarp=1&scc=1&plt=AKgnsbt0
+   534-5.7.14 vmBg8Nz0CTx3iEhTWx6hw752vkiTr4cui3WDvPPJCnVhwABCFU9Eg6F8DW3a49y4KHxngi
+   534-5.7.14 3ut2TjSARxlVdbVYXCVbGSSHIGCkj03POVhptORmBMofqEvxfuhzpsRnIum2KojIvLgTv-
+   534-5.7.14 0ix2yOwjpI5d2o6m3hJCcDb1ahZjjuDWDTfRM-fPmY1Rz5kq7XIFC2-SjdFBAecWZKuNLX
+   534-5.7.14 wnTma-BP_E1GMDPn_xKeXJb1BeTNo> Please log in via your web browser and
+   534-5.7.14 then try again.
+   534-5.7.14  Learn more at
+   534 5.7.14  https://support.google.com/mail/answer/78754 g15sm296031qtc.17 - gsmtp
+{ [AuthError: Invalid login - 534-5.7.14 <https://accounts.google.com/signin/continue?sarp=1&scc=1&plt=AKgnsbt0
+534-5.7.14 vmBg8Nz0CTx3iEhTWx6hw752vkiTr4cui3WDvPPJCnVhwABCFU9Eg6F8DW3a49y4KHxngi
+534-5.7.14 3ut2TjSARxlVdbVYXCVbGSSHIGCkj03POVhptORmBMofqEvxfuhzpsRnIum2KojIvLgTv-
+534-5.7.14 0ix2yOwjpI5d2o6m3hJCcDb1ahZjjuDWDTfRM-fPmY1Rz5kq7XIFC2-SjdFBAecWZKuNLX
+534-5.7.14 wnTma-BP_E1GMDPn_xKeXJb1BeTNo> Please log in via your web browser and
+534-5.7.14 then try again.
+534-5.7.14  Learn more at
+534 5.7.14  https://support.google.com/mail/answer/78754 g15sm296031qtc.17 - gsmtp]
+  name: 'AuthError',
+  data: '534-5.7.14 <https://accounts.google.com/signin/continue?sarp=1&scc=1&plt=AKgnsbt0\r\n534-5.7.14 vmBg8Nz0CTx3iEhTWx6hw752vkiTr4cui3WDvPPJCnVhwABCFU9Eg6F8DW3a49y4KHxngi\r\n534-5.7.14 3ut2TjSARxlVdbVYXCVbGSSHIGCkj03POVhptORmBMofqEvxfuhzpsRnIum2KojIvLgTv-\r\n534-5.7.14 0ix2yOwjpI5d2o6m3hJCcDb1ahZjjuDWDTfRM-fPmY1Rz5kq7XIFC2-SjdFBAecWZKuNLX\r\n534-5.7.14 wnTma-BP_E1GMDPn_xKeXJb1BeTNo> Please log in via your web browser and\r\n534-5.7.14 then try again.\r\n534-5.7.14  Learn more at\r\n534 5.7.14  https://support.google.com/mail/answer/78754 g15sm296031qtc.17 - gsmtp',
+  stage: 'auth' }
+Closing connection to the server
+Will update DB here for adfitfidelizacion@gmail.comWith false
+[]
+[ 'adfitfidelizacion@gmail.com',
+  'adfitfidelizacion@gmail.com',
+  'adfitfidelizacion@gmail.com',
+  'adfitfidelizacion@gmail.com' ]
+403
+403
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+1 producto ha sido guardado.
+403
+403
+403
+403
+403
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+403
+1 Publicidad/es han sido creadas.
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+403
+403
+403
+403
+403
+403
+403
+403
+403
+Sending email to adfitfidelizacion@gmail.com
+req.body._id: undefined
+SERVER 1:
+└──220 smtp.gmail.com ESMTP 1sm2347119qtv.13 - gsmtp
+CLIENT 1:
+└──EHLO [127.0.0.1]
+SERVER 1:
+└──250-smtp.gmail.com at your service, [45.79.175.249]
+   250-SIZE 35882577
+   250-8BITMIME
+   250-STARTTLS
+   250-ENHANCEDSTATUSCODES
+   250-PIPELINING
+   250-CHUNKING
+   250 SMTPUTF8
+CLIENT 1:
+└──STARTTLS
+SERVER 1:
+└──220 2.0.0 Ready to start TLS
+Connection secured
+CLIENT 1:
+└──EHLO [127.0.0.1]
+SERVER 1:
+└──250-smtp.gmail.com at your service, [45.79.175.249]
+   250-SIZE 35882577
+   250-8BITMIME
+   250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+   250-ENHANCEDSTATUSCODES
+   250-PIPELINING
+   250-CHUNKING
+   250 SMTPUTF8
+CLIENT 1:
+└──AUTH PLAIN AGFkZml0ZmlkZWxpemFjaW9uQGdtYWlsLmNvbQBmaWRlbGl6YWNpb25hZGZpdA==
+SERVER 1:
+└──534-5.7.14 <https://accounts.google.com/signin/continue?sarp=1&scc=1&plt=AKgnsbsF
+   534-5.7.14 cK5-oQLXWN_EJ9cf4Cz8oS-F_Cx0TGNirlFxX41EQwsaTYqw-13AFtUNpDsgptXPPB4U92
+   534-5.7.14 yuhbZG-lnUG0P9YfUAna5eqq6F_bv5NLdS0wQ_J8brEC4BFe7klWkpipU5PUYN-xoPpm90
+   534-5.7.14 0u5SSqAqP0B7vhwfKxPb7EBHxlZ85AnIwFredJJe3BVrGu9HKk-dr2mALvkY-yE6bHFK9j
+   534-5.7.14 t0HpwAI-ZaiAT3AKWwpgWcl2Y_VOU> Please log in via your web browser and
+   534-5.7.14 then try again.
+   534-5.7.14  Learn more at
+   534 5.7.14  https://support.google.com/mail/answer/78754 1sm2347119qtv.13 - gsmtp
+{ [AuthError: Invalid login - 534-5.7.14 <https://accounts.google.com/signin/continue?sarp=1&scc=1&plt=AKgnsbsF
+534-5.7.14 cK5-oQLXWN_EJ9cf4Cz8oS-F_Cx0TGNirlFxX41EQwsaTYqw-13AFtUNpDsgptXPPB4U92
+534-5.7.14 yuhbZG-lnUG0P9YfUAna5eqq6F_bv5NLdS0wQ_J8brEC4BFe7klWkpipU5PUYN-xoPpm90
+534-5.7.14 0u5SSqAqP0B7vhwfKxPb7EBHxlZ85AnIwFredJJe3BVrGu9HKk-dr2mALvkY-yE6bHFK9j
+534-5.7.14 t0HpwAI-ZaiAT3AKWwpgWcl2Y_VOU> Please log in via your web browser and
+534-5.7.14 then try again.
+534-5.7.14  Learn more at
+534 5.7.14  https://support.google.com/mail/answer/78754 1sm2347119qtv.13 - gsmtp]
+  name: 'AuthError',
+  data: '534-5.7.14 <https://accounts.google.com/signin/continue?sarp=1&scc=1&plt=AKgnsbsF\r\n534-5.7.14 cK5-oQLXWN_EJ9cf4Cz8oS-F_Cx0TGNirlFxX41EQwsaTYqw-13AFtUNpDsgptXPPB4U92\r\n534-5.7.14 yuhbZG-lnUG0P9YfUAna5eqq6F_bv5NLdS0wQ_J8brEC4BFe7klWkpipU5PUYN-xoPpm90\r\n534-5.7.14 0u5SSqAqP0B7vhwfKxPb7EBHxlZ85AnIwFredJJe3BVrGu9HKk-dr2mALvkY-yE6bHFK9j\r\n534-5.7.14 t0HpwAI-ZaiAT3AKWwpgWcl2Y_VOU> Please log in via your web browser and\r\n534-5.7.14 then try again.\r\n534-5.7.14  Learn more at\r\n534 5.7.14  https://support.google.com/mail/answer/78754 1sm2347119qtv.13 - gsmtp',
+  stage: 'auth' }
+Closing connection to the server
+Will update DB here for adfitfidelizacion@gmail.comWith false
+[]
+[ 'adfitfidelizacion@gmail.com',
+  'adfitfidelizacion@gmail.com',
+  'adfitfidelizacion@gmail.com',
+  'adfitfidelizacion@gmail.com',
+  'adfitfidelizacion@gmail.com' ]
+403
+403
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+403
+403
+403
+Magic happens on port 8080
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+1 producto ha sido guardado.
+403
+403
+403
+403
+{ _id: 577b3416ee4dee7464ef0503,
+  id: 'MLA614450458',
+  cat: 'MLA1716' }
+Sending email to adfitfidelizacion@gmail.com
+req.body._id: undefined
+SERVER 1:
+└──220 smtp.gmail.com ESMTP y80sm3006044qkb.49 - gsmtp
+CLIENT 1:
+└──EHLO [127.0.0.1]
+SERVER 1:
+└──250-smtp.gmail.com at your service, [45.79.175.249]
+   250-SIZE 35882577
+   250-8BITMIME
+   250-STARTTLS
+   250-ENHANCEDSTATUSCODES
+   250-PIPELINING
+   250-CHUNKING
+   250 SMTPUTF8
+CLIENT 1:
+└──STARTTLS
+SERVER 1:
+└──220 2.0.0 Ready to start TLS
+Connection secured
+CLIENT 1:
+└──EHLO [127.0.0.1]
+SERVER 1:
+└──250-smtp.gmail.com at your service, [45.79.175.249]
+   250-SIZE 35882577
+   250-8BITMIME
+   250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+   250-ENHANCEDSTATUSCODES
+   250-PIPELINING
+   250-CHUNKING
+   250 SMTPUTF8
+CLIENT 1:
+└──AUTH PLAIN AGFkZml0ZmlkZWxpemFjaW9uQGdtYWlsLmNvbQBmaWRlbGl6YWNpb25hZGZpdA==
+SERVER 1:
+└──534-5.7.14 <https://accounts.google.com/signin/continue?sarp=1&scc=1&plt=AKgnsbtS
+   534-5.7.14 zgh7B40OVqx7DDiTny0bvgYAlq1oF9h2JYEuKC9788vLFYG1CBHNSMKCopwMNhYnITwRD-
+   534-5.7.14 R2jS4SKuQKr-EZYsUj4y4YXRBOo9gTtVPXvg8LCrnNGtVCe2LQ1U8uHJtootIErJu7bwHb
+   534-5.7.14 o3-g_9j3sKLWRdn3kQnMxm-4M8R_JO4kJg3xtUyxX47K6XNh9NnBGYBsItS0VNPrsZoGos
+   534-5.7.14 G-wlNvZo75MV2qOuN6Ojn3kC8WVls> Please log in via your web browser and
+   534-5.7.14 then try again.
+   534-5.7.14  Learn more at
+   534 5.7.14  https://support.google.com/mail/answer/78754 y80sm3006044qkb.49 - gsmtp
+{ [AuthError: Invalid login - 534-5.7.14 <https://accounts.google.com/signin/continue?sarp=1&scc=1&plt=AKgnsbtS
+534-5.7.14 zgh7B40OVqx7DDiTny0bvgYAlq1oF9h2JYEuKC9788vLFYG1CBHNSMKCopwMNhYnITwRD-
+534-5.7.14 R2jS4SKuQKr-EZYsUj4y4YXRBOo9gTtVPXvg8LCrnNGtVCe2LQ1U8uHJtootIErJu7bwHb
+534-5.7.14 o3-g_9j3sKLWRdn3kQnMxm-4M8R_JO4kJg3xtUyxX47K6XNh9NnBGYBsItS0VNPrsZoGos
+534-5.7.14 G-wlNvZo75MV2qOuN6Ojn3kC8WVls> Please log in via your web browser and
+534-5.7.14 then try again.
+534-5.7.14  Learn more at
+534 5.7.14  https://support.google.com/mail/answer/78754 y80sm3006044qkb.49 - gsmtp]
+  name: 'AuthError',
+  data: '534-5.7.14 <https://accounts.google.com/signin/continue?sarp=1&scc=1&plt=AKgnsbtS\r\n534-5.7.14 zgh7B40OVqx7DDiTny0bvgYAlq1oF9h2JYEuKC9788vLFYG1CBHNSMKCopwMNhYnITwRD-\r\n534-5.7.14 R2jS4SKuQKr-EZYsUj4y4YXRBOo9gTtVPXvg8LCrnNGtVCe2LQ1U8uHJtootIErJu7bwHb\r\n534-5.7.14 o3-g_9j3sKLWRdn3kQnMxm-4M8R_JO4kJg3xtUyxX47K6XNh9NnBGYBsItS0VNPrsZoGos\r\n534-5.7.14 G-wlNvZo75MV2qOuN6Ojn3kC8WVls> Please log in via your web browser and\r\n534-5.7.14 then try again.\r\n534-5.7.14  Learn more at\r\n534 5.7.14  https://support.google.com/mail/answer/78754 y80sm3006044qkb.49 - gsmtp',
+  stage: 'auth' }
+Closing connection to the server
+Will update DB here for adfitfidelizacion@gmail.comWith false
+[]
+[ 'adfitfidelizacion@gmail.com' ]
+403
+403
+403
+403
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+403
+403
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+1 producto ha sido guardado.
+403
+403
+403
+403
+403
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+1 producto ha sido guardado.
+403
+403
+Sending email to adfitfidelizacion@gmail.com
+req.body._id: undefined
+SERVER 1:
+└──220 smtp.gmail.com ESMTP t54sm1411038qta.10 - gsmtp
+CLIENT 1:
+└──EHLO [127.0.0.1]
+SERVER 1:
+└──250-smtp.gmail.com at your service, [45.79.175.249]
+   250-SIZE 35882577
+   250-8BITMIME
+   250-STARTTLS
+   250-ENHANCEDSTATUSCODES
+   250-PIPELINING
+   250-CHUNKING
+   250 SMTPUTF8
+CLIENT 1:
+└──STARTTLS
+SERVER 1:
+└──220 2.0.0 Ready to start TLS
+Connection secured
+CLIENT 1:
+└──EHLO [127.0.0.1]
+SERVER 1:
+└──250-smtp.gmail.com at your service, [45.79.175.249]
+   250-SIZE 35882577
+   250-8BITMIME
+   250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+   250-ENHANCEDSTATUSCODES
+   250-PIPELINING
+   250-CHUNKING
+   250 SMTPUTF8
+CLIENT 1:
+└──AUTH PLAIN AGFkZml0ZmlkZWxpemFjaW9uQGdtYWlsLmNvbQBmaWRlbGl6YWNpb25hZGZpdA==
+SERVER 1:
+└──534-5.7.14 <https://accounts.google.com/signin/continue?sarp=1&scc=1&plt=AKgnsbu9
+   534-5.7.14 MRGS2HpI_WyerplTY7YzxpzM42jn3EWalxONSoF-Qx5k91tfOsyr0IKU9TRXUDYGlUE6r2
+   534-5.7.14 _BF6tM0toAM2dROEgkxTgzjoONhjoS3WdT_tAlTMiTRlC4-qcI8yW4Th7MyTExt2vv4g43
+   534-5.7.14 S2VPz2ZwhmsbSiKUGswBeeo-Q-oJHhP0N3dZwdN7Pb735eTaMBiZAbqzTtiogTeXDKNlqP
+   534-5.7.14 nWQKLv0p0jXqjkyNe_9w5kRl8n9xY> Please log in via your web browser and
+   534-5.7.14 then try again.
+   534-5.7.14  Learn more at
+   534 5.7.14  https://support.google.com/mail/answer/78754 t54sm1411038qta.10 - gsmtp
+{ [AuthError: Invalid login - 534-5.7.14 <https://accounts.google.com/signin/continue?sarp=1&scc=1&plt=AKgnsbu9
+534-5.7.14 MRGS2HpI_WyerplTY7YzxpzM42jn3EWalxONSoF-Qx5k91tfOsyr0IKU9TRXUDYGlUE6r2
+534-5.7.14 _BF6tM0toAM2dROEgkxTgzjoONhjoS3WdT_tAlTMiTRlC4-qcI8yW4Th7MyTExt2vv4g43
+534-5.7.14 S2VPz2ZwhmsbSiKUGswBeeo-Q-oJHhP0N3dZwdN7Pb735eTaMBiZAbqzTtiogTeXDKNlqP
+534-5.7.14 nWQKLv0p0jXqjkyNe_9w5kRl8n9xY> Please log in via your web browser and
+534-5.7.14 then try again.
+534-5.7.14  Learn more at
+534 5.7.14  https://support.google.com/mail/answer/78754 t54sm1411038qta.10 - gsmtp]
+  name: 'AuthError',
+  data: '534-5.7.14 <https://accounts.google.com/signin/continue?sarp=1&scc=1&plt=AKgnsbu9\r\n534-5.7.14 MRGS2HpI_WyerplTY7YzxpzM42jn3EWalxONSoF-Qx5k91tfOsyr0IKU9TRXUDYGlUE6r2\r\n534-5.7.14 _BF6tM0toAM2dROEgkxTgzjoONhjoS3WdT_tAlTMiTRlC4-qcI8yW4Th7MyTExt2vv4g43\r\n534-5.7.14 S2VPz2ZwhmsbSiKUGswBeeo-Q-oJHhP0N3dZwdN7Pb735eTaMBiZAbqzTtiogTeXDKNlqP\r\n534-5.7.14 nWQKLv0p0jXqjkyNe_9w5kRl8n9xY> Please log in via your web browser and\r\n534-5.7.14 then try again.\r\n534-5.7.14  Learn more at\r\n534 5.7.14  https://support.google.com/mail/answer/78754 t54sm1411038qta.10 - gsmtp',
+  stage: 'auth' }
+Closing connection to the server
+Will update DB here for adfitfidelizacion@gmail.comWith false
+[]
+[ 'adfitfidelizacion@gmail.com', 'adfitfidelizacion@gmail.com' ]
+403
+403
+403
+403
+403
+403
+1 venta ha sido guardada.
+403
+1 EVENTO ha sido creado.
+403
+403
+403
+{ id: 110242209,
+  nickname: 'VEINTEDOCEPC',
+  registration_date: '2012-04-23T09:58:00.000-04:00',
+  first_name: 'DAMARFU',
+  last_name: 'SA',
+  country_id: 'AR',
+  email: 'damarfusa@gmail.com',
+  identification: { type: 'Otro', number: '33708543409' },
+  address: 
+   { state: 'AR-C',
+     city: 'capital federal',
+     address: 'echeverria 1392',
+     zip_code: '1428' },
+  phone: 
+   { area_code: '11',
+     number: '47817077',
+     extension: '',
+     verified: false },
+  alternative_phone: { area_code: '11', number: '47817071', extension: '' },
+  user_type: 'normal',
+  tags: [ 'normal', 'user_info_verified', 'medium_seller' ],
+  logo: null,
+  points: 73637,
+  site_id: 'MLA',
+  permalink: 'http://perfil.mercadolibre.com.ar/VEINTEDOCEPC',
+  shipping_modes: [ 'custom', 'not_specified', 'me2' ],
+  seller_experience: 'ADVANCED',
+  bill_data: { accept_credit_note: null },
+  seller_reputation: 
+   { level_id: '5_green',
+     power_seller_status: 'platinum',
+     transactions: 
+      { period: 'historic',
+        total: 97704,
+        completed: 88088,
+        canceled: 9616,
+        ratings: [Object] } },
+  buyer_reputation: 
+   { canceled_transactions: 0,
+     transactions: 
+      { period: 'historic',
+        total: null,
+        completed: null,
+        canceled: [Object],
+        unrated: [Object],
+        not_yet_rated: [Object] },
+     tags: [] },
+  status: 
+   { site_status: 'active',
+     list: { allow: true, codes: [], immediate_payment: [Object] },
+     buy: { allow: true, codes: [], immediate_payment: [Object] },
+     sell: { allow: true, codes: [], immediate_payment: [Object] },
+     billing: { allow: true, codes: [] },
+     mercadopago_tc_accepted: true,
+     mercadopago_account_type: 'professional',
+     mercadoenvios: 'not_accepted',
+     immediate_payment: false,
+     confirmed_email: true,
+     user_type: 'simple_registration',
+     required_action: '' },
+  company: 
+   { corporate_name: 'DAMARFU SA ',
+     brand_name: null,
+     identification: '33708543409',
+     state_tax_id: null,
+     city_tax_id: null },
+  credit: { consumed: 208474.94, credit_level_id: 'MLA1' } }
+403
+403
+Sending email to adfitfidelizacion@gmail.com
+req.body._id: undefined
+SERVER 1:
+└──220 smtp.gmail.com ESMTP f190sm2561116qkd.4 - gsmtp
+CLIENT 1:
+└──EHLO [127.0.0.1]
+SERVER 1:
+└──250-smtp.gmail.com at your service, [45.79.175.249]
+   250-SIZE 35882577
+   250-8BITMIME
+   250-STARTTLS
+   250-ENHANCEDSTATUSCODES
+   250-PIPELINING
+   250-CHUNKING
+   250 SMTPUTF8
+CLIENT 1:
+└──STARTTLS
+SERVER 1:
+└──220 2.0.0 Ready to start TLS
+Connection secured
+CLIENT 1:
+└──EHLO [127.0.0.1]
+SERVER 1:
+└──250-smtp.gmail.com at your service, [45.79.175.249]
+   250-SIZE 35882577
+   250-8BITMIME
+   250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+   250-ENHANCEDSTATUSCODES
+   250-PIPELINING
+   250-CHUNKING
+   250 SMTPUTF8
+CLIENT 1:
+└──AUTH PLAIN AGFkZml0ZmlkZWxpemFjaW9uQGdtYWlsLmNvbQBmaWRlbGl6YWNpb25hZGZpdA==
+SERVER 1:
+└──534-5.7.14 <https://accounts.google.com/signin/continue?sarp=1&scc=1&plt=AKgnsbuS
+   534-5.7.14 VJ84ti2umxf_Rp_kjuaG11OQomzC36VTKFTNzmqAy5Njv9ex6jDC98ebvb5PddB_NWPT9X
+   534-5.7.14 UjY8gXxGcf4dZtuqxJDmvM7Eiv2LaL3ml8W3TU5dj8Cr1c4fMQSw49zfWZB344tNvqYMhc
+   534-5.7.14 qRS_aMsqcVF1JsmOhrooQbIOUO8bh5uIh-ux-4uPpnwQ_3Ckrunlhw0bq-pH_RQtfm_h_h
+   534-5.7.14 Hi8AevSl1qLILW72D_lU-FLvPiLv4> Please log in via your web browser and
+   534-5.7.14 then try again.
+   534-5.7.14  Learn more at
+   534 5.7.14  https://support.google.com/mail/answer/78754 f190sm2561116qkd.4 - gsmtp
+{ [AuthError: Invalid login - 534-5.7.14 <https://accounts.google.com/signin/continue?sarp=1&scc=1&plt=AKgnsbuS
+534-5.7.14 VJ84ti2umxf_Rp_kjuaG11OQomzC36VTKFTNzmqAy5Njv9ex6jDC98ebvb5PddB_NWPT9X
+534-5.7.14 UjY8gXxGcf4dZtuqxJDmvM7Eiv2LaL3ml8W3TU5dj8Cr1c4fMQSw49zfWZB344tNvqYMhc
+534-5.7.14 qRS_aMsqcVF1JsmOhrooQbIOUO8bh5uIh-ux-4uPpnwQ_3Ckrunlhw0bq-pH_RQtfm_h_h
+534-5.7.14 Hi8AevSl1qLILW72D_lU-FLvPiLv4> Please log in via your web browser and
+534-5.7.14 then try again.
+534-5.7.14  Learn more at
+534 5.7.14  https://support.google.com/mail/answer/78754 f190sm2561116qkd.4 - gsmtp]
+  name: 'AuthError',
+  data: '534-5.7.14 <https://accounts.google.com/signin/continue?sarp=1&scc=1&plt=AKgnsbuS\r\n534-5.7.14 VJ84ti2umxf_Rp_kjuaG11OQomzC36VTKFTNzmqAy5Njv9ex6jDC98ebvb5PddB_NWPT9X\r\n534-5.7.14 UjY8gXxGcf4dZtuqxJDmvM7Eiv2LaL3ml8W3TU5dj8Cr1c4fMQSw49zfWZB344tNvqYMhc\r\n534-5.7.14 qRS_aMsqcVF1JsmOhrooQbIOUO8bh5uIh-ux-4uPpnwQ_3Ckrunlhw0bq-pH_RQtfm_h_h\r\n534-5.7.14 Hi8AevSl1qLILW72D_lU-FLvPiLv4> Please log in via your web browser and\r\n534-5.7.14 then try again.\r\n534-5.7.14  Learn more at\r\n534 5.7.14  https://support.google.com/mail/answer/78754 f190sm2561116qkd.4 - gsmtp',
+  stage: 'auth' }
+Closing connection to the server
+Will update DB here for adfitfidelizacion@gmail.comWith false
+[]
+[ 'adfitfidelizacion@gmail.com',
+  'adfitfidelizacion@gmail.com',
+  'adfitfidelizacion@gmail.com' ]
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+1 producto ha sido guardado.
+403
+403
+403
+403
+403
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+403
+403
+403
+403
+403
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+403
+1 Publicidad/es han sido creadas.
+403
+403
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+1 producto ha sido guardado.
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+1 producto ha sido guardado.
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+1 producto ha sido guardado.
+403
+403
+403
+403
+403
+403
+403
+403
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+1 producto ha sido guardado.
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+403
+1 Publicidad/es han sido creadas.
+403
+403
+403
+403
+403
+403
+403
+{ _id: 577b3416ee4dee7464ef0503,
+  id: 'MLA614450458',
+  cat: 'MLA1716' }
+Sending email to adfitfidelizacion@gmail.com
+req.body._id: undefined
+SERVER 1:
+└──220 smtp.gmail.com ESMTP 49sm329856qtn.16 - gsmtp
+CLIENT 1:
+└──EHLO [127.0.0.1]
+SERVER 1:
+└──250-smtp.gmail.com at your service, [45.79.175.249]
+   250-SIZE 35882577
+   250-8BITMIME
+   250-STARTTLS
+   250-ENHANCEDSTATUSCODES
+   250-PIPELINING
+   250-CHUNKING
+   250 SMTPUTF8
+CLIENT 1:
+└──STARTTLS
+SERVER 1:
+└──220 2.0.0 Ready to start TLS
+Connection secured
+CLIENT 1:
+└──EHLO [127.0.0.1]
+SERVER 1:
+└──250-smtp.gmail.com at your service, [45.79.175.249]
+   250-SIZE 35882577
+   250-8BITMIME
+   250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+   250-ENHANCEDSTATUSCODES
+   250-PIPELINING
+   250-CHUNKING
+   250 SMTPUTF8
+CLIENT 1:
+└──AUTH PLAIN AGFkZml0ZmlkZWxpemFjaW9uQGdtYWlsLmNvbQBmaWRlbGl6YWNpb25hZGZpdA==
+403
+SERVER 1:
+└──534-5.7.14 <https://accounts.google.com/signin/continue?sarp=1&scc=1&plt=AKgnsbvX
+   534-5.7.14 SgQ7Dquep02ZhmClWiaMtOoh5DS70cls1VY8aDmQpxEYsnWrYQVcidALidjuaqRx36uaeL
+   534-5.7.14 3O_KLSOGR2yCF1K7sCR7rNvgKxMK8rGHTM9qApKiX7d_TrSmf6DnswX4FpzbQS3HiFopkB
+   534-5.7.14 sorGg1BZf0v7yeHD4AHEAJ4Ydm64vjgVGzi9MbtEqhdO01Y7tKjd_haB6K4_pHfYpuqhqk
+   534-5.7.14 bsrVTeDfPuEWJoHon8y_hGHVYel-4> Please log in via your web browser and
+   534-5.7.14 then try again.
+   534-5.7.14  Learn more at
+   534 5.7.14  https://support.google.com/mail/answer/78754 49sm329856qtn.16 - gsmtp
+{ [AuthError: Invalid login - 534-5.7.14 <https://accounts.google.com/signin/continue?sarp=1&scc=1&plt=AKgnsbvX
+534-5.7.14 SgQ7Dquep02ZhmClWiaMtOoh5DS70cls1VY8aDmQpxEYsnWrYQVcidALidjuaqRx36uaeL
+534-5.7.14 3O_KLSOGR2yCF1K7sCR7rNvgKxMK8rGHTM9qApKiX7d_TrSmf6DnswX4FpzbQS3HiFopkB
+534-5.7.14 sorGg1BZf0v7yeHD4AHEAJ4Ydm64vjgVGzi9MbtEqhdO01Y7tKjd_haB6K4_pHfYpuqhqk
+534-5.7.14 bsrVTeDfPuEWJoHon8y_hGHVYel-4> Please log in via your web browser and
+534-5.7.14 then try again.
+534-5.7.14  Learn more at
+534 5.7.14  https://support.google.com/mail/answer/78754 49sm329856qtn.16 - gsmtp]
+  name: 'AuthError',
+  data: '534-5.7.14 <https://accounts.google.com/signin/continue?sarp=1&scc=1&plt=AKgnsbvX\r\n534-5.7.14 SgQ7Dquep02ZhmClWiaMtOoh5DS70cls1VY8aDmQpxEYsnWrYQVcidALidjuaqRx36uaeL\r\n534-5.7.14 3O_KLSOGR2yCF1K7sCR7rNvgKxMK8rGHTM9qApKiX7d_TrSmf6DnswX4FpzbQS3HiFopkB\r\n534-5.7.14 sorGg1BZf0v7yeHD4AHEAJ4Ydm64vjgVGzi9MbtEqhdO01Y7tKjd_haB6K4_pHfYpuqhqk\r\n534-5.7.14 bsrVTeDfPuEWJoHon8y_hGHVYel-4> Please log in via your web browser and\r\n534-5.7.14 then try again.\r\n534-5.7.14  Learn more at\r\n534 5.7.14  https://support.google.com/mail/answer/78754 49sm329856qtn.16 - gsmtp',
+  stage: 'auth' }
+Closing connection to the server
+Will update DB here for adfitfidelizacion@gmail.comWith false
+[]
+[ 'adfitfidelizacion@gmail.com',
+  'adfitfidelizacion@gmail.com',
+  'adfitfidelizacion@gmail.com',
+  'adfitfidelizacion@gmail.com' ]
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+1 producto ha sido guardado.
+403
+403
+403
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+403
+1 Publicidad/es han sido creadas.
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+403
+403
+403
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+1 producto ha sido guardado.
+403
+403
+403
+403
+403
+403
+403
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+1 producto ha sido guardado.
+403
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+1 producto ha sido guardado.
+403
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+403
+1 Publicidad/es han sido creadas.
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+1 producto ha sido guardado.
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+403
+403
+403
+403
+403
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+403
+403
+403
+403
+403
+403
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+1 producto ha sido guardado.
+403
+403
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+1 producto ha sido guardado.
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+1 producto ha sido guardado.
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+403
+1 Publicidad/es han sido creadas.
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+403
+403
+403
+403
+403
+403
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+403
+1 Publicidad/es han sido creadas.
+403
+403
+403
+403
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+1 producto ha sido guardado.
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+1 producto ha sido guardado.
+403
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+403
+403
+403
+403
+403
+403
+403
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+403
+403
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+403
+1 Publicidad/es han sido creadas.
+403
+403
+403
+403
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+403
+403
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+403
+403
+Sending email to adfitfidelizacion@gmail.com
+req.body._id: undefined
+SERVER 1:
+└──220 smtp.gmail.com ESMTP r6sm2763052qtd.20 - gsmtp
+CLIENT 1:
+└──EHLO [127.0.0.1]
+SERVER 1:
+└──250-smtp.gmail.com at your service, [45.79.175.249]
+   250-SIZE 35882577
+   250-8BITMIME
+   250-STARTTLS
+   250-ENHANCEDSTATUSCODES
+   250-PIPELINING
+   250-CHUNKING
+   250 SMTPUTF8
+CLIENT 1:
+└──STARTTLS
+SERVER 1:
+└──220 2.0.0 Ready to start TLS
+Connection secured
+CLIENT 1:
+└──EHLO [127.0.0.1]
+SERVER 1:
+└──250-smtp.gmail.com at your service, [45.79.175.249]
+   250-SIZE 35882577
+   250-8BITMIME
+   250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+   250-ENHANCEDSTATUSCODES
+   250-PIPELINING
+   250-CHUNKING
+   250 SMTPUTF8
+CLIENT 1:
+└──AUTH PLAIN AGFkZml0ZmlkZWxpemFjaW9uQGdtYWlsLmNvbQBmaWRlbGl6YWNpb25hZGZpdA==
+SERVER 1:
+└──534-5.7.14 <https://accounts.google.com/signin/continue?sarp=1&scc=1&plt=AKgnsbvA
+   534-5.7.14 yeJanclgUqxgyPyZbFlE_VKBDzA9mH9lHp7Jd9EnDGDzklRFM62PKYHSs5GNXJAvExg1gh
+   534-5.7.14 LupJMJcOY_qvrkj606KHIxEIXR-denUUSn11JfDNhrAZk2wsrpDCo8znX9WYjQnCvroSKS
+   534-5.7.14 IQrcb9dAEYQeJyooZ-6S8Hd56_QgnvvXJS5HLICxUiPjCl-UQFUQcx3Yq4B-hTgGGA4k9i
+   534-5.7.14 WcNQu9Pr7NL2uJQLII1WXB0ZTPJek> Please log in via your web browser and
+   534-5.7.14 then try again.
+   534-5.7.14  Learn more at
+   534 5.7.14  https://support.google.com/mail/answer/78754 r6sm2763052qtd.20 - gsmtp
+{ [AuthError: Invalid login - 534-5.7.14 <https://accounts.google.com/signin/continue?sarp=1&scc=1&plt=AKgnsbvA
+534-5.7.14 yeJanclgUqxgyPyZbFlE_VKBDzA9mH9lHp7Jd9EnDGDzklRFM62PKYHSs5GNXJAvExg1gh
+534-5.7.14 LupJMJcOY_qvrkj606KHIxEIXR-denUUSn11JfDNhrAZk2wsrpDCo8znX9WYjQnCvroSKS
+534-5.7.14 IQrcb9dAEYQeJyooZ-6S8Hd56_QgnvvXJS5HLICxUiPjCl-UQFUQcx3Yq4B-hTgGGA4k9i
+534-5.7.14 WcNQu9Pr7NL2uJQLII1WXB0ZTPJek> Please log in via your web browser and
+534-5.7.14 then try again.
+534-5.7.14  Learn more at
+534 5.7.14  https://support.google.com/mail/answer/78754 r6sm2763052qtd.20 - gsmtp]
+  name: 'AuthError',
+  data: '534-5.7.14 <https://accounts.google.com/signin/continue?sarp=1&scc=1&plt=AKgnsbvA\r\n534-5.7.14 yeJanclgUqxgyPyZbFlE_VKBDzA9mH9lHp7Jd9EnDGDzklRFM62PKYHSs5GNXJAvExg1gh\r\n534-5.7.14 LupJMJcOY_qvrkj606KHIxEIXR-denUUSn11JfDNhrAZk2wsrpDCo8znX9WYjQnCvroSKS\r\n534-5.7.14 IQrcb9dAEYQeJyooZ-6S8Hd56_QgnvvXJS5HLICxUiPjCl-UQFUQcx3Yq4B-hTgGGA4k9i\r\n534-5.7.14 WcNQu9Pr7NL2uJQLII1WXB0ZTPJek> Please log in via your web browser and\r\n534-5.7.14 then try again.\r\n534-5.7.14  Learn more at\r\n534 5.7.14  https://support.google.com/mail/answer/78754 r6sm2763052qtd.20 - gsmtp',
+  stage: 'auth' }
+Closing connection to the server
+Will update DB here for adfitfidelizacion@gmail.comWith false
+[]
+[ 'adfitfidelizacion@gmail.com',
+  'adfitfidelizacion@gmail.com',
+  'adfitfidelizacion@gmail.com',
+  'adfitfidelizacion@gmail.com',
+  'adfitfidelizacion@gmail.com' ]
+403
+403
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+403
+403
+403
+403
+403
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+403
+403
+403
+403
+403
+403
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+403
+1 Publicidad/es han sido creadas.
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+403
+403
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+403
+403
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+403
+403
+403
+403
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+403
+1 Publicidad/es han sido creadas.
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+1 producto ha sido guardado.
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+1 producto ha sido guardado.
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+1 venta ha sido guardada.
+1 EVENTO ha sido creado.
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
+403
