@@ -5,17 +5,21 @@
     <pagination total-items="productos.length" ng-model="currentPage" max-size="maxSize" class="pagination-sm" boundary-links="true" items-per-page="numPerPage"></pagination>
   <table class="table table-striped">
     <thead><tr>
-      <th>Detalle</th>
+      <th></th>
       <th>ID</th>
     </tr></thead>
     <tbody><tr ng-repeat="producto in filteredProductos">
-      <td>
-
-        <a class="btn" href="/detalleProducto" ng-click="verDetalle(producto)">
-          <span class="glyphicon glyphicon-plus-sign"></span>&nbsp;&nbsp;Ver Detalles
-        </a>
-      </td>
-      <td>{{ producto.id }}</td>
+        <td>
+          <a class="btn" href="/detalleProducto" ng-click="verDetalle(producto)">
+            <img src="{{producto.thumbnail}}" class="img-circle">                
+          </a>
+        </td>
+        <td>
+          {{ producto.id }}
+        </td>
+        <td>
+          {{ producto.title }}
+        </td>
     </tr></tbody>
   </table>
 </div>

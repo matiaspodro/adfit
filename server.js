@@ -59,6 +59,7 @@ var ventaSchema = new mongoose.Schema({
 
 var productoSchema = new mongoose.Schema({
   id: String
+ ,cat: String
 });
 
 
@@ -185,7 +186,8 @@ app.post('/saveProductos', function(req, res) {
                 //Guardar producto
                 ////////////////////////////
                 var prods = [{
-                    id: str.order_items[0].item.id
+                    id: str.order_items[0].item.id,                    
+                    cat: str.order_items[0].item.category_id
                 }];   
                 Productos.collection.insert(prods
                 , onInsert);
@@ -384,15 +386,50 @@ app.get('/getAllProductos', function(req, res) {
 });
 
 app.get('/getProductosByCategoria', function(req, res) {
-  Productos.find({}, function(err, productos) {
-    var prodMap = {};
 
-    productos.forEach(function(prod) {
-      prodMap[prod._id] = prod;
+  var options = {
+    host: 'api.mercadolibre.com',
+    path: '/categories/'+req.query.cat
+  };
+              
+  callback = function(response) {
+    var str = '';
+    response.on('data', function (chunk) {
+      str += chunk;
     });
 
-    res.send(prodMap);  
-  });
+    response.on('end', function () {
+        str = JSON.parse(str);
+        var from_root = str.path_from_root;
+        var childs    = str.children_categories;
+        var cats      = [];
+
+        cats.push(from_root[0].id);
+        childs.forEach(function(cat) {
+          cats.push(cat.id);
+        });
+
+        Productos.find({}, function(err, productos) {
+          var prodMap = {};
+          var resp = [];
+          productos.forEach(function(prod) {
+            var index = cats.indexOf(prod.cat);
+            if (index >= 0) {
+              console.log(prod);
+              resp.push(prod);
+
+            }
+          });
+
+          res.send(resp);  
+        });
+
+    });
+  };
+
+  var req = https.request(options, callback).end();
+
+
 });
 
 app.get('/getAllCategorias', function(req, res) {
@@ -634,7 +671,7 @@ app.post('/notifications', function(req, res) {
 
   switch(req.body.topic) {
     case 'orders': return saveOne(req.body, saveVentaCallback);break;
-    case 'items': return saveOne(req.body, saveProductoCallback);break;
+    //case 'items': return saveOne(req.body, saveProductoCallback);break;
     case 'questions': return notifications.orderNotifiactions(req.body);break;
     case 'payments': return notifications.orderNotifiactions(req.body);break;
     default: return notifications.orderNotifiactions(req.body);break;

@@ -56,32 +56,35 @@
           <h2>Alguno de estos productos te está esperando!</h2>
         </td>
       </tr>
-      <tr>
-        <td align='center'>
-          <img src='{{productos[0].picture.url}}'/>
-        </td>
-      </tr>
-      <tr>
-        <td align='center'>
-          <h3>{{productos[0].title}}</h3>
-        </td>
-      </tr>
-      <tr>
-        <td align='center'>
+      <div ng-if="productos[0] != undefined">
+        <tr>
+          <td align='center'>
+            <img src='{{productos[0].picture.url}}'/>
+          </td>
+        </tr>
+        <tr>
+          <td align='center'>
+            <h3>{{productos[0].title}}</h3>
+          </td>
+        </tr>
+        <tr>
+          <td align='center'>
 
-          <p class='text'>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500.
-          </p>
-          <p class='bt'>
-            <a href='{{productos[0].link}}'><img src='/images/btn_shop.jpg'/></a>
-          </p>
-        </td>
-      </tr>
+            <p class='text'>
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500.
+            </p>
+            <p class='bt'>
+              <a href='{{productos[0].link}}'><img src='/images/btn_shop.jpg'/></a>
+            </p>
+          </td>
+        </tr>
+
+      </div>
       </table>
     </div>
     <!-- COLUMN WRAP -->
     <div class='column-wrap'>
-      <div class='column'>
+      <div ng-if="productos[1] != undefined" class='column'>
         <table bgcolor='' class='social' width='100%'>
         <tr>
           <td>
@@ -92,7 +95,7 @@
         </tr>
         <tr>
           <td>
-            <h4>{{productos[0].title}}</h4>
+            <h4>{{productos[1].title}}</h4>
           </td>
         </tr>
         <tr>
@@ -111,7 +114,7 @@
         </tr>
         </table>
       </div>
-      <div class='column'>
+      <div ng-if="productos[2] != undefined" class='column'>
         <table bgcolor='' class='social' width='100%'>
         <tr>
           <td>
@@ -122,7 +125,7 @@
         </tr>
         <tr>
           <td>
-            <h4>{{productos[1].title}}</h4>
+            <h4>{{productos[2].title}}</h4>
           </td>
         </tr>
         <tr>
