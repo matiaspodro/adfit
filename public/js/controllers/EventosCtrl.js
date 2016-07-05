@@ -13,7 +13,24 @@ angular.module('EventosCtrl', ['ui.bootstrap']).controller('EventosController', 
     	var begin 	= (($scope.currentPage - 1) * $scope.numPerPage)
     	, end 		= begin + $scope.numPerPage;
     
-    	$scope.filteredEventos = $scope.eventos.slice(begin, end);
+    	//$scope.filteredEventos = $scope.eventos.slice(begin, end);
+
+
+    	var evs = $scope.eventos.slice(begin, end);
+		var i = 0;
+
+		angular.forEach(evs, function(ev) {
+			ML.getItem(ev.product_id).then(function(item) {
+				ev.thumbnail = item.secure_thumbnail;
+				ev.title = item.title;
+				i++;
+				if (evs.length == i){
+					$scope.filteredEventos = evs;
+				}
+
+			});
+		});
+
   	});
       
   	var array = function(object){
@@ -36,6 +53,13 @@ angular.module('EventosCtrl', ['ui.bootstrap']).controller('EventosController', 
 		DB.generateReselling({}).then(function(data) {
 
 		});
+	};
+
+	$scope.tituloTipo = function(tipo){
+		if (tipo == '1') return 'CrossSelling';
+		else if (tipo == '2') return 'Reselling';
+		else if (tipo == '3') return 'CrossProduct';
+		else return '';
 	};
 
 });

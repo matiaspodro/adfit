@@ -13,7 +13,23 @@ angular.module('ProductosCtrl', ['ui.bootstrap']).controller('ProductosControlle
     	var begin = (($scope.currentPage - 1) * $scope.numPerPage)
     	, end = begin + $scope.numPerPage;
     
-    	$scope.filteredProductos = $scope.productos.slice(begin, end);
+    	//$scope.filteredProductos = $scope.productos.slice(begin, end);
+
+    	var prods = $scope.productos.slice(begin, end);
+		var i = 0;
+
+		angular.forEach(prods, function(prod) {
+			ML.getItem(prod.id).then(function(item) {
+				prod.thumbnail = item.secure_thumbnail;
+				prod.title = item.title;
+				i++;
+				if (prods.length == i){
+					$scope.filteredProductos = prods;
+				}
+
+			});
+		});
+
   	});
       
   	var array = function(object){
@@ -23,10 +39,13 @@ angular.module('ProductosCtrl', ['ui.bootstrap']).controller('ProductosControlle
   	}
 
 	DB.getProductos().then(function(data) {
+
 		$scope.productos 		= array(data);
 		$scope.currentPage 		= 1;
 		$scope.numPerPage 		= 10;
 		$scope.isActive			= false;
+
+
 	});
 
 

@@ -9,16 +9,25 @@
     
   <table class="table table-striped">
     <thead><tr>
-      <th>Tipo</th>
-      <th>Id</th>
-      <th>Fecha</th>
-      <th>Repeticion</th>
+      <th>Producto</th>
+      <th></th>
+      <th>Tipo de Evento</th>
+      <th>Fecha</th>  
+      <th></th>
     </tr></thead>
     <tbody><tr ng-repeat="evento in filteredEventos">
-      <td>{{ evento.tipo }}</td>
-      <td>{{ evento.id }}</td>
-      <td>{{ evento.fecha }}</td>
-      <td>{{ evento.repeticion }}</td>
+
+      <td>
+        <a class="btn" href="/detalleProducto" ng-click="verDetalle(evento)">
+          <img src="{{evento.thumbnail}}" class="img-circle">                
+        </a>
+      </td>
+      <td>{{ evento.title }}</td>
+
+      <td>{{ tituloTipo(evento.tipo) }}</td>
+      <td ng-bind="evento.fecha | date"></td>
+      <td ng-show="evento.repeticion != null">{{ evento.repeticion }}° repetición</td>
+      <td ng-show="evento.repeticion == null">{{ evento.repeticion }}</td>
     </tr></tbody>
   </table>
 

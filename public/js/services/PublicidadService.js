@@ -1,19 +1,26 @@
-angular.module('PublicidadService', []).factory('Publicidad', ['$http', '$q', 'DB', 'ML', function($http, $q, DB,ML) {
+angular.module('PublicidadService', []).factory('Publicidad', ['$http', '$q', 'DB', 'ML', function($http, $q, $filter, DB,ML) {
 	var pub = {};
 	pub.obtenerProductosRandom = function(publicidad){	
 	    var defered = $q.defer();
 	    var promise = defered.promise;
 
-		DB.getProductosByCategoria(publicidad.destino).then(function(data) {
+		DB.getProductosByCategoria(publicidad.destino.id).then(function(data) {
 			var arr = array(data);
+
+			$scope.random = function(){
+			    return 0.5 - Math.random();
+			};
+
+			var sarassa = $filter('orderBy')(arr, $scope.random);
+
 			var prods = [];
-			prods.push(arr[0]);
-			prods.push(arr[1]);
-			prods.push(arr[2]);
-			prods.push(arr[3]);
-			prods.push(arr[4]);
-			prods.push(arr[5]);
-			prods.push(arr[6]);
+			if (arr[0]!= undefined) prods.push(arr[0]);
+			if (arr[1]!= undefined) prods.push(arr[1]);
+			if (arr[2]!= undefined) prods.push(arr[2]);
+			if (arr[3]!= undefined) prods.push(arr[3]);
+			if (arr[4]!= undefined) prods.push(arr[4]);
+			if (arr[5]!= undefined) prods.push(arr[5]);
+			if (arr[6]!= undefined) prods.push(arr[6]);
 
 			var ret = [];
 			angular.forEach(prods, function(prod) {

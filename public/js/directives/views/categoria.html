@@ -19,7 +19,7 @@
 
     </div>
 
-    <label  id="cat_{{prod.id}}"  ng-if="a.length > 0" ng-repeat="prod in a" class="nav-header black title link" ng-click="doClick(prod);" ng-class="{'origen': selected.id == prod.id}">
+    <label  id="cat_{{prod.id}}"  ng-if="a.length > 0" ng-repeat="prod in a" class="nav-header black title link" ng-click="doClick(prod);" ng-class="{'origen': selected.id == prod.id, 'destino': destinoId == prod.id}}">
       {{prod.name}}
     </label>
 
