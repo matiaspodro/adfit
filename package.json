@@ -12,8 +12,11 @@
     "node-rest-client" : "latest",
     "socket.io": "latest",
     "nodemailer":"0.7.1",
+    "nodemailer-smtp-transport": "latest",
     "moment": "2.0.0",
-    "styliner": "latest"
+    "styliner": "latest",
+    "sendgrid": "^3.0.7",
+    "smtpapi": "^1.0.5"
   }
 }
 
