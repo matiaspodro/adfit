@@ -8,7 +8,7 @@ var app            			= express.Router();
 
 // This will store emails needed to send.
 // We can fetch it from DB (MySQL,Mongo) and store here.
-var listofemails = ["adfitfidelizacion@gmail.com"]; //DEPRECADO
+var listofemails = ["fidelizados2017@gmail.com"]; //DEPRECADO
 // Will store email sent successfully.
 var success_email = [];
 // Will store email whose sending is failed. 
@@ -16,7 +16,7 @@ var failure_email = [];
 
 var transporter;
 
-var userMail = 'adfitfidelizacion@gmail.com';
+var userMail = 'fidelizados2017@gmail.com';
 var example = '';
 
 
@@ -34,7 +34,7 @@ function massMailer() {
           port: 587,
           auth: {
             user: userMail,
-            pass: 'fidelizacionadfit'
+            pass: 'fidelizados'
          },
           tls: {rejectUnauthorized: false},
           debug:true
@@ -108,7 +108,7 @@ exports.send = function(req, res){
     example = req.body.publicidad.producto;
     subject = req.body.asunto;
     //email = req.body.email;
-    email = 'adfitfidelizacion@gmail.com';
+    email = 'fidelizados2017@gmail.com';
 
     data_html = req.body.template;
 
