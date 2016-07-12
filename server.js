@@ -391,7 +391,6 @@ app.get('/getProductosByCategoria', function(req, res) {
     host: 'api.mercadolibre.com',
     path: '/categories/'+req.query.cat
   };
-              
   callback = function(response) {
     var str = '';
     response.on('data', function (chunk) {
@@ -535,7 +534,7 @@ app.post('/generateReselling', function(req, res) {
                     saveEvento(2, evento.id, evento.category_id, moment(today).utc().format('YYYY-MM-DDTHH:mm:ss.sssZ'), relacion._id, repeticion);
                   }
                 }
-
+              //}
             }
           }
 
@@ -559,7 +558,6 @@ app.post('/generateReselling', function(req, res) {
 app.post('/generatePublicidades', function(req, res) {
   Eventos.find({tipo:1}, function(err, eventos) {
     eventos.forEach(function(eve) {
-        console.log('ENTROOO');
       Ventas.find({id:eve.venta_id}, function(err, ventas) {
         ventas.forEach(function(ven) {
            savePublicidad(eve, ven);
@@ -574,44 +572,24 @@ app.post('/generatePublicidades', function(req, res) {
 
 
 //==========================
-/*app.post('/prepareMailer', mailer.prepare);
-app.post('/sendMailer', function(req, res) {
-  mailer.send(req, res);
 
-  Publicidades.update({_id:req.body.publicidad._id}, {$set:{enviado:1}}, function(err, docs) {
-      if (err) {
-      res.status(403)        // HTTP status 404: NotFound
-      .send(err);
-      } else {
-          console.log('req.body._id: '+req.body._id);
-          res.send('Publicidad enviada');
-      }
+app.post('/sendMailer', function(req, res) {
+  mailer.send(req, res, function(sendResponse){
+    if(sendResponse.statusCode < '400'){
+      console.log('ok');
+      Publicidades.update({_id:req.body.publicidad._id}, {$set:{enviado:1}}, function(err, docs) {
+          if (err) {
+          res.status(403)        // HTTP status 404: NotFound
+          .send(err);
+          } else {
+              console.log('req.body._id: '+req.body._id);
+              res.send('Publicidad enviada');
+          }
+      });
+    }else{
+      console.log(response.statusCode);
+    }
   });
-
-});
-*/
-
-
-app.post('/sendMailer', function(req, res) {
-  var helper = require('sendgrid').mail
-  from_email = new helper.Email("fidelizados2017@gmail.com")
-  to_email = new helper.Email("fidelizados2017@gmail.com")
-  subject = "Hello World from the SendGrid Node.js Library"
-  content = new helper.Content("text/plain", "some text here2")
-  mail = new helper.Mail(from_email, subject, to_email, content)
-
-  var sg = require('sendgrid').SendGrid('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')
-  var requestBody = mail.toJSON()
-  var request = sg.emptyRequest()
-  request.method = 'POST'
-  request.path = '/v3/mail/send'
-  request.body = requestBody
-  sg.API(request, function (response) {
-    console.log(response.statusCode)
-    console.log(response.body)
-    console.log(response.headers)
-  })
-
 });
 
 //==========================
