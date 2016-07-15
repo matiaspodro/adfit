@@ -391,6 +391,7 @@ app.get('/getProductosByCategoria', function(req, res) {
     host: 'api.mercadolibre.com',
     path: '/categories/'+req.query.cat
   };
+  
   callback = function(response) {
     var str = '';
     response.on('data', function (chunk) {
