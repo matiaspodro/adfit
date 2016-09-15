@@ -9,4 +9,6 @@ angular.module('LoginCtrl', []).controller('LoginController', function($scope, $
 	    $scope.nickname = data.profile_user.nickname;
 	});
 
+	$scope.login();
+
 });

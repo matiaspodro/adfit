@@ -3,9 +3,9 @@ angular.module('appRoutes', []).config(['$routeProvider', '$locationProvider', f
 	$routeProvider
 
 		// home page
-		.when('/inicio', {
+		.when('/inicio2', {
 			templateUrl: 'views/home.html',
-			controller: 'MainController'
+			controller: 'LoginController'
 		})
 
 		.when('/ventas', {

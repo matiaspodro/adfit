@@ -212,13 +212,19 @@ angular.module('MLService', []).factory('ML', ['$http', '$q', 'DB', function($ht
 	    var defered = $q.defer();
 	    var promise = defered.promise;
 
-	    $http.get('/inicio')
+	    var config = {headers:  {
+	    	'Access-Control-Allow-Origin': '*'
+	    }
+		};
+
+		$http.get('/inicio', config)
 		.success(function(data) {
             defered.resolve(data);
 		})
         .error(function(err) {
             defered.reject(err)
         });
+
 
 
         return promise;

@@ -642,8 +642,11 @@ passport.deserializeUser(function (user, done) {
 
 
 
-app.get('/auth/mercadolibre',
-  passport.authorize('mercadolibre'));
+app.get('/auth/mercadolibre', function(req, res){
+  console.log(res);
+  res.setHeader('', '');
+  passport.authorize('mercadolibre', req, res);
+});
  
 app.get('/auth/mercadolibre/callback', 
   passport.authorize('mercadolibre', { failureRedirect: '/login' }),
