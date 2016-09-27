@@ -614,8 +614,8 @@ var access_token = '';
 var profile_user = '';
  
 passport.use(new MercadoLibreStrategy({
-    clientID: '8767318679796615',
-    clientSecret: 'elBDPKVpiQztGCpWjrtymnuo5pwzcDW6',
+    clientID: '8897826357766426',
+    clientSecret: '9Uc9Olu30h0ozswLFisUxM66zSgpxHQO',
     callbackURL: 'https://'+config.URL+':'+config.port+'/auth/mercadolibre/callback',
   },
   function (accessToken, refreshToken, profile, done) {
